@@ -4,6 +4,7 @@
 @use "./components/utils/classes";
 @use "./components/utils/elements";
 @use "./components/utils/variables";
+@use "./components/ui/header";
 
 #appcontainer {
 	display: flex;
@@ -11,12 +12,7 @@
 	gap: 4rem;
 	padding: 0;
 	margin: 0 auto;
-	max-width: 40vw;
-
-	@media screen and (max-width: v.$md_breakpoint) {
-		max-width: 80vw;
-
-	}
+	max-width: 70vw;
 }
 
 #app {

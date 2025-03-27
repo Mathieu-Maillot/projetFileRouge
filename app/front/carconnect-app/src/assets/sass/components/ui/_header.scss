@@ -1,4 +1,11 @@
 @use "../utils/variables" as v;
+
 #header {
 	z-index: 1;
+	height: 8rem;
+
+	p{
+		font-size: calc(1.5rem + 0.2vw);
+		color : var(--text_color02);
+	}
 }
