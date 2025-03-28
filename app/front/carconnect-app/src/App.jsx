@@ -1,10 +1,11 @@
 import React from 'react'
+import HeroSection from './display/pages/home/HeroSection'
 
 const App = () => {
 	return (
 		<>
 			<div id="app">
-				<h1>Application</h1>
+				<HeroSection />
 			</div>
 		</>
 	)

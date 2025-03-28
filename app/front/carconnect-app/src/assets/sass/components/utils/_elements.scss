@@ -10,32 +10,19 @@
 	border: var(--border_color01);
 	border-radius: 0.5rem;
 	height: 3.5rem;
-	font-size: 2rem;
+	font-size: 1.4rem;
 	width: 100%;
 	outline: none;
 	padding: 1rem;
+	transition: all 0.25s ease-in-out;
+	font-family: var(--font_family_inter);
 }
 
-.label_default {
-	display: flex;
-	align-items: center;
-	column-gap: 0.5rem;
-	position: absolute;
-	font-size: 1.5rem;
-	top: 50%;
-	left: 15px;
-	transform: translateY(-50%);
-	pointer-events: none;
-	transition: 0.3s;
-	font-size: var(--text_size01);
-}
 
-.input_default:focus ~ label {
-	opacity: 0;
-	top: 0;
-	left: 15px;
-	background: transparent;
-	font-size: 1rem;
+
+.input_default:focus {
+background-color: var(--bg_color02);
+border: var(--border_color02);
 }
 
 

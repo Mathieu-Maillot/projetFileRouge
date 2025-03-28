@@ -6,6 +6,7 @@
 @use "./components/utils/variables";
 @use "./components/ui/header";
 @use "./components/ui/nav";
+@use "./pages/home/home";
 
 #appcontainer {
 	display: flex;
@@ -17,6 +18,12 @@
 }
 
 #app {
+	display: flex;
+	flex-direction: column;
+	gap: 8rem;
+}
+
+#root{
 	display: flex;
 	flex-direction: column;
 	gap: 8rem;
