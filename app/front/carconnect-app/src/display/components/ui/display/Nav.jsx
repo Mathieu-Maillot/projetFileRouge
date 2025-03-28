@@ -21,7 +21,7 @@ const Nav = () => {
 
 			<ul className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
 				<div className="flex between">
-					<p>Navigation</p>
+					{isMenuOpen && <p>Navigation</p>}
 				<button
 				className='menu-button'
 				onClick={() => setIsMenuOpen(!isMenuOpen)}
