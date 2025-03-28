@@ -3,7 +3,10 @@
 #header {
 	z-index: 1;
 	height: 8rem;
-
+	border-bottom: var(--border_color01);
+	h1{
+		font-size: calc(2.15rem + 0.2vw);
+	}
 	p{
 		font-size: calc(1.5rem + 0.2vw);
 		color : var(--text_color02);

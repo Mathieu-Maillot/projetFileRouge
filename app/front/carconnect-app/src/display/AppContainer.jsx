@@ -1,8 +1,8 @@
 import React from 'react'
 
-const AppContainer = ({ children }) => {
+const AppContainer = ({ children , classN}) => {
 	return (
-		<div id="appcontainer">
+		<div id="appcontainer" className={classN}>
 			{children}
 		</div>
 	)

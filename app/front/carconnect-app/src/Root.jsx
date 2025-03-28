@@ -8,8 +8,8 @@ import Header from './display/components/ui/display/Header';
 const Root = () => {
 	return (
 		<BrowserRouter>
+			<Header />
 			<AppContainer>
-				<Header />
 				<Routes>
 					<Route exact path="/" element={<App />} />
 				</Routes>

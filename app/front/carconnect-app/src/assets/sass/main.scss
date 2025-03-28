@@ -5,6 +5,7 @@
 @use "./components/utils/elements";
 @use "./components/utils/variables";
 @use "./components/ui/header";
+@use "./components/ui/nav";
 
 #appcontainer {
 	display: flex;
