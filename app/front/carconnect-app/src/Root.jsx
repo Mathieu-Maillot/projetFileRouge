@@ -8,25 +8,40 @@ import SearchTraject from './display/pages/routes/SearchTraject';
 import PublishTraject from './display/pages/routes/PublishTraject';
 import Check from './display/pages/auth/Check';
 
-const Root = () => {
+const AppRoutes = () => {
 	const location = useLocation();
 
 	return (
-		<BrowserRouter>
-					{!location.pathname.startsWith("/auth") && <Header />}
-
-			<AppContainer>
+		<>
+			{!location.pathname.startsWith("/auth") && <Header />}
+			{!location.pathname.startsWith("/auth") ? (
+				<AppContainer>
+					<Routes>
+						<Route exact path="/" element={<App />} />
+						<Route exact path="/routes/search" element={<SearchTraject />} />
+						<Route exact path="/routes/publish" element={<PublishTraject />} />
+						<Route exact path="/auth/check" element={<Check />} />
+					</Routes>
+				</AppContainer>
+			) : (
 				<Routes>
 					<Route exact path="/" element={<App />} />
 					<Route exact path="/routes/search" element={<SearchTraject />} />
 					<Route exact path="/routes/publish" element={<PublishTraject />} />
-					<Route exact path="/routes/check" element={<Check />} />
+					<Route exact path="/auth/check" element={<Check />} />
 				</Routes>
-			</AppContainer>
-			<Footer></Footer>
+			)}
+			<Footer />
+		</>
+	);
+};
+
+const Root = () => {
+	return (
+		<BrowserRouter>
+			<AppRoutes />
 		</BrowserRouter>
-	)
-}
+	);
+};
 
 export default Root;
-

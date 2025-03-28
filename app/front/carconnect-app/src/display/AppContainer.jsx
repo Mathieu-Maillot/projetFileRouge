@@ -2,9 +2,9 @@ import React from 'react'
 
 const AppContainer = ({ children , classN}) => {
 	return (
-		<div id="appcontainer" className={classN}>
-			{children}
-		</div>
+		<main className="app_container">
+				{children}
+			</main>
 	)
 }
 
