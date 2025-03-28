@@ -16,24 +16,24 @@ const Nav = () => {
 				className='menu-button'
 				onClick={() => setIsMenuOpen(!isMenuOpen)}
 			>
-				{!isMenuOpen &&  <Icon type='menu' size='2.5rem' />}
+				{!isMenuOpen && <Icon type='menu' size='2.5rem' />}
 			</button>
 
 			<ul className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
 				<div className="flex between">
 					{isMenuOpen && <p>Navigation</p>}
-				<button
-				className='menu-button'
-				onClick={() => setIsMenuOpen(!isMenuOpen)}
-			>
-				{isMenuOpen &&  <Icon type='close' size='2.5rem' />}
-			</button>
+					<button
+						className='menu-button'
+						onClick={() => setIsMenuOpen(!isMenuOpen)}
+					>
+						{isMenuOpen && <Icon type='close' size='2.5rem' />}
+					</button>
 				</div>
 				{navLinks.map((link, index) => (
 					<li key={index}>
-						<NavLink to={link.path} className='nav-item'>
+						<NavLink to={link.path} className='nav-item flex a_center gap1'> 
 							<Icon type={link.icon} size='2rem' />
-							<p>{link.name}</p>
+							<p className="nav-text">{link.name}</p> 
 						</NavLink>
 					</li>
 				))}

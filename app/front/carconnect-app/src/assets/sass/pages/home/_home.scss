@@ -5,8 +5,8 @@
 	flex-direction: column;
 	gap: 4rem;
 	.container_whole {
-		@include mixins.flex_res(initial, space-between, column, row);
 		gap: 4rem;
+		@include mixins.flex_res(initial, space-between, column, row);
 	}
 	.container_features{
 		display: flex;

@@ -222,6 +222,18 @@
 .j_center {
 	justify-content: center;
 }
+.j_end{
+	justify-content: flex-end;
+}
+.j_start{
+	justify-content: flex-start;
+}
+.a_start{
+	align-items: flex-start;
+}
+.a_end{
+	align-items: flex-end;
+}
 
 .a_center {
 	align-items: center;

@@ -1,10 +1,28 @@
 @use './variables' as v;
+
 .col {
 	position: relative;
-	flex : 1 0 100%;
+	flex: 1 0 100%;
+
 	@media screen and (min-width : v.$lg-breakpoint ) {
 		flex: 1 1 0%;
 	}
+}
+
+.btn_base {
+	flex: 1 0 100%;
+	color: white;
+	background-color: var(--color_primary);
+}
+
+.btn_form {
+	background-color: white;
+	transition: all 0.25s ease-in-out;
+
+}
+.btn_form:focus {
+	background-color: var(--bg_color02);
+	border: var(--border_color02);
 }
 .input_default {
 	border: var(--border_color01);
@@ -21,15 +39,14 @@
 
 
 .input_default:focus {
-background-color: var(--bg_color02);
-border: var(--border_color02);
+	background-color: var(--bg_color02);
+	border: var(--border_color02);
 }
 
 
 .btn {
 	border: var(--border_color01);
-	background-color: var(--bg_color02);
-	color: var(--text_color03);
 	border-radius: 0.5rem;
 	padding: 1rem;
+	font-family: var(--font_family_inter);
 }
