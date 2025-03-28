@@ -5,9 +5,9 @@ import Icon from '../../utils/Icon'
 const Nav = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
 	const navLinks = [
-		{ name: 'Rechercher', path: '/route/search', icon: 'search' },
-		{ name: 'Pricing', path: '/route/add', icon: 'plus' },
-		{ name: 'Contact', path: '/auth/check', icon: 'user' }
+		{ name: 'Rechercher', path: '/routes/search', icon: 'search' },
+		{ name: 'Publier un trajet', path: '/routes/publish', icon: 'plus' },
+		{ name: "S'identifier", path: '/auth/check', icon: 'user' }
 	]
 
 	return (
