@@ -1,19 +1,18 @@
 @use '../../components/utils/variables' as v;
 
 #search_traject {
-    .form_group {
-        display: flex;
-        gap: 2rem;
-        @media (max-width: v.$lg_breakpoint) {
-            flex-direction: column;
-        }
-    }
-    form {
-        border: var(--border_color01);
-        padding: 4rem 2rem;
-        border-radius: 0.5rem;
+	form {
+		border: var(--border_color01);
+		padding: 2rem 2rem;
+		border-radius: 0.5rem;
 		display: flex;
 		justify-content: center;
-    }
-   
+	}
+
+	.form_group {
+		display: flex;
+		gap: 2rem;
+	}
+
+
 }

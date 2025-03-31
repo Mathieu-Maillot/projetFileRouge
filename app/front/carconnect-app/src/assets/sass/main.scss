@@ -8,6 +8,7 @@
 @use "./components/ui/nav";
 @use "./pages/home/home";
 @use "./pages/routes/search";
+@use "./pages/routes/publish";
 @use "./pages/auth/check";
 
 .app_container {

@@ -59,7 +59,7 @@ const SearchTraject = () => {
 					<Form
 						formAction={handleSearchTraject}
 						inputCount={3}
-						placeholder={['Departure', "Destination", "Date"]}
+						placeholder={['Ville de départ ', "Ville d'arrivée", "Date"]}
 						inputTypes={['text', 'text', 'date']}
 						inputName={['depart', "arrival", "date"]}
 						buttonName="Search"

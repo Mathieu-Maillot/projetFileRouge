@@ -1,0 +1,23 @@
+@use '../../components/utils/variables' as v;
+
+#publish_traject{
+	
+		.container{
+			display: flex;
+			flex-wrap: wrap;
+		}
+		.container_form{
+			flex-basis: 50%;
+			display: flex;
+			flex-direction: column;
+			gap: 2rem;
+			@media (max-width: v.$lg_breakpoint) {	
+				flex-basis: 100%;
+			}
+		}
+	.form_group{
+		display: flex;
+		flex-direction: column;
+		gap:2rem;
+	}
+}
