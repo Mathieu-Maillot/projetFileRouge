@@ -39,7 +39,7 @@ const Check = () => {
 	return (
 		<>
 
-			<section id="check">
+			<div id="check">
 				<div className="container">
 					<div className="container_check pad2">
 						<div className="flex">
@@ -59,14 +59,14 @@ const Check = () => {
 										{<p className='text_size02'>{text.subtitle}</p>}
 									</div>
 								</div>
-								<Form formClass="a_center" formAction={handleCheck} inputCount={1} placeholder={["example@gmail.com"]} inputTypes={['email']} inputName={['email']} buttonName="Valider" btnClass="btn btn_base" />
+								<Form formClass="a_center" formAction={handleCheck} inputCount={1} placeholder={["example@gmail.com"]} inputTypes={['email']} inputName={['email']} buttonName="Prochaine étape" btnClass="btn btn_base" />
 							</div>
 						</div>
 					</div >
 					<div className="container_content">
 					</div>
 				</div >
-			</section >
+			</div >
 
 		</>
 	)
