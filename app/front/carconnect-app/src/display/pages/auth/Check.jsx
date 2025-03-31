@@ -4,7 +4,8 @@ import { useLocation } from 'react-router-dom'
 import { useState } from 'react'
 
 const Check = () => {
-	const handleCheck = () => {
+	const handleCheck = (e) => {
+		e.preventDefault();
 		console.log('searching traject')
 	}
 	const location = useLocation();
@@ -58,7 +59,7 @@ const Check = () => {
 										{<p className='text_size02'>{text.subtitle}</p>}
 									</div>
 								</div>
-								<Form formAction={handleCheck} inputCount={1} placeholder={["example@gmail.com"]} inputTypes={['email']} inputName={['email']} buttonName="Valider" btnClass="btn btn_base" />
+								<Form formClass="a_center" formAction={handleCheck} inputCount={1} placeholder={["example@gmail.com"]} inputTypes={['email']} inputName={['email']} buttonName="Valider" btnClass="btn btn_base" />
 							</div>
 						</div>
 					</div >

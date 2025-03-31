@@ -11,8 +11,10 @@
 @use "./pages/auth/check";
 
 .app_container {
+	max-width: 80vw;
 	display: flex;
 	flex-direction: column;
+	margin: 0 auto;
 }
 .lyt_container{
 	max-width: 80vw;
@@ -27,6 +29,9 @@
 	gap: 4rem;
 }
 
+section{
+	margin-top: 8rem;
+}
 
 .container_responsive {
 	@include mixins.flex_res(initial, center, column, row)
