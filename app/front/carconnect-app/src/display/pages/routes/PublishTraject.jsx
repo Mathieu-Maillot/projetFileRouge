@@ -45,6 +45,7 @@ const PublishTraject = () => {
 							</p>
 						</div>
 						<Form
+							title="Publier"
 							formAction={handlePublishTraject}
 							inputCount={3}
 							placeholder={['Ville de départ ', "Ville d'arrivée", "Date"]}

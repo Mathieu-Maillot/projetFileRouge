@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Input from '../helpers/Input';
 import Button from '../helpers/Button';
-const Form = ({ formAction, inputName, inputCount, inputTypes, buttonName, btnClass, placeholder, children, formClass}) => {
+const Form = ({ title,formAction, inputName, inputCount, inputTypes, buttonName, btnClass, placeholder, children, formClass}) => {
 	const [data, setData] = useState({});
 
 	const inputs = Array.from({ length: inputCount }, (_, index) => (
@@ -12,6 +12,7 @@ const Form = ({ formAction, inputName, inputCount, inputTypes, buttonName, btnCl
 	return (
 		<>
 			<form action={formAction} className={formClass}>
+				<h1>{title}</h1>
 				<div className="form_group">
 					{inputs}
 					{children}
