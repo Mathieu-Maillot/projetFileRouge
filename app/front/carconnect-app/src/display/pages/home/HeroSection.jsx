@@ -1,11 +1,35 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Form from '../../components/utils/Form'
 import Icon from '../../components/utils/Icon'
+import Dropdown from '../../components/utils/Dropdown'
 
 const HeroSection = () => {
-
+	const [isMobile, setIsMobile] = useState(false);
+	const [activeMenu, setActiveMenu] = useState(false);
+	const [nbrPassenger, setNbrPassenger] = useState(1);
 	const handleSearchTraject = () => {
-		console.log('searching traject')
+		console.log('searching trajectory')
+	}
+
+	const handleButtonForm = () => {
+		return (
+			<div className="form_element relative">
+				<button
+					type='button'
+					onClick={() => setActiveMenu(!activeMenu)}
+					className='btn btn_form'
+					style={{width:'100%' , textAlign:'left'}}
+				>
+					{nbrPassenger} {nbrPassenger <= 1 ? "Passager" : "Passagers"}
+				</button>
+				<Dropdown
+					activeMenu={activeMenu}
+					setActiveMenu={setActiveMenu}
+					nbrPassenger={nbrPassenger}
+					setNbrPassenger={setNbrPassenger}
+				/>
+			</div>
+		)
 	}
 	return (
 		<section id='hero'>
@@ -23,7 +47,15 @@ const HeroSection = () => {
 						<p className='text_color02'>Trouvez rapidement votre trajet idéal pour aller d'un point A à un point B en quelques clics. Économisez sur vos déplacements tout en réduisant votre empreinte carbone grâce à notre service de covoiturage simple et efficace.
 						</p>
 					</div>
-					<Form formAction={handleSearchTraject} inputCount={4} placeholder={['Départ', "Destination", "Date", "1 Passager"]} inputTypes={['text', 'text', 'date', 'text']} inputName={['depart', "arrival", "date", "userNbr"]} buttonName="Rechercher" btnClass="btn btn_base" />
+					<Form
+						formAction={handleSearchTraject}
+						inputCount={3}
+						placeholder={['Départ', "Destination", "Date"]}
+						inputTypes={['text', 'text', 'date']} inputName={['depart', "arrival", "date"]}
+						buttonName="Rechercher"
+						btnClass="btn btn_base"
+						children={handleButtonForm()}
+					/>
 				</div>
 			</div>
 			<div className="container_features">
