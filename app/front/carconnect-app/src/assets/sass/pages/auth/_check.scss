@@ -2,6 +2,7 @@
 
 
 #check {
+	
 	width: 100%;
 	height: 100vh;
 	.form_group{
@@ -13,6 +14,15 @@
 		width: 100%;
 		object-fit:cover;
 		height: 100%;
+	}
+	.container_content{
+		background-color: #f7f7f7;
+		.wrapper{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100%;
+		}
 	}
 	.element_svg{
 		display: flex;

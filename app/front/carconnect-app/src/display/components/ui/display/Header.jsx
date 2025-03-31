@@ -3,6 +3,7 @@ import Icon from '../../utils/Icon'
 import AppContainer from '../../../AppContainer'
 import Nav from './Nav'
 import { useNavigate } from 'react-router-dom'
+import Logo from './Logo'
 
 const Header = () => {
 	const navigate = useNavigate();
@@ -11,10 +12,7 @@ const Header = () => {
 			<header id="header">
 				<div className="lyt_container h_100">
 					<div className="flex between h_100 a_center">
-
-						<div className="flex a_center h_100" onClick={() => navigate("/")}>
-							<h1><strong className='color_primary'>Car</strong>Connect</h1>
-						</div>
+						<Logo />
 						<Nav />
 					</div>
 				</div>

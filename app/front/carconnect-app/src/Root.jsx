@@ -10,38 +10,38 @@ import Check from './display/pages/auth/Check';
 
 const AppRoutes = () => {
 	const location = useLocation();
+	const isAuthRoute = location.pathname.startsWith("/auth");
 
 	return (
 		<>
-			{!location.pathname.startsWith("/auth") && <Header />}
-			{!location.pathname.startsWith("/auth") ? (
+			{!isAuthRoute && <Header />}
+
+			{isAuthRoute ? (
+				<Routes>
+					<Route path="/auth/check" element={<Check />} />
+					<Route path="/auth/login" element={<Check />} />
+					<Route path="/auth/register" element={<Check />} />
+					<Route path="*" element={<App />} />
+				</Routes>
+			) : (
 				<AppContainer>
 					<Routes>
-						<Route exact path="/" element={<App />} />
-						<Route exact path="/routes/search" element={<SearchTraject />} />
-						<Route exact path="/routes/publish" element={<PublishTraject />} />
-						<Route exact path="/auth/check" element={<Check />} />
+						<Route path="/" element={<App />} />
+						<Route path="/routes/search" element={<SearchTraject />} />
+						<Route path="/routes/publish" element={<PublishTraject />} />
 					</Routes>
 				</AppContainer>
-			) : (
-				<Routes>
-					<Route exact path="/" element={<App />} />
-					<Route exact path="/routes/search" element={<SearchTraject />} />
-					<Route exact path="/routes/publish" element={<PublishTraject />} />
-					<Route exact path="/auth/check" element={<Check />} />
-				</Routes>
 			)}
+
 			<Footer />
 		</>
 	);
 };
 
-const Root = () => {
-	return (
-		<BrowserRouter>
-			<AppRoutes />
-		</BrowserRouter>
-	);
-};
+const Root = () => (
+	<BrowserRouter>
+		<AppRoutes />
+	</BrowserRouter>
+);
 
 export default Root;

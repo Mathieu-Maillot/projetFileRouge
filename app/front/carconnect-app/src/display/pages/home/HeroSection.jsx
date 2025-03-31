@@ -15,7 +15,14 @@ const HeroSection = () => {
 						<img src="/images/illustration-01.jpg" alt="placeholder" />
 					</div>
 				</div>
-				<div className="container">
+				<div className="container flex column gap2">
+					<div className="element">
+						<h1>Votre recherche</h1>
+					</div>
+					<div className="element">
+						<p className='text_color02'>Trouvez rapidement votre trajet idéal pour aller d'un point A à un point B en quelques clics. Économisez sur vos déplacements tout en réduisant votre empreinte carbone grâce à notre service de covoiturage simple et efficace.
+						</p>
+					</div>
 					<Form formAction={handleSearchTraject} inputCount={4} placeholder={['Départ', "Destination", "Date", "1 Passager"]} inputTypes={['text', 'text', 'date', 'text']} inputName={['depart', "arrival", "date", "userNbr"]} buttonName="Rechercher" btnClass="btn btn_base" />
 				</div>
 			</div>

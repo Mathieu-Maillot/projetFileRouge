@@ -3,10 +3,13 @@
 #hero {
 	display: flex;
 	flex-direction: column;
-	gap: 4rem;
+	gap: 8rem;
 	.container_whole {
 		gap: 4rem;
 		@include mixins.flex_res(initial, space-between, column, row);
+		p{
+			font-size: calc(1.2rem + 0.2vw);
+		}
 	}
 	.container_features{
 		display: flex;
