@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Security.Principal;
+using CarConnectAPI.Models.Enums;
 
 namespace CarConnectAPI.Models.Users
 {
@@ -11,12 +12,18 @@ namespace CarConnectAPI.Models.Users
         public string? Lastname { get; set; }
         [Required]
         public string? PhoneNumber { get; set; }
-        public bool IsDriver { get; set; }
-        public bool IsPassenger { get; set; }
+
+        public DateTime BirthDate { get; set; } 
+        public Gender Gender   {  get; set; }
+
+        public int? Age { get; set; } 
+        public string? Role { get; set; } = "user";
+
         public Vehicle Vehicle { get; set; } = new();
-        public Account Account { get; set; } = new();
         public List<Review> Reviews { get; set; } = [];
-        public List<Message> Messages { get; set; } = [];
-        public List<Booking> Bookings { get; set; } = [];
+
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
+
     }
 }
