@@ -73,7 +73,7 @@ const Check = () => {
 					</div >
 					<div className="container_content">
 						<div className="wrapper">
-							<img src="\images\illustration-check.jpg" alt="" />
+							<img src="\images\illustration-07.webp" alt="" />
 						</div>
 					</div>
 				</div >

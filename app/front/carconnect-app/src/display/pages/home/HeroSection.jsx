@@ -36,7 +36,7 @@ const HeroSection = () => {
 			<div className="container_whole">
 				<div className="container_image">
 					<div className="wrapper">
-						<img src="/images/illustration-01.jpg" alt="placeholder" />
+						<img src="/images/illustration-01.webp" alt="placeholder" />
 					</div>
 				</div>
 				<div className="container flex column gap2">
