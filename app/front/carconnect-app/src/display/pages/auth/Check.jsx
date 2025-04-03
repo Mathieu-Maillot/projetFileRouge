@@ -6,7 +6,7 @@ import Logo from '../../components/ui/display/Logo'
 import AuthManagement from '../../../data/auth/AuthManagement'
 import Icon from '../../components/utils/Icon'
 const Check = () => {
-	const { handleCheck, handleLogin, handleRegister } = AuthManagement()
+	const { handleCheck, handleLogin, handleRegister } = AuthManagement();
 	const location = useLocation();
 	const navigate = useNavigate();
 	const pathCheck = location.pathname === '/auth/check';
@@ -31,7 +31,7 @@ const Check = () => {
 		}
 		else {
 			setText({
-				title: 'Bon retour',
+				title: 'Connexion',
 				subtitle: 'Entrer votre adresse email et votre mot de passe pour vos connecter.'
 			})
 		}
@@ -61,13 +61,13 @@ const Check = () => {
 								</div>
 								{pathCheck && <Form formAction={handleCheck} inputCount={1} placeholder={["example@gmail.com"]} inputTypes={['email']} inputName={['email']} buttonName="Prochaine étape" btnClass="btn btn_base" />}
 								{pathLogin && <Form formAction={handleLogin} inputCount={2} placeholder={["example@gmail.com", "mot de passe"]} inputTypes={['email', "password"]} inputName={['email, password']} buttonName="Se connecter" btnClass="btn btn_base" />}
-								{pathRegister && <Form formAction={handleRegister} inputCount={4} placeholder={["example@gmail.com", "Nom d'utilisateur", "mot de passe", "confirmation mot de passe"]} inputTypes={['email', 'text', 'password', 'password']} inputName={['email', 'username', 'password', 'c_password']} buttonName="S'enregistrer" btnClass="btn btn_base" />}
+								{pathRegister && <Form formAction={handleRegister} inputCount={4} placeholder={["example@gmail.com", "Nom d'utilisateur", "mot de passe", "confirmer mot de passe"]} inputTypes={['email', 'text', 'password', 'password']} inputName={['email', 'username', 'password', 'c_password']} buttonName="S'enregistrer" btnClass="btn btn_base" />}
 							</div>
 
 						</div>
 						<div className="flex a_center j_center">
 							<div className="element">
-								<Icon type="arrowl" size="5rem" action={() => navigate(-1)}/>
+								<Icon type="arrowl" size="5rem" action={() => navigate(-1)} />
 							</div>
 						</div>
 					</div >

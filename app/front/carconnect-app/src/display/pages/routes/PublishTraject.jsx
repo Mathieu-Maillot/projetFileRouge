@@ -38,7 +38,7 @@ const PublishTraject = () => {
 
 					<div className="container_form">
 						<div className="element">
-							<h1>Publier un trajet</h1>
+							<h1>Prenez votre route en main !</h1>
 						</div>
 						<div className="element">
 							<p className='text_color02'>Partagez votre voyage et réduisez vos frais de transport ! Indiquez votre trajet, la date et le nombre de places disponibles dans votre véhicule. Voyagez ensemble, économisez et réduisez votre empreinte carbone.
@@ -57,7 +57,10 @@ const PublishTraject = () => {
 						/>
 					</div>
 					<div className="container_content">
+						<div className="wrapper">
+							<img className='images' src="\images\illustration-08.webp" alt="" />
 
+						</div>
 					</div>
 				</div>
 			</section>

@@ -1,28 +1,47 @@
 @use '../../components/utils/variables' as v;
 
-#publish_traject{
-		form{
-			display: flex;
-			flex-direction: column;
-			gap: 2rem;
-			max-width: 30rem;
-		}
-		.container{
-			display: flex;
-			flex-wrap: wrap;
-		}
-		.container_form{
-			flex-basis: 50%;
-			display: flex;
-			flex-direction: column;
-			gap: 2rem;
-			@media (max-width: v.$lg_breakpoint) {	
-				flex-basis: 100%;
-			}
-		}
-	.form_group{
+#publish_traject {
+	form {
 		display: flex;
 		flex-direction: column;
-		gap:2rem;
+		gap: 2rem;
+		max-width: 30rem;
+	}
+
+	.container {
+		display: flex;
+		gap: 4rem;
+		@media (max-width: v.$lg_breakpoint) {
+			flex-direction: column;
+		}
+	}
+
+	.container_form {
+		flex-basis: 40%;
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+
+		@media (max-width: v.$lg_breakpoint) {
+			flex-basis: 100%;
+		}
+	}
+
+	.container-content {
+		flex-basis: 40%;
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+
+		@media (max-width: v.$lg_breakpoint) {
+			flex-basis: 100%;
+		}
+	
+	}
+
+	.form_group {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
 	}
 }

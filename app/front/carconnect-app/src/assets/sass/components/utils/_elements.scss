@@ -48,6 +48,7 @@
 	border: var(--border_color01);
 	border-radius: 0.5rem;
 	padding: 1rem;
+	cursor: pointer;
 	font-family: var(--font_family_inter);
 }
 
@@ -112,4 +113,9 @@ form {
 	border-radius: 0.5rem;
 	display: flex;
 	justify-content: center;
+}
+
+.images{
+	width: 100%;
+	height: auto;
 }

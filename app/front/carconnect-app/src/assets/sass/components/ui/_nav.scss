@@ -46,38 +46,36 @@
 	border: none;
 	cursor: pointer;
 }
-
 @media (max-width: v.$lg_breakpoint) {
-	.menu-button {
-		display: block;
-	}
+    .menu-button {
+        display: block;
+    }
 
-	.nav-links {
-        visibility: hidden;
-        opacity: 0;
-        flex-direction: column;
+    .nav-links {
         position: fixed;
-        border: var(--border_color01);
-        padding: 2rem;
         right: 0;
         top: 0;
         bottom: 0;
         width: 250px;
         background: white;
+        border: var(--border_color01);
+        padding: 2rem;
         z-index: 1;
+        flex-direction: column;
         transform: translateX(100%);
-        transition: transform 0.8s ease;
+        transition: transform 0.4s ease;
+        pointer-events: none;
         
-		li {
-			width: 100%;
-		}
-	}
+        li {
+            width: 100%;
+        }
+    }
 
-	.nav-links.open {
-		visibility: visible;
-        opacity: 1;
+    .nav-links.open {
         transform: translateX(0);
-	}
+        pointer-events: all;
+    }
+
 	.nav-links:not(.open) {
         transition: transform 0.8s ease, opacity 0.8s ease, visibility 0s 0.8s;
 	}
