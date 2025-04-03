@@ -7,9 +7,9 @@ namespace CarConnectAPI.Models.Users
     public class User : UserBase
     {
         [Required]
-        public string? Firstname { get; set; }
+        public string? FirstName { get; set; }
         [Required] 
-        public string? Lastname { get; set; }
+        public string? LastName { get; set; }
         [Required]
         public string? PhoneNumber { get; set; }
 

@@ -1,20 +1,18 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using CarConnectAPI.Models.Users;
 using MongoDB.Driver;
 
 namespace CarConnectAPI.Data
 {
     public class ApplicationDbContext
     {
+        public IMongoCollection<User> Users { get; set; }
         private readonly IMongoDatabase _db;
 
         public ApplicationDbContext(string connectionString, string databaseName)
         {
-            // create an instance of the MongoDB client and connects to the database
             var client = new MongoClient(connectionString);
             _db = client.GetDatabase(databaseName);
+            Users = _db.GetCollection<User>("Users");
         }
-
-        //Example to access at a collection in the database
-        //public IMongoCollection<Entity> MyEntities => _db.GetCollection<Entity>("MyEntities")
     }
 }

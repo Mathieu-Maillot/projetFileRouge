@@ -10,6 +10,5 @@
         public double Duration { get; set; } 
         public string? Notes { get; set; }
     }
-    {
-    }
+ 
 }
