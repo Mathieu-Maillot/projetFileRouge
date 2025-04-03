@@ -2,10 +2,13 @@
 
 #publish_traject {
 	form {
+		border: var(--border_color01);
+		padding: 2rem 2rem;
+		border-radius: 0.5rem;
 		display: flex;
-		flex-direction: column;
 		gap: 2rem;
-		max-width: 30rem;
+		flex-direction: column;
+		justify-content: center;
 	}
 
 	.container {

@@ -11,6 +11,7 @@ const Check = () => {
 	const navigate = useNavigate();
 	const pathCheck = location.pathname === '/auth/check';
 	const pathRegister = location.pathname === '/auth/register';
+	const pathDriver = location.pathname === '/auth/driver';
 	const pathLogin = location.pathname === '/auth/login';
 	const [text, setText] = useState({
 		title: 'Bienvenue',
@@ -27,6 +28,12 @@ const Check = () => {
 			setText({
 				title: 'Bienvenue',
 				subtitle: 'Entrer vos informations pour enregistrer un compte.'
+			})
+		}
+		else if (pathDriver) {
+			setText({
+				title: 'Êtes-vous conducteur ?',
+				subtitle: 'Remplisser les informations sur votre véhicule'
 			})
 		}
 		else {
@@ -62,6 +69,7 @@ const Check = () => {
 								{pathCheck && <Form formAction={handleCheck} inputCount={1} placeholder={["example@gmail.com"]} inputTypes={['email']} inputName={['email']} buttonName="Prochaine étape" btnClass="btn btn_base" />}
 								{pathLogin && <Form formAction={handleLogin} inputCount={2} placeholder={["example@gmail.com", "mot de passe"]} inputTypes={['email', "password"]} inputName={['email, password']} buttonName="Se connecter" btnClass="btn btn_base" />}
 								{pathRegister && <Form formAction={handleRegister} inputCount={4} placeholder={["example@gmail.com", "Nom d'utilisateur", "mot de passe", "confirmer mot de passe"]} inputTypes={['email', 'text', 'password', 'password']} inputName={['email', 'username', 'password', 'c_password']} buttonName="S'enregistrer" btnClass="btn btn_base" />}
+								{pathDriver && <Form formAction={handleRegister} inputCount={3} placeholder={["Modèle", "Marque", "Nombre de sièges"]} inputTypes={['text', 'text', 'number']} inputName={['email', 'username', 'password', 'c_password']} buttonName="S'enregistrer" btnClass="btn btn_base" />}
 							</div>
 
 						</div>

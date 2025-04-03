@@ -21,6 +21,7 @@ const AppRoutes = () => {
 					<Route path="/auth/check" element={<Check />} />
 					<Route path="/auth/login" element={<Check />} />
 					<Route path="/auth/register" element={<Check />} />
+					<Route path="/auth/driver" element={<Check />} />
 					<Route path="*" element={<App />} />
 				</Routes>
 			) : (
