@@ -1,0 +1,6 @@
+@RideMicroservice_HostAddress = http://localhost:5226
+
+GET {{RideMicroservice_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
