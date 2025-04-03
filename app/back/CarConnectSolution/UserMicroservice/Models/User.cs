@@ -14,8 +14,7 @@ namespace UserMicroservice.Models
         public RoleStatus Role { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
-
-        public Vehicle VehicleUser { get; set; } = new Vehicle();
+        public List<Vehicle> VehicleUser { get; set; } = [];
         public List<Review> Reviews { get; set; } = [];
     }
 }
