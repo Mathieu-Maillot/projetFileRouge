@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace BookingMicroService.Controllers;
+namespace BookingMicroservice.Controllers;
 
 [ApiController]
 [Route("[controller]")]
