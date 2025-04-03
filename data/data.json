@@ -1,0 +1,78 @@
+{
+    "users": [
+        {
+			"_id": { "$oid": "605c72ef1532071cba029d5c" },
+            "name": "John Doe",
+            "email": "john.doe@example.com",
+            "password": "hashed_password",
+            "role": "user",  // Peut être "user" ou "admin"
+			"createdAt": { "$date": "2025-04-03T00:00:00Z" },
+            "updatedAt": { "$date": "2025-04-03T00:00:00Z" }
+          }
+    ],
+
+
+    "vehicles" : [
+        {
+            "_id": { "$oid": "605c72ef1532071cba029d6d" },
+            "userId": { "$oid": "605c72ef1532071cba029d6a" },
+            "brand": "Toyota",
+            "model": "Corolla",
+            "capacity": 4,
+            "licensePlate": "ABC1234",
+            "createdAt": { "$date": "2025-04-03T00:00:00Z" },
+            "updatedAt": { "$date": "2025-04-03T00:00:00Z" }
+          }
+    ],
+
+    "rides": [
+        {
+            "_id": { "$oid": "605c72ef1532071cba029d6e" },
+            "departureLocation": "Paris",
+            "arrivalLocation": "Lyon",
+            "departureTime": { "$date": "2025-04-05T09:00:00Z" },
+            "driverId": { "$oid": "605c72ef1532071cba029d6a" },
+            "vehicleId": { "$oid": "605c72ef1532071cba029d6d" },
+            "availableSeats": 3,
+            "createdAt": { "$date": "2025-04-03T00:00:00Z" },
+            "updatedAt": { "$date": "2025-04-03T00:00:00Z" }
+          }
+    ],
+
+    "bookings" : [
+        {
+            "_id": { "$oid": "605c72ef1532071cba029d6f" },
+            "rideId": { "$oid": "605c72ef1532071cba029d6e" },
+            "userId": { "$oid": "605c72ef1532071cba029d6b" },
+            "bookingTime": { "$date": "2025-04-03T12:00:00Z" },
+            "status": "confirmed",
+            "createdAt": { "$date": "2025-04-03T00:00:00Z" },
+            "updatedAt": { "$date": "2025-04-03T00:00:00Z" }
+          }
+    ],
+    
+    "messages" : [
+        {
+            "_id": { "$oid": "605c72ef1532071cba029d70" },
+            "senderId": { "$oid": "605c72ef1532071cba029d6a" },
+            "receiverId": { "$oid": "605c72ef1532071cba029d6b" },
+            "content": "Hello, I would like to join your ride.",
+            "sentAt": { "$date": "2025-04-03T10:00:00Z" },
+            "createdAt": { "$date": "2025-04-03T00:00:00Z" },
+            "updatedAt": { "$date": "2025-04-03T00:00:00Z" }
+          }
+    ],
+
+    "reviews" : [
+        {
+            "_id": { "$oid": "605c72ef1532071cba029d71" },
+            "rideId": { "$oid": "605c72ef1532071cba029d6e" },
+            "userId": { "$oid": "605c72ef1532071cba029d6b" },
+            "rating": 4,
+            "comment": "The ride was very smooth and comfortable.",
+            "createdAt": { "$date": "2025-04-03T00:00:00Z" },
+            "updatedAt": { "$date": "2025-04-03T00:00:00Z" }
+          }
+    ]
+}
+
