@@ -2,25 +2,24 @@
 using MongoDB.Bson;
 using UserMicroservice.Models;
 
-namespace UserMicroservice.Services.Interfaces
+namespace UserMicroservice.Repositories.Interface
 {
-    public interface IUserService<T, Tid> where T : class
+    public interface IRepository <T,Tid> where T : class
     {
-        Task<T> CreateUserAsync(T user);
+        Task<T> CreateAsync(T entity);
+        Task<T?> GetByIdAsync(Tid id);
         Task<IEnumerable<T>> GetAllAsync();
         Task<IEnumerable<T>> GetAllAsync(Expression<Func<T, bool>> predicate);
-        Task<T?> GetUserByIdAsync(Tid id);
-        Task<T?> GetUserAsync(Expression<Func<T, bool>> predicate);
-        Task<T?> UpdateUserAsync(T user);
-        Task<bool> DeleteUserAsync(Tid id);
-        
-        //Vehicle Services
-        Task CreateVehicleForUserAsync(Tid userID, Vehicle userVehicle);
+        Task<T?> GetAsync(Expression<Func<T, bool>> predicate);
+        Task<T?> UpdateAsync(T entity);
+        Task<bool> DeleteAsync(Tid id);
+
+        //Vehicle Methods
+        Task CreateVehicleForUserAsync(Tid userId, Vehicle userVehicle);
         Task<IEnumerable<Vehicle>> GetVehiclesForUserAsync(Tid userId);
         Task UpdateVehicleForUserAsync(Tid userId, Vehicle userVehicle);
         Task DeleteVehicleForUserAsync(Tid userId, Tid vehicleId);
 
-        //Review Services
         //Review Methods
         Task CreateReviewForUserAsync(Tid userId, Review review);
         Task<IEnumerable<Review>> GetReviewForUserAsync(Tid userId);

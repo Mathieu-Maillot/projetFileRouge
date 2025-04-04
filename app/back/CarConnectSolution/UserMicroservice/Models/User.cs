@@ -1,4 +1,5 @@
 ﻿using MongoDB.Bson;
+using UserMicroservice.Models.Enums;
 
 namespace UserMicroservice.Models
 {

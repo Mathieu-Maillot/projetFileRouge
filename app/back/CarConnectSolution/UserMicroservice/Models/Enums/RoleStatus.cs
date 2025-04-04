@@ -1,4 +1,4 @@
-﻿namespace UserMicroservice.Models
+﻿namespace UserMicroservice.Models.Enums
 {
     public enum RoleStatus
     {
