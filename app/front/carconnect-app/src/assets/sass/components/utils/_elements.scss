@@ -54,11 +54,14 @@
 	font-family: var(--font_family_inter);
 }
 .btn_success{
-	background-color : var(--color_success);
+	background-color : var(--color_primary);
+	border : var(--border_color02);
+	color: white;
 }
 .btn_close{
 	background-color: var(--color_cancel);
-	color : white;
+	color : black;
+	border:var(--border_color02);
 }
 .dropdown {
 	position: absolute;
@@ -128,6 +131,7 @@
 	position: absolute;
 	left: 0;
 	right: 0;
+	z-index: 3;
 	padding: 1rem;
 	background-color: white;
 	border: var(--border_color01);

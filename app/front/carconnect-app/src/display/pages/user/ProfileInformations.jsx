@@ -17,10 +17,14 @@ const ProfileInformations = ({ user }) => {
 				<FormButton
 					title="Informations personnelles"
 					buttonName="Informations personnelles"
-					inputCount={4}
-					placeholder={["Adresse email", "Prénom", "Nom", "Date de naissance"]}
-					inputTypes={['email', 'text', 'text', 'date']}
-					inputName={['email', 'firstName', 'lastName', 'birthdate']}
+					inputCount={6}
+					placeholder={["Adresse email", "Prénom", "Nom", "Dâte de naissance", "Genre", "Conducteur"]}
+					inputTypes={['email', 'text', 'text', 'date', 'text', 'text']}
+					inputName={['email', 'firstName', 'lastName', 'birthdate','gender', 'driver']}
+					selectCount={1}
+					isGenderField={true}
+					selectOptions={[['Homme', 'Femme', 'Ne se prononce pas']]}
+					selectName={['gender']}
 					userData={user}
 					onSave={handleSaveProfile}
 				/>
@@ -29,39 +33,27 @@ const ProfileInformations = ({ user }) => {
 					title="Securité"
 					buttonName="Changer le mot de passe"
 					inputCount={1}
-					placeholder={["New Password"]}
+					placeholder={["Nouveau mot de passe"]}
 					inputTypes={['password']}
-					inputName={[ 'newPassword']}
+					inputName={['newPassword']}
 					userData={{}}
 					onSave={handleSaveProfile}
 				/>
 
 				<FormButton
-					title="Gender"
-					buttonName="Gender Information"
-					inputCount={1}
-					placeholder={["Gender"]}
-					inputTypes={['text']}
-					inputName={['gender']}
-					userData={{ gender: user?.gender || '' }}
-					onSave={handleSaveProfile}
-				/>
-
-				{/* Address Information (if applicable) */}
-				<FormButton
-					title="Address"
-					buttonName="Address Information"
-					inputCount={3}
-					placeholder={["Street", "City", "Postal Code"]}
-					inputTypes={['text', 'text', 'text']}
-					inputName={['street', 'city', 'postalCode']}
+					title="Informations"
+					buttonName="Informations Complémentaires"
+					inputCount={2}
+					placeholder={[ "Ville", "Code postal"]}
+					inputTypes={[ 'text', 'text']}
+					inputName={['city', 'postalCode']}
 					userData={{
-						street: user?.address?.street || '',
-						city: user?.address?.city || '',
-						postalCode: user?.address?.postalCode || ''
+						city: user?.city || '',
+						postalCode: user?.postalCode || ''
 					}}
 					onSave={handleSaveProfile}
 				/>
+				
 			</div>
 		</>
 	)
