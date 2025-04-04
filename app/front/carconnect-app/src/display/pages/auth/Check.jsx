@@ -68,8 +68,30 @@ const Check = () => {
 								</div>
 								{pathCheck && <Form formAction={handleCheck} inputCount={1} placeholder={["example@gmail.com"]} inputTypes={['email']} inputName={['email']} buttonName="Prochaine étape" btnClass="btn btn_base" />}
 								{pathLogin && <Form formAction={handleLogin} inputCount={2} placeholder={["example@gmail.com", "mot de passe"]} inputTypes={['email', "password"]} inputName={['email, password']} buttonName="Se connecter" btnClass="btn btn_base" />}
-								{pathRegister && <Form formAction={handleRegister} inputCount={4} placeholder={["example@gmail.com", "Nom d'utilisateur", "mot de passe", "confirmer mot de passe"]} inputTypes={['email', 'text', 'password', 'password']} inputName={['email', 'username', 'password', 'c_password']} buttonName="S'enregistrer" btnClass="btn btn_base" />}
-								{pathDriver && <Form formAction={handleRegister} inputCount={3} placeholder={["Modèle", "Marque", "Nombre de sièges"]} inputTypes={['text', 'text', 'number']} inputName={['email', 'username', 'password', 'c_password']} buttonName="S'enregistrer" btnClass="btn btn_base" />}
+								{pathLogin &&
+									<>
+										<div className="element_column gap1">
+											<p className='text_link' onClick={() => navigate("/auth/forgotpassword")}>Mot de passe oublié ?</p>
+											<p className='text_link' onClick={() => navigate("/auth/register")}>Pas encore de compte ?</p>
+										</div>
+
+
+									</>}
+								{pathRegister && <Form
+									formAction={handleRegister}
+									inputCount={6}
+									selectCount={1}
+									selectOptions={[['Homme', 'Femme', 'Ne se prononce pas']]}
+									selectName={['gender']}
+									placeholder={["example@gmail.com", "Nom d'utilisateur", "mot de passe", "confirmer mot de passe", 'Date de naissance', 'Téléphone']}
+									inputTypes={['email', 'text', 'password', 'password', 'date', 'tel']}
+									inputName={['email', 'username', 'password', 'c_password', ' birthdate', 'phone']}
+									buttonName="Prochaine étape"
+									btnClass="btn btn_base"
+								/>}
+								{pathDriver && <Form formAction={handleRegister} inputCount={3} placeholder={["Modèle", "Marque", "Nombre de sièges"]} inputTypes={['text', 'text', 'number']} inputName={['email', 'username', 'password', 'c_password']} buttonName="Finaliser l'enregistrement" btnClass="btn btn_base" />}
+								{pathDriver && <p className='text_link'>Ignorer cette étape ?</p>}
+
 							</div>
 
 						</div>

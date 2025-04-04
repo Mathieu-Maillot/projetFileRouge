@@ -10,6 +10,7 @@
 @use "./pages/routes/search";
 @use "./pages/routes/publish";
 @use "./pages/auth/check";
+@use "./pages/user/profile";
 
 .app_container {
 	max-width: 80vw;

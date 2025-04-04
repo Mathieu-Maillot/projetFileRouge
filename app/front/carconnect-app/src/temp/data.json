@@ -1,0 +1,74 @@
+[
+    {
+      "_id": { "$oid": "605c72ef1532071cba029d60" },
+      "firstName": "Alice",
+      "lastName": "Martin",
+      "email": "alice.martin@example.com",
+      "password": "hashed_password_1",
+      "age": 25,
+      "role": "user",
+      "createdAt": { "$date": "2025-04-03T00:00:00Z" },
+      "updatedAt": { "$date": "2025-04-03T00:00:00Z" },
+      "vehicule": null,
+      "Review": []
+    },
+    {
+      "_id": { "$oid": "605c72ef1532071cba029d61" },
+      "firstName": "David",
+      "lastName": "Bernard",
+      "email": "david.bernard@example.com",
+      "password": "hashed_password_2",
+      "age": 45,
+      "role": "admin",
+      "createdAt": { "$date": "2025-04-02T00:00:00Z" },
+      "updatedAt": { "$date": "2025-04-03T00:00:00Z" },
+      "vehicule": null,
+      "Review": []
+    },
+    {
+      "_id": { "$oid": "605c72ef1532071cba029d62" },
+      "firstName": "Clara",
+      "lastName": "Dubois",
+      "email": "clara.dubois@example.com",
+      "password": "hashed_password_3",
+      "age": 32,
+      "role": "driver",
+      "createdAt": { "$date": "2025-04-01T00:00:00Z" },
+      "updatedAt": { "$date": "2025-04-03T00:00:00Z" },
+      "vehicule": {
+        "brand": "Renault",
+        "model": "Clio",
+        "capacity": 4,
+        "createdAt": { "$date": "2025-04-01T00:00:00Z" },
+        "updatedAt": { "$date": "2025-04-03T00:00:00Z" }
+      },
+      "Review": [
+        {
+          "userId": { "$oid": "605c72ef1532071cba029d60" },
+          "rating": 5,
+          "comment": "Très bonne conduite, ponctuelle et sympathique.",
+          "createdAt": { "$date": "2025-04-03T00:00:00Z" },
+          "updatedAt": { "$date": "2025-04-03T00:00:00Z" }
+        }
+      ]
+    },
+    {
+      "_id": { "$oid": "605c72ef1532071cba029d63" },
+      "firstName": "Hugo",
+      "lastName": "Lefevre",
+      "email": "hugo.lefevre@example.com",
+      "password": "hashed_password_4",
+      "age": 28,
+      "role": "driver",
+      "createdAt": { "$date": "2025-04-03T00:00:00Z" },
+      "updatedAt": { "$date": "2025-04-03T00:00:00Z" },
+      "vehicule": {
+        "brand": "Peugeot",
+        "model": "208",
+        "capacity": 3,
+        "createdAt": { "$date": "2025-04-03T00:00:00Z" },
+        "updatedAt": { "$date": "2025-04-03T00:00:00Z" }
+      },
+      "Review": []
+    }
+]

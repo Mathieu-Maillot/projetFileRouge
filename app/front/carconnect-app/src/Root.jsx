@@ -7,6 +7,7 @@ import Header from './display/components/ui/display/Header';
 import SearchTraject from './display/pages/routes/SearchTraject';
 import PublishTraject from './display/pages/routes/PublishTraject';
 import Check from './display/pages/auth/Check';
+import Profile from './display/pages/user/Profile';
 
 const AppRoutes = () => {
 	const location = useLocation();
@@ -22,12 +23,15 @@ const AppRoutes = () => {
 					<Route path="/auth/login" element={<Check />} />
 					<Route path="/auth/register" element={<Check />} />
 					<Route path="/auth/driver" element={<Check />} />
-					<Route path="*" element={<App />} />
 				</Routes>
 			) : (
 				<AppContainer>
 					<Routes>
 						<Route path="/" element={<App />} />
+						<Route path="/user/profile" element={<Profile />} />
+						<Route path="/user/profile/informations" element={<Profile />} />
+						<Route path="/user/profile/marks" element={<Profile />} />
+						<Route path="/user/profile/messages" element={<Profile />} />
 						<Route path="/routes/search" element={<SearchTraject />} />
 						<Route path="/routes/publish" element={<PublishTraject />} />
 					</Routes>

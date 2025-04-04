@@ -20,10 +20,12 @@
 	transition: all 0.25s ease-in-out;
 
 }
+
 .btn_form:focus {
 	background-color: var(--bg_color02);
 	border: var(--border_color02);
 }
+
 .input_default {
 	border: var(--border_color01);
 	border-radius: 0.5rem;
@@ -82,6 +84,7 @@
 		opacity: 0;
 		transition: all 0.25s;
 		transition-behavior: allow-discrete;
+
 		&.active {
 			transform: translateY(0);
 			opacity: 1;
@@ -102,14 +105,39 @@
 		}
 	}
 }
+
 .disabled {
 	display: none;
-	
+
 }
-	
 
 
-.images{
+
+.images {
 	width: 100%;
 	height: auto;
+}
+
+.option_default {
+	position: absolute;
+	left: 0;
+	right: 0;
+	padding: 1rem;
+	background-color: white;
+	border: var(--border_color01);
+	border-radius: 0.5rem;
+	box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+	.option_item{
+		cursor: pointer;
+		transition: all 0.125s ease-in-out;
+		&:hover{
+			background-color: var(--bg_color03);
+		}
+	}
+}
+
+.text_link{
+	text-decoration: underline;
+	color : var(--text_link);
+	cursor: pointer;
 }

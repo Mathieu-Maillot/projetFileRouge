@@ -32,7 +32,7 @@ const Nav = () => {
 				{navLinks.map((link, index) => (
 					<li key={index}>
 						<NavLink to={link.path} className='nav-item flex a_center gap1'> 
-							<Icon type={link.icon} size='2rem' />
+							<Icon type={link.icon} size='1.5rem' />
 							<p className="nav-text">{link.name}</p> 
 						</NavLink>
 					</li>
