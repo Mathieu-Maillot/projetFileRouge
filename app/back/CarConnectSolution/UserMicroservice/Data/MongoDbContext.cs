@@ -23,7 +23,7 @@ namespace UserMicroservice.Data
                                  .Find(u => u.Id == userId)
                                  .FirstOrDefault();
 
-            return User?.Review ?? new List<Review>();
+            return users?.Reviews ?? new List<Review>();
         }
     }
 }

@@ -52,6 +52,6 @@ namespace UserMicroservice.DTOs.Users
         [Required]
         public string? Address { get; set; }
 
-        public RoleStatus Role { get; set; } = 0;
+        public RoleStatus Role { get; set; } = RoleStatus.user;
     }
 }
