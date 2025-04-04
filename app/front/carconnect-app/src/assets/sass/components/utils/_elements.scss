@@ -53,7 +53,13 @@
 	cursor: pointer;
 	font-family: var(--font_family_inter);
 }
-
+.btn_success{
+	background-color : var(--color_success);
+}
+.btn_close{
+	background-color: var(--color_cancel);
+	color : white;
+}
 .dropdown {
 	position: absolute;
 	width: auto;

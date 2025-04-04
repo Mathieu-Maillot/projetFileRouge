@@ -3,6 +3,7 @@
 @use "./components/utils/mixins" as mixins;
 @use "./components/utils/classes";
 @use "./components/utils/elements";
+@use "./components/utils/modal";
 @use "./components/utils/variables";
 @use "./components/ui/header";
 @use "./components/ui/nav";
@@ -34,6 +35,7 @@
 section{
 	margin-top: 8rem;
 }
+
 
 .container_responsive {
 	@include mixins.flex_res(initial, center, column, row)

@@ -4,21 +4,71 @@
 	.container {
 		display: flex;
 
-		@media (max-width: 768px) {
+		@media (max-width: v.$lg_breakpoint) {
 			flex-direction: column;
 		}
+	}
+
+	.container_content {
+		flex-basis: 95%;
+		padding: 8rem;
+
+		@media (max-width: v.$lg_breakpoint) {
+			padding: 0;
+		}
+
+		.btn_wrapper {
+			flex-basis: 25%;
+
+			@media (max-width: v.$lg_breakpoint) {
+				flex-basis: 100%;
+			}
+		}
+	}
+
+	.profile_container {
+		width: 100%;
+	}
+
+	.form_btn_container {
+		display: flex;
+		gap: 2rem;
+		flex-wrap: wrap;
 	}
 
 	.sidebar {
 		border-right: var(--border_color01);
 		padding: 1rem;
 		flex-basis: 15%;
+
 		@media (max-width: v.$lg_breakpoint) {
 			border-right: none;
 			border-bottom: var(--border_color01);
 			padding: 0.5rem;
 			flex-basis: 100%;
 			flex-direction: column;
-		}	
+		}
+
+		p {
+			position: relative;
+			display: inline-block;
+			transition: color 0.3s ease;
+
+
+			&::after {
+				content: '';
+				position: absolute;
+				left: 0;
+				bottom: -2px;
+				width: 0;
+				height: 2px;
+				background-color: var(--color_primary);
+				transition: width 0.3s ease;
+			}
+
+			&:hover::after {
+				width: 100%;
+			}
+		}
 	}
 }

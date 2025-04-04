@@ -3,8 +3,11 @@ import React from "react";
 const variants = {
 	primary: "btn btn_base",
 	secondary: "btn btn_secondary",
+	third : "btn btn_third",
+	success: "btn btn_success",
 	outline: "btn btn_outline",
 	danger: "btn btn_warning",
+	close : "btn btn_close",
 };
 
 const sizes = {
