@@ -52,7 +52,7 @@ const SearchTraject = () => {
 			<div className="container">
 				{isMobile && (
 					<div className="wrapper">
-						<h1>Search, adventure and share!</h1>
+						<h1>Recherche et part a l'aventure!</h1>
 					</div>
 				)}
 				<div className="wrapper">

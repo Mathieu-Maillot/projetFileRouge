@@ -12,6 +12,9 @@
 	.form_group {
 		display: flex;
 		gap: 2rem;
+		@media (max-width: v.$lg_breakpoint) {
+			flex-direction: column;
+		}
 	}
 
 
