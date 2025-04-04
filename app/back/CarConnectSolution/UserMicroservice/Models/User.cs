@@ -6,12 +6,15 @@ namespace UserMicroservice.Models
     public class User
     {
         public ObjectId Id { get; set; }
-        public string Firstname { get; set; } = string.Empty;
-        public string Lastname { get; set; } = string.Empty;
+        public string? Firstname { get; set; }
+        public string? Lastname { get; set; }
         public string FullName => $"{Firstname} + {Lastname}";
-        public string Email { get; set; } = string.Empty;
-        public string Password { get; set; } = string.Empty;
+        public string? Email { get; set; }
+        public string? Password { get; set; }
+        public DateOnly Birthdate { get; set; }
+        public Gender Gender {  get; set; }
         public int Age { get; set; }
+        public string? Address { get; set; }
         public RoleStatus Role { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
