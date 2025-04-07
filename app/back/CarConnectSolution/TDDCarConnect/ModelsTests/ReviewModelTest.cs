@@ -5,7 +5,7 @@ using UserMicroservice.Models;
 namespace TDDCarConnect.ModelsTests
 {
     [TestClass]
-    public sealed class ReviewModelTest
+    public class ReviewModelTest
     {
         [TestMethod]
         public void Review_DefaultValues_ShouldBeInitializedCorrectly()
