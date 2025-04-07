@@ -3,7 +3,7 @@
 #profile {
 	.container {
 		display: flex;
-
+gap: 4rem;
 		@media (max-width: v.$lg_breakpoint) {
 			flex-direction: column;
 		}
