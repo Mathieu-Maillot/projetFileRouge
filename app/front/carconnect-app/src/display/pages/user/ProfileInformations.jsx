@@ -43,13 +43,12 @@ const ProfileInformations = ({ user }) => {
 				<FormButton
 					title="Informations"
 					buttonName="Informations Complémentaires"
-					inputCount={2}
-					placeholder={[ "Ville", "Code postal"]}
-					inputTypes={[ 'text', 'text']}
-					inputName={['city', 'postalCode']}
+					inputCount={1}
+					placeholder={[ "Ville"]}
+					inputTypes={[ 'search']}
+					inputName={['city']}
 					userData={{
 						city: user?.city || '',
-						postalCode: user?.postalCode || ''
 					}}
 					onSave={handleSaveProfile}
 				/>

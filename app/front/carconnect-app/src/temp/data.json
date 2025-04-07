@@ -5,7 +5,7 @@
       "lastName": "Martin",
       "email": "alice.martin@example.com",
       "password": "hashed_password_1",
-	  "birtdate" : "1998-04-03",
+	  "birthdate" : "1998-04-03",
       "age": 25,
 	  "city" : "Paris",
 	  "postalCode" : "75001",

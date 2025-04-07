@@ -51,7 +51,7 @@ const HeroSection = () => {
 						formAction={handleSearchTraject}
 						inputCount={3}
 						placeholder={['Départ', "Destination", "Date"]}
-						inputTypes={['text', 'text', 'date']} inputName={['depart', "arrival", "date"]}
+						inputTypes={['search', 'search', 'date']} inputName={['depart', "arrival", "date"]}
 						buttonName="Rechercher"
 						btnClass="btn btn_base"
 						children={handleButtonForm()}

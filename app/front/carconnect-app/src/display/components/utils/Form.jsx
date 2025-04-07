@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Input from '../helpers/Input';
 import Button from '../helpers/Button';
 import Option from '../helpers/Option';
+import CitySearch from '../helpers/CitySearch';
 
 const Form = ({
 	title,
@@ -19,7 +20,14 @@ const Form = ({
 	formClass
 }) => {
 	const [data, setData] = useState({});
-
+	const getCurrentDateTime = () => {
+		const now = new Date();
+		return now.toISOString().slice(0, 16);
+	};
+	const getCurrentDate = () => {
+		const now = new Date();
+		return now.toISOString().slice(0, 10);
+	};
 	const handleInputChange = (name, value) => {
 		setData(prevData => ({
 			...prevData,
@@ -34,16 +42,47 @@ const Form = ({
 		}));
 	};
 
-	const inputs = Array.from({ length: inputCount }, (_, index) => (
-		<Input
-			key={`input-${index}`}
-			type={inputTypes[index]}
-			name={inputName[index]}
-			placeholder={placeholder[index]}
-			defValue={data[inputName[index]] || ''}
-			onChange={(e) => handleInputChange(inputName[index], e.target.value)}
-		/>
-	));
+	const handleCitySelect = (name, city) => {
+		setData(prevData => ({
+			...prevData,
+			[name]: city.nom
+		}));
+	};
+
+	const inputs = Array.from({ length: inputCount }, (_, index) => {
+		let defaultValue = data[inputName[index]] || '';
+
+		if (!data[inputName[index]]) {
+			if (inputTypes[index] === 'datetime-local') {
+				defaultValue = getCurrentDateTime();
+			} else if (inputTypes[index] === 'date') {
+				defaultValue = getCurrentDate();
+			}
+		}
+
+		if (inputTypes[index] === 'search') {
+			return (
+				<div key={`input-${index}`} className="form_element">
+					<CitySearch
+						onSelectCity={(city) => handleCitySelect(inputName[index], city)}
+						placeholder={placeholder[index]}
+					/>
+				</div>
+			);
+		}
+
+		return (
+			<Input
+				key={`input-${index}`}
+				type={inputTypes[index]}
+				name={inputName[index]}
+				placeholder={placeholder[index]}
+				defValue={defaultValue}
+				onChange={(e) => handleInputChange(inputName[index], e.target.value)}
+			/>
+		);
+	});
+
 
 	const options = Array.from({ length: selectCount }, (_, index) => (
 		<Option

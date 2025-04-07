@@ -5,6 +5,7 @@
 @use "./components/utils/elements";
 @use "./components/utils/modal";
 @use "./components/utils/variables";
+@use "./components/helpers/citySearch";
 @use "./components/ui/header";
 @use "./components/ui/nav";
 @use "./pages/home/home";

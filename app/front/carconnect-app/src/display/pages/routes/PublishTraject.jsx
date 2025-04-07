@@ -49,7 +49,7 @@ const PublishTraject = () => {
 							formAction={handlePublishTraject}
 							inputCount={3}
 							placeholder={['Ville de départ ', "Ville d'arrivée", "Date"]}
-							inputTypes={['search', 'search', 'date']}
+							inputTypes={['search', 'search', 'datetime-local']}
 							inputName={['depart', "arrival", "date"]}
 							buttonName="Search"
 							btnClass="btn btn_base"
