@@ -3,12 +3,16 @@ import data from '../../../temp/data.json'
 import Icon from '../../components/utils/Icon';
 import { useLocation, useNavigate } from 'react-router-dom';
 import ProfileInformations from './ProfileInformations';
+import Reviews from './Reviews';
 const Profile = () => {
 	const navigate = useNavigate();
 	const location = useLocation();
 	const pathInformations = location.pathname === '/user/profile/informations';
+	const pathReviews = location.pathname === '/user/profile/reviews';
 	const user = data.find(user => user._id.$oid === '605c72ef1532071cba029d60');
-	console.log(user)
+    const reviews = user?.reviews;
+	// console.log(user)
+	// console.log(reviews)
 	return (
 		<>
 			<div id="profile">
@@ -19,7 +23,7 @@ const Profile = () => {
 								<h1>Menu</h1>
 								<ul className='flex column gap1 pad1'>
 									<li onClick={() => navigate("/user/profile/informations")}><p>Informations</p></li>
-									<li onClick={() => navigate("/user/profile/marks")}><p>Notes</p></li>
+									<li onClick={() => navigate("/user/profile/reviews")}><p>Notes</p></li>
 									<li onClick={() => navigate("/user/profile/messages")}><p>Messages</p></li>
 								</ul>
 							</div>
@@ -27,7 +31,8 @@ const Profile = () => {
 					</div>
 					<div className="container_content">
 						<div className="wrapper_top flex gap 1rem">
-							{pathInformations && <ProfileInformations user={user}/>}
+							{pathInformations && <ProfileInformations user={user} />}
+							{pathReviews && <Reviews user={user} reviews={reviews} data={data}/>}
 						</div>
 					</div>
 				</div>

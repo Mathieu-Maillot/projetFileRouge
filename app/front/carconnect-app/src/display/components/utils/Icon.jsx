@@ -72,6 +72,32 @@ const Icon = ({ type, size, action }) => {
 					</g>
 				</svg>
 			);
+		case 'HalfStar':
+			return (
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width={size} height={size} >
+					<defs>
+						<clipPath id="half-star">
+							<rect x="0" y="0" width="1rem" height="2rem" />
+						</clipPath>
+					</defs>
+					<path
+						d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+						clipPath="url(#half-star)"
+					/>
+				</svg>
+			);
+		case 'EmptyStar':
+			return (
+				<svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+					<path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+				</svg>
+			);
+		case 'FullStar':
+			return (
+				<svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="currentColor   ">
+					<path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+				</svg>
+			);
 		case 'avatar':
 			return (
 				<svg

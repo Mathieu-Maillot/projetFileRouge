@@ -9,7 +9,9 @@ const Nav = () => {
 		{ name: 'Publier un trajet', path: '/routes/publish', icon: 'plus' },
 		{ name: "S'identifier", path: '/auth/check', icon: 'user' }
 	]
-
+	const handleNavLinkClick = () => {
+		setIsMenuOpen(false)
+	}
 	return (
 		<nav className='navbar'>
 			<button
@@ -31,9 +33,10 @@ const Nav = () => {
 				</div>
 				{navLinks.map((link, index) => (
 					<li key={index}>
-						<NavLink to={link.path} className='nav-item flex a_center gap1'> 
+						<NavLink to={link.path} className='nav-item flex a_center gap1' onClick={handleNavLinkClick}
+						>
 							<Icon type={link.icon} size='1.5rem' />
-							<p className="nav-text">{link.name}</p> 
+							<p className="nav-text">{link.name}</p>
 						</NavLink>
 					</li>
 				))}

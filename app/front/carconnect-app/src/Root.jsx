@@ -28,9 +28,8 @@ const AppRoutes = () => {
 				<AppContainer>
 					<Routes>
 						<Route path="/" element={<App />} />
-						<Route path="/user/profile" element={<Profile />} />
 						<Route path="/user/profile/informations" element={<Profile />} />
-						<Route path="/user/profile/marks" element={<Profile />} />
+						<Route path="/user/profile/reviews" element={<Profile />} />
 						<Route path="/user/profile/messages" element={<Profile />} />
 						<Route path="/routes/search" element={<SearchTraject />} />
 						<Route path="/routes/publish" element={<PublishTraject />} />

@@ -72,3 +72,14 @@
 		}
 	}
 }
+
+#reviews{
+	.wrapper_review{
+		padding: 2rem;
+		border-radius: 0.5rem;
+		width: 100%;
+		background-color: var(--bg_color01);
+		box-shadow: var(--box_shadow01);
+		border-color: var(--border_color01);
+	}
+}
