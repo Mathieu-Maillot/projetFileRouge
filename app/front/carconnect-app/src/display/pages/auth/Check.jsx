@@ -5,14 +5,32 @@ import { useState } from 'react'
 import Logo from '../../components/ui/display/Logo'
 import AuthManagement from '../../../data/auth/AuthManagement'
 import Icon from '../../components/utils/Icon'
+import Popup from '../../components/utils/Popup'
+import { useAuthStore } from '../../../cfg/store/AuthStore'
 const Check = () => {
 	const { handleCheck, handleLogin, handleRegister } = AuthManagement();
+	const popup = useAuthStore((state) => state.popup);
 	const location = useLocation();
 	const navigate = useNavigate();
 	const pathCheck = location.pathname === '/auth/check';
 	const pathRegister = location.pathname === '/auth/register';
 	const pathDriver = location.pathname === '/auth/driver';
 	const pathLogin = location.pathname === '/auth/login';
+	const checkManagement = (formData) => {
+		console.log(formData);
+		if (pathCheck) {
+			handleCheck(formData);
+		}
+		else if (pathLogin) {
+			handleLogin(formData);
+		}
+		else if (pathRegister) {
+			handleRegister(formData);
+		}
+		else if (pathDriver) {
+			handleRegister(formData);
+		}
+	}
 	const [text, setText] = useState({
 		title: 'Bienvenue',
 		subtitle: 'Entrer votre adresse email pour vérifier si vous avez un compte existant.'
@@ -66,8 +84,8 @@ const Check = () => {
 										{<p className='text_size02'>{text.subtitle}</p>}
 									</div>
 								</div>
-								{pathCheck && <Form formAction={handleCheck} inputCount={1} placeholder={["example@gmail.com"]} inputTypes={['email']} inputName={['email']} buttonName="Prochaine étape" btnClass="btn btn_base" />}
-								{pathLogin && <Form formAction={handleLogin} inputCount={2} placeholder={["example@gmail.com", "mot de passe"]} inputTypes={['email', "password"]} inputName={['email, password']} buttonName="Se connecter" btnClass="btn btn_base" />}
+								{pathCheck && <Form formAction={checkManagement} inputCount={1} placeholder={["example@gmail.com"]} inputTypes={['email']} inputName={['email']} buttonName="Prochaine étape" btnClass="btn btn_base" />}
+								{pathLogin && <Form formAction={checkManagement} inputCount={2} placeholder={["example@gmail.com", "mot de passe"]} inputTypes={['email', 'password']} inputName={['email', 'password']} buttonName="Se connecter" btnClass="btn btn_base" />}
 								{pathLogin &&
 									<>
 										<div className="element_column gap1">
@@ -78,7 +96,7 @@ const Check = () => {
 
 									</>}
 								{pathRegister && <Form
-									formAction={handleRegister}
+									formAction={checkManagement}
 									inputCount={6}
 									selectCount={1}
 									selectOptions={[['Homme', 'Femme', 'Ne se prononce pas']]}
@@ -106,9 +124,15 @@ const Check = () => {
 							<img src="\images\illustration-07.webp" alt="" />
 						</div>
 					</div>
-				</div >
-			</div >
-
+				</div>
+			</div>
+			{popup.isOpen && (
+				<Popup
+					isOpen={popup.isOpen}
+					message={popup.message}
+					type={popup.type}
+				/>
+			)}
 		</>
 	)
 }

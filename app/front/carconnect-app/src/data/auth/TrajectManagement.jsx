@@ -31,7 +31,7 @@ const TrajectManagement = () => {
 			let existingData = JSON.parse(localStorage.getItem('appData') || '{"rides":[]}');
 			existingData.rides = [...existingData.rides, newTraject];
 			localStorage.setItem('appData', JSON.stringify(existingData));
-			navigate('/user/profile/rides', { replace: true });
+			navigate('/account/rides', { replace: true });
 		} catch (error) {
 			console.error("Error publishing traject:", error);
 		}

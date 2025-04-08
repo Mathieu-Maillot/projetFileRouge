@@ -1,16 +1,14 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
-import useAuthStore from '../../cfg/store/AuthStore';
-import { useStore } from 'zustand';
-
-
+import useStore from '../../cfg/store/AuthStore';
+import usersData from '../../temp/data.json'
 const AuthManagement = () => {
 	const navigate = useNavigate();
 	const { setUser, errorPop, setAuthenticated } = useStore();
-	const { login } = useAuthStore();
+	const { login } = useStore();
 	const handleCheck = (formData) => {
-		console.log('Checking email:', formData.email);
-		const user = usersData.find(user => user.email === formData.email);
+		const email = formData.get("email");
+		const user = usersData?.users?.find(user => user.email === email);
 		if (user) {
 			console.log('User found, redirecting to login');
 			navigate('/auth/login', { state: { email: formData.email } });
@@ -21,11 +19,17 @@ const AuthManagement = () => {
 	};
 
 	const handleLogin = (formData) => {
-		console.log('Login attempt with:', formData);
+		console.log(formData)
+		const data = {};
+		formData.forEach((value, name) => {
+			data[name] = value;
+		});
 
-		const user = usersData.find(user =>
-			user.email === formData.email &&
-			user.password === formData.password
+		console.log('Login attempt with:', data);
+
+		const user = usersData.users.find(user =>
+			user.email === data.email &&
+			user.password === data.password
 		);
 
 		if (user) {
@@ -37,7 +41,7 @@ const AuthManagement = () => {
 			setAuthenticated(true);
 			login(user, fakeToken);
 
-			navigate('/user/profile/informations');
+			navigate('/account/informations');
 		} else {
 			console.log('Login failed: Invalid credentials');
 			errorPop('Email ou mot de passe incorrect');
@@ -87,7 +91,7 @@ const AuthManagement = () => {
 			setAuthenticated(true);
 			login(newUser, fakeToken);
 
-			navigate('/user/profile/informations');
+			navigate('/account/informations');
 		}
 	};
 
