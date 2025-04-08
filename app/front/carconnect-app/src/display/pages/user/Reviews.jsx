@@ -8,7 +8,7 @@ const Reviews = ({ user, reviews, data }) => {
 					<h1>Mes notes</h1>
 					<ul className='flex column gap1 pad1'>
 						{reviews?.map((review, index) => {
-							const reviewer = data?.find(user => user._id.$oid === review.userId.$oid);
+							const reviewer = data?.users?.find(user => user._id.$oid === review.userId.$oid);
 
 							return (
 								<li key={index} className='wrapper_review flex column gap05'>

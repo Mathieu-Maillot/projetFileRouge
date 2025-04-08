@@ -263,3 +263,6 @@ $RECYCLE.BIN/
 .DS_Store
 
 _NCrunch*
+*.ncrunch*
+*.vsdix
+*.vs

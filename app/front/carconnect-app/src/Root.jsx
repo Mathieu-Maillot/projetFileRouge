@@ -8,6 +8,8 @@ import SearchTraject from './display/pages/routes/SearchTraject';
 import PublishTraject from './display/pages/routes/PublishTraject';
 import Check from './display/pages/auth/Check';
 import Profile from './display/pages/user/Profile';
+import AuthGuard from './display/guards/AuthGuard';
+import NotFound from './display/pages/NotFound';
 
 const AppRoutes = () => {
 	const location = useLocation();
@@ -19,20 +21,24 @@ const AppRoutes = () => {
 
 			{isAuthRoute ? (
 				<Routes>
-					<Route path="/auth/check" element={<Check />} />
-					<Route path="/auth/login" element={<Check />} />
-					<Route path="/auth/register" element={<Check />} />
-					<Route path="/auth/driver" element={<Check />} />
+					<Route exact path="/auth/check" element={<Check />} />
+					<Route exact path="/auth/login" element={<Check />} />
+					<Route exact path="/auth/register" element={<Check />} />
+					<Route exact path="/auth/driver" element={<Check />} />
 				</Routes>
 			) : (
 				<AppContainer>
 					<Routes>
 						<Route path="/" element={<App />} />
-						<Route path="/user/profile/informations" element={<Profile />} />
-						<Route path="/user/profile/reviews" element={<Profile />} />
-						<Route path="/user/profile/messages" element={<Profile />} />
-						<Route path="/routes/search" element={<SearchTraject />} />
-						<Route path="/routes/publish" element={<PublishTraject />} />
+						<Route path="*" element={<NotFound />} />
+						<Route element={<AuthGuard />}>
+
+							<Route exact path="/user/profile/informations" element={<Profile />} />
+							<Route exact path="/user/profile/reviews" element={<Profile />} />
+							<Route exact path="/user/profile/messages" element={<Profile />} />
+						</Route>
+						<Route exact path="/routes/search" element={<SearchTraject />} />
+						<Route exact path="/routes/publish" element={<PublishTraject />} />
 					</Routes>
 				</AppContainer>
 			)}

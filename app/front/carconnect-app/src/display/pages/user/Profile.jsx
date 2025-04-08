@@ -9,7 +9,7 @@ const Profile = () => {
 	const location = useLocation();
 	const pathInformations = location.pathname === '/user/profile/informations';
 	const pathReviews = location.pathname === '/user/profile/reviews';
-	const user = data.find(user => user._id.$oid === '605c72ef1532071cba029d60');
+	const user = data?.users?.find(user => user._id.$oid === '605c72ef1532071cba029d60');
     const reviews = user?.reviews;
 	// console.log(user)
 	// console.log(reviews)
