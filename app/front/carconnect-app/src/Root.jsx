@@ -10,6 +10,7 @@ import Check from './display/pages/auth/Check';
 import Profile from './display/pages/user/Profile';
 import AuthGuard from './display/guards/AuthGuard';
 import NotFound from './display/pages/NotFound';
+import Traject from './display/pages/routes/Traject';
 
 const AppRoutes = () => {
 	const location = useLocation();
@@ -36,6 +37,9 @@ const AppRoutes = () => {
 							<Route exact path="/user/profile/informations" element={<Profile />} />
 							<Route exact path="/user/profile/reviews" element={<Profile />} />
 							<Route exact path="/user/profile/messages" element={<Profile />} />
+							<Route exact path="/user/profile/rides" element={<Profile />} />
+							<Route exact path="/routes/publish/traject" element={<Traject />} />
+
 						</Route>
 						<Route exact path="/routes/search" element={<SearchTraject />} />
 						<Route exact path="/routes/publish" element={<PublishTraject />} />

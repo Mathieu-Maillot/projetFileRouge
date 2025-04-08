@@ -1,14 +1,21 @@
 import React, { useState } from 'react'
 import Form from '../../components/utils/Form'
 import Dropdown from '../../components/utils/Dropdown';
-
+import TrajectManagement from '../../../data/auth/TrajectManagement';
 const PublishTraject = () => {
+
+	const { handlePublishTraject } = TrajectManagement();
 	const [isMobile, setIsMobile] = useState(false);
 	const [activeMenu, setActiveMenu] = useState(false);
 	const [nbrPassenger, setNbrPassenger] = useState(1);
-	const handlePublishTraject = () => {
-		console.log('publishing trajectory')
-	}
+	const onSubmit = (formData) => {
+		handlePublishTraject({
+			departureLocation: formData.departure,
+			arrivalLocation: formData.arrival,
+			departureTime: formData.departureTime,
+			availableSeats: formData.nbrPassenger
+		});
+	};
 	const handleButtonForm = () => {
 		return (
 			<div className="form_element relative">
@@ -46,12 +53,12 @@ const PublishTraject = () => {
 						</div>
 						<Form
 							title="Publier"
-							formAction={handlePublishTraject}
+							formAction={onSubmit}
 							inputCount={3}
 							placeholder={['Ville de départ ', "Ville d'arrivée", "Date"]}
 							inputTypes={['search', 'search', 'datetime-local']}
-							inputName={['depart', "arrival", "date"]}
-							buttonName="Search"
+							inputName={['departure', "arrival", "departureTime"]}
+							buttonName="Publier"
 							btnClass="btn btn_base"
 							children={handleButtonForm()}
 						/>
