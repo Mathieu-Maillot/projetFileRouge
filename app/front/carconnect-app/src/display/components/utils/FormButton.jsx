@@ -87,7 +87,7 @@ const FormButton = ({
 
 	return (
 		<>
-			<div className="flex column gap2">
+			<div className="flex column gap2 element_box">
 				<h2>{buttonName}</h2>
 				<div className="form_btn_container">
 					{dataButtons}

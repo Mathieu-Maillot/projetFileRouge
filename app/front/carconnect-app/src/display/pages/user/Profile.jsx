@@ -5,13 +5,19 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import Settings from './Settings';
 import Reviews from './Reviews';
 import DisplayProfile from './DisplayProfile';
+import useStore from '../../../cfg/store/AuthStore';
+import Rides from './Rides';
+import Bookings from './Bookings';
 const Profile = () => {
 	const navigate = useNavigate();
 	const location = useLocation();
 	const pathInformations = location.pathname === '/account/settings';
 	const pathProfile = location.pathname === '/account/profile';
 	const pathReviews = location.pathname === '/account/reviews';
-	const user = data?.users?.find(user => user._id.$oid === '605c72ef1532071cba029d60');
+	const pathRides = location.pathname === '/account/rides';
+	const pathBookings = location.pathname === '/account/bookings';
+		const { user } = useStore();
+	
     const reviews = user?.reviews;
 	return (
 		<>
@@ -35,8 +41,10 @@ const Profile = () => {
 					<div className="container_content">
 						<div className="wrapper_top flex gap 1rem">
 							{pathInformations && <Settings user={user} />}
-							{pathProfile && <DisplayProfile user={user} />}
+							{pathProfile && <DisplayProfile user={user} data={data} />}
 							{pathReviews && <Reviews user={user} reviews={reviews} data={data}/>}
+							{pathRides && <Rides user={user} reviews={reviews} data={data}/>}
+							{pathBookings && <Bookings user={user} reviews={reviews} data={data}/>}
 						</div>
 					</div>
 				</div>

@@ -1,248 +1,470 @@
 {
 	"users": [
-	  {
-		"_id": { "$oid": "605c72ef1532071cba029d60" },
-		"firstName": "Alice",
-		"lastName": "Martin",
-		"email": "alice.martin@example.com",
-		"password": "hashed_password_1",
-		"birthdate": "1998-04-03",
-		"age": 25,
-		"city": "Paris",
-		"postalCode": "75001",
-		"gender": "Femme",
-		"phone": "+33 1 23 45 67 89",
-		"role": "driver",
-		"createdAt": { "$date": "2025-04-03T00:00:00Z" },
-		"updatedAt": { "$date": "2025-04-03T00:00:00Z" },
-		"vehicule": null,
-		"reviews": [
-		  {
-			"userId": { "$oid": "605c72ef1532071cba029d61" },
-			"rating": 5,
-			"comment": "Très bonne conduite, ponctuelle et sympathique.",
-			"createdAt": { "$date": "2025-04-03T00:00:00Z" },
-			"updatedAt": { "$date": "2025-04-03T00:00:00Z" }
-		  },
-		  {
-			"userId": { "$oid": "605c72ef1532071cba029d61" },
-			"rating": 4.2,
-			"comment": "Très bonne conduite, ponctuelle et sympathique.",
-			"createdAt": { "$date": "2025-04-03T00:00:00Z" },
-			"updatedAt": { "$date": "2025-04-03T00:00:00Z" }
-		  }
-		]
-	  },
-	  {
-		"_id": { "$oid": "605c72ef1532071cba029d61" },
-		"firstName": "David",
-		"lastName": "Bernard",
-		"email": "david.bernard@example.com",
-		"password": "hashed_password_2",
-		"birthdate": "1980-07-15",
-		"age": 45,
-		"city": "Lyon",
-		"postalCode": "69001",
-		"gender": "Homme",
-		"phone": "+33 6 12 34 56 78",
-		"role": "admin",
-		"createdAt": { "$date": "2025-04-02T00:00:00Z" },
-		"updatedAt": { "$date": "2025-04-03T00:00:00Z" },
-		"vehicule": null,
-		"reviews": []
-	  },
-	  {
-		"_id": { "$oid": "605c72ef1532071cba029d62" },
-		"firstName": "Clara",
-		"lastName": "Dubois",
-		"email": "clara.dubois@example.com",
-		"password": "hashed_password_3",
-		"birthdate": "1993-09-22",
-		"age": 32,
-		"city": "Marseille",
-		"postalCode": "13001",
-		"gender": "Femme",
-		"phone": "+33 7 23 45 67 89",
-		"role": "driver",
-		"createdAt": { "$date": "2025-04-01T00:00:00Z" },
-		"updatedAt": { "$date": "2025-04-03T00:00:00Z" },
-		"vehicule": {
-		  "brand": "Renault",
-		  "model": "Clio",
-		  "capacity": 4,
-		  "createdAt": { "$date": "2025-04-01T00:00:00Z" },
-		  "updatedAt": { "$date": "2025-04-03T00:00:00Z" }
+		{
+			"_id": {
+				"$oid": "605c72ef1532071cba029d60"
+			},
+			"firstName": "Alice",
+			"lastName": "Martin",
+			"email": "alice.martin@example.com",
+			"password": "hashed_password_1",
+			"birthdate": "1998-04-03",
+			"age": 25,
+			"city": "Paris",
+			"postalCode": "75001",
+			"gender": "Femme",
+			"phone": "+33 1 23 45 67 89",
+			"role": "driver",
+			"createdAt": {
+				"$date": "2025-04-03T00:00:00Z"
+			},
+			"updatedAt": {
+				"$date": "2025-04-03T00:00:00Z"
+			},
+			"vehicule": null,
+			"reviews": [
+				{
+					"userId": {
+						"$oid": "605c72ef1532071cba029d61"
+					},
+					"rating": 5,
+					"comment": "Très bonne conduite, ponctuelle et sympathique.",
+					"createdAt": {
+						"$date": "2025-04-03T00:00:00Z"
+					},
+					"updatedAt": {
+						"$date": "2025-04-03T00:00:00Z"
+					}
+				},
+				{
+					"userId": {
+						"$oid": "605c72ef1532071cba029d61"
+					},
+					"rating": 4.2,
+					"comment": "Très bonne conduite, ponctuelle et sympathique.",
+					"createdAt": {
+						"$date": "2025-04-03T00:00:00Z"
+					},
+					"updatedAt": {
+						"$date": "2025-04-03T00:00:00Z"
+					}
+				},
+				{
+					"userId": {
+						"$oid": "605c72ef1532071cba029d66"
+					},
+					"rating": 5,
+					"comment": "Impeccable! Quel beau trajet.",
+					"createdAt": {
+						"$date": "2025-04-03T00:00:00Z"
+					},
+					"updatedAt": {
+						"$date": "2025-04-03T00:00:00Z"
+					}
+				}
+			]
 		},
-		"reviews": [
-		  {
-			"userId": { "$oid": "605c72ef1532071cba029d60" },
-			"rating": 5,
-			"comment": "Très bonne conduite, ponctuelle et sympathique.",
-			"createdAt": { "$date": "2025-04-03T00:00:00Z" },
-			"updatedAt": { "$date": "2025-04-03T00:00:00Z" }
-		  },
-		  {
-			"userId": { "$oid": "605c72ef1532071cba029d60" },
-			"rating": 5,
-			"comment": "Très bonne conduite, ponctuelle et sympathique.",
-			"createdAt": { "$date": "2025-04-03T00:00:00Z" },
-			"updatedAt": { "$date": "2025-04-03T00:00:00Z" }
-		  }
-		]
-	  },
-	  {
-		"_id": { "$oid": "605c72ef1532071cba029d63" },
-		"firstName": "Hugo",
-		"lastName": "Lefevre",
-		"email": "hugo.lefevre@example.com",
-		"password": "hashed_password_4",
-		"birthdate": "1997-03-12",
-		"age": 28,
-		"city": "Bordeaux",
-		"postalCode": "33000",
-		"gender": "Homme",
-		"phone": "+33 6 98 76 54 32",
-		"role": "driver",
-		"createdAt": { "$date": "2025-04-03T00:00:00Z" },
-		"updatedAt": { "$date": "2025-04-03T00:00:00Z" },
-		"vehicule": {
-		  "brand": "Peugeot",
-		  "model": "208",
-		  "capacity": 3,
-		  "createdAt": { "$date": "2025-04-03T00:00:00Z" },
-		  "updatedAt": { "$date": "2025-04-03T00:00:00Z" }
+		{
+			"_id": {
+				"$oid": "605c72ef1532071cba029d61"
+			},
+			"firstName": "David",
+			"lastName": "Bernard",
+			"email": "david.bernard@example.com",
+			"password": "hashed_password_2",
+			"birthdate": "1980-07-15",
+			"age": 45,
+			"city": "Lyon",
+			"postalCode": "69001",
+			"gender": "Homme",
+			"phone": "+33 6 12 34 56 78",
+			"role": "admin",
+			"createdAt": {
+				"$date": "2025-04-02T00:00:00Z"
+			},
+			"updatedAt": {
+				"$date": "2025-04-03T00:00:00Z"
+			},
+			"vehicule": null,
+			"reviews": [
+				{
+					"userId": {
+						"$oid": "605c72ef1532071cba029d60"
+					},
+					"rating": 3.7,
+					"comment": "Bonne expérience, merci !",
+					"createdAt": {
+						"$date": "2025-04-03T00:00:00Z"
+					},
+					"updatedAt": {
+						"$date": "2025-04-03T00:00:00Z"
+					}
+				}
+			]
 		},
-		"reviews": []
-	  },
-	  {
-		"_id": { "$oid": "605c72ef1532071cba029d64" },
-		"firstName": "Sophie",
-		"lastName": "Lambert",
-		"email": "sophie.lambert@example.com",
-		"password": "hashed_password_5",
-		"birthdate": "1992-11-08",
-		"age": 33,
-		"city": "Lille",
-		"postalCode": "59000",
-		"gender": "Femme",
-		"phone": "+33 7 65 43 21 98",
-		"role": "driver",
-		"createdAt": { "$date": "2025-04-02T00:00:00Z" },
-		"updatedAt": { "$date": "2025-04-03T00:00:00Z" },
-		"vehicule": {
-		  "brand": "Citroën",
-		  "model": "C3",
-		  "capacity": 4,
-		  "createdAt": { "$date": "2025-04-02T00:00:00Z" },
-		  "updatedAt": { "$date": "2025-04-03T00:00:00Z" }
+		{
+			"_id": {
+				"$oid": "605c72ef1532071cba029d62"
+			},
+			"firstName": "Clara",
+			"lastName": "Dubois",
+			"email": "clara.dubois@example.com",
+			"password": "hashed_password_3",
+			"birthdate": "1993-09-22",
+			"age": 32,
+			"city": "Marseille",
+			"postalCode": "13001",
+			"gender": "Femme",
+			"phone": "+33 7 23 45 67 89",
+			"role": "driver",
+			"createdAt": {
+				"$date": "2025-04-01T00:00:00Z"
+			},
+			"updatedAt": {
+				"$date": "2025-04-03T00:00:00Z"
+			},
+			"vehicule": {
+				"brand": "Renault",
+				"model": "Clio",
+				"capacity": 4,
+				"createdAt": {
+					"$date": "2025-04-01T00:00:00Z"
+				},
+				"updatedAt": {
+					"$date": "2025-04-03T00:00:00Z"
+				}
+			},
+			"reviews": [
+				{
+					"userId": {
+						"$oid": "605c72ef1532071cba029d60"
+					},
+					"rating": 5,
+					"comment": "Très bonne conduite, ponctuelle et sympathique.",
+					"createdAt": {
+						"$date": "2025-04-03T00:00:00Z"
+					},
+					"updatedAt": {
+						"$date": "2025-04-03T00:00:00Z"
+					}
+				},
+				{
+					"userId": {
+						"$oid": "605c72ef1532071cba029d60"
+					},
+					"rating": 5,
+					"comment": "Encore un super trajet avec Clara.",
+					"createdAt": {
+						"$date": "2025-04-03T00:00:00Z"
+					},
+					"updatedAt": {
+						"$date": "2025-04-03T00:00:00Z"
+					}
+				}
+			]
 		},
-		"reviews": [
-		  {
-			"userId": { "$oid": "605c72ef1532071cba029d62" },
-			"rating": 4,
-			"comment": "Bonne conductrice, trajet agréable.",
-			"createdAt": { "$date": "2025-04-03T00:00:00Z" },
-			"updatedAt": { "$date": "2025-04-03T00:00:00Z" }
-		  }
-		]
-	  },
-	  {
-		"_id": { "$oid": "605c72ef1532071cba029d65" },
-		"firstName": "Thomas",
-		"lastName": "Moreau",
-		"email": "thomas.moreau@example.com",
-		"password": "hashed_password_6",
-		"birthdate": "1990-05-17",
-		"age": 35,
-		"city": "Toulouse",
-		"postalCode": "31000",
-		"gender": "Homme",
-		"phone": "+33 6 54 32 10 98",
-		"role": "passenger",
-		"createdAt": { "$date": "2025-04-01T00:00:00Z" },
-		"updatedAt": { "$date": "2025-04-03T00:00:00Z" },
-		"vehicule": null,
-		"reviews": []
-	  },
-	  {
-		"_id": { "$oid": "605c72ef1532071cba029d66" },
-		"firstName": "Julie",
-		"lastName": "Petit",
-		"email": "julie.petit@example.com",
-		"password": "hashed_password_7",
-		"birthdate": "1995-12-03",
-		"age": 30,
-		"city": "Nantes",
-		"postalCode": "44000",
-		"gender": "Femme",
-		"phone": "+33 7 01 23 45 67",
-		"role": "passenger",
-		"createdAt": { "$date": "2025-04-02T00:00:00Z" },
-		"updatedAt": { "$date": "2025-04-03T00:00:00Z" },
-		"vehicule": null,
-		"reviews": []
-	  }
+		{
+			"_id": {
+				"$oid": "605c72ef1532071cba029d63"
+			},
+			"firstName": "Hugo",
+			"lastName": "Lefevre",
+			"email": "hugo.lefevre@example.com",
+			"password": "hashed_password_4",
+			"birthdate": "1997-03-12",
+			"age": 28,
+			"city": "Bordeaux",
+			"postalCode": "33000",
+			"gender": "Homme",
+			"phone": "+33 6 98 76 54 32",
+			"role": "driver",
+			"createdAt": {
+				"$date": "2025-04-03T00:00:00Z"
+			},
+			"updatedAt": {
+				"$date": "2025-04-03T00:00:00Z"
+			},
+			"vehicule": {
+				"brand": "Peugeot",
+				"model": "208",
+				"capacity": 3,
+				"createdAt": {
+					"$date": "2025-04-03T00:00:00Z"
+				},
+				"updatedAt": {
+					"$date": "2025-04-03T00:00:00Z"
+				}
+			},
+			"reviews": [
+				{
+					"userId": {
+						"$oid": "605c72ef1532071cba029d66"
+					},
+					"rating": 4,
+					"comment": "Sympa mais un peu en retard au départ.",
+					"createdAt": {
+						"$date": "2025-04-03T00:00:00Z"
+					},
+					"updatedAt": {
+						"$date": "2025-04-03T00:00:00Z"
+					}
+				}
+			]
+		},
+		{
+			"_id": {
+				"$oid": "605c72ef1532071cba029d64"
+			},
+			"firstName": "Sophie",
+			"lastName": "Lambert",
+			"email": "sophie.lambert@example.com",
+			"password": "hashed_password_5",
+			"birthdate": "1992-11-08",
+			"age": 33,
+			"city": "Lille",
+			"postalCode": "59000",
+			"gender": "Femme",
+			"phone": "+33 7 65 43 21 98",
+			"role": "driver",
+			"createdAt": {
+				"$date": "2025-04-02T00:00:00Z"
+			},
+			"updatedAt": {
+				"$date": "2025-04-03T00:00:00Z"
+			},
+			"vehicule": {
+				"brand": "Citroën",
+				"model": "C3",
+				"capacity": 4,
+				"createdAt": {
+					"$date": "2025-04-02T00:00:00Z"
+				},
+				"updatedAt": {
+					"$date": "2025-04-03T00:00:00Z"
+				}
+			},
+			"reviews": [
+				{
+					"userId": {
+						"$oid": "605c72ef1532071cba029d62"
+					},
+					"rating": 4,
+					"comment": "Bonne conductrice, trajet agréable.",
+					"createdAt": {
+						"$date": "2025-04-03T00:00:00Z"
+					},
+					"updatedAt": {
+						"$date": "2025-04-03T00:00:00Z"
+					}
+				},
+				{
+					"userId": {
+						"$oid": "605c72ef1532071cba029d66"
+					},
+					"rating": 3.2,
+					"comment": "Trajet correct mais un peu bruyant.",
+					"createdAt": {
+						"$date": "2025-04-03T00:00:00Z"
+					},
+					"updatedAt": {
+						"$date": "2025-04-03T00:00:00Z"
+					}
+				}
+			]
+		},
+		{
+			"_id": {
+				"$oid": "605c72ef1532071cba029d65"
+			},
+			"firstName": "Thomas",
+			"lastName": "Moreau",
+			"email": "thomas.moreau@example.com",
+			"password": "hashed_password_6",
+			"birthdate": "1990-05-17",
+			"age": 35,
+			"city": "Toulouse",
+			"postalCode": "31000",
+			"gender": "Homme",
+			"phone": "+33 6 54 32 10 98",
+			"role": "passenger",
+			"createdAt": {
+				"$date": "2025-04-01T00:00:00Z"
+			},
+			"updatedAt": {
+				"$date": "2025-04-03T00:00:00Z"
+			},
+			"vehicule": null,
+			"reviews": [
+				{
+					"userId": {
+						"$oid": "605c72ef1532071cba029d60"
+					},
+					"rating": 4.5,
+					"comment": "Chouette passager, paiement rapide.",
+					"createdAt": {
+						"$date": "2025-04-03T00:00:00Z"
+					},
+					"updatedAt": {
+						"$date": "2025-04-03T00:00:00Z"
+					}
+				}
+			]
+		},
+		{
+			"_id": {
+				"$oid": "605c72ef1532071cba029d66"
+			},
+			"firstName": "Julie",
+			"lastName": "Petit",
+			"email": "julie.petit@example.com",
+			"password": "hashed_password_7",
+			"birthdate": "1995-12-03",
+			"age": 30,
+			"city": "Nantes",
+			"postalCode": "44000",
+			"gender": "Femme",
+			"phone": "+33 7 01 23 45 67",
+			"role": "passenger",
+			"createdAt": {
+				"$date": "2025-04-02T00:00:00Z"
+			},
+			"updatedAt": {
+				"$date": "2025-04-03T00:00:00Z"
+			},
+			"vehicule": null,
+			"reviews": []
+		}
 	],
 	"rides": [
-	  {
-		"_id": { "$oid": "605c72ef1532071cba029d70" },
-		"departureLocation": "Paris",
-		"arrivalLocation": "Lyon",
-		"departureTime": { "$date": "2025-04-05T09:00:00Z" },
-		"driverId": { "$oid": "605c72ef1532071cba029d60" },
-		"availableSeats": 3,
-		"createdAt": { "$date": "2025-04-03T00:00:00Z" },
-		"updatedAt": { "$date": "2025-04-03T00:00:00Z" }
-	  },
-	  {
-		"_id": { "$oid": "605c72ef1532071cba029d71" },
-		"departureLocation": "Marseille",
-		"arrivalLocation": "Nice",
-		"departureTime": { "$date": "2025-04-06T10:30:00Z" },
-		"driverId": { "$oid": "605c72ef1532071cba029d62" },
-		"availableSeats": 2,
-		"createdAt": { "$date": "2025-04-02T00:00:00Z" },
-		"updatedAt": { "$date": "2025-04-03T00:00:00Z" }
-	  }
+		{
+			"_id": {
+				"$oid": "605c72ef1532071cba029d70"
+			},
+			"departureLocation": "Paris",
+			"arrivalLocation": "Lyon",
+			"departureTime": {
+				"$date": "2025-04-05T09:00:00Z"
+			},
+			"driverId": {
+				"$oid": "605c72ef1532071cba029d60"
+			},
+			"availableSeats": 3,
+			"createdAt": {
+				"$date": "2025-04-03T00:00:00Z"
+			},
+			"updatedAt": {
+				"$date": "2025-04-03T00:00:00Z"
+			},
+			"price": 45
+		},
+		{
+			"_id": {
+				"$oid": "605c72ef1532071cba029d71"
+			},
+			"departureLocation": "Marseille",
+			"arrivalLocation": "Nice",
+			"departureTime": {
+				"$date": "2025-04-06T10:30:00Z"
+			},
+			"driverId": {
+				"$oid": "605c72ef1532071cba029d62"
+			},
+			"availableSeats": 2,
+			"createdAt": {
+				"$date": "2025-04-02T00:00:00Z"
+			},
+			"updatedAt": {
+				"$date": "2025-04-03T00:00:00Z"
+			},
+			"price": 45
+		}
 	],
 	"bookings": [
-	  {
-		"_id": { "$oid": "605c72ef1532071cba029d80" },
-		"rideId": { "$oid": "605c72ef1532071cba029d70" },
-		"userId": { "$oid": "605c72ef1532071cba029d65" },
-		"bookingTime": { "$date": "2025-04-03T12:00:00Z" },
-		"status": "confirmed",
-		"createdAt": { "$date": "2025-04-03T00:00:00Z" },
-		"updatedAt": { "$date": "2025-04-03T00:00:00Z" }
-	  },
-	  {
-		"_id": { "$oid": "605c72ef1532071cba029d81" },
-		"rideId": { "$oid": "605c72ef1532071cba029d71" },
-		"userId": { "$oid": "605c72ef1532071cba029d65" },
-		"bookingTime": { "$date": "2025-04-04T09:15:00Z" },
-		"status": "pending",
-		"createdAt": { "$date": "2025-04-04T00:00:00Z" },
-		"updatedAt": { "$date": "2025-04-04T00:00:00Z" }
-	  }
+		{
+			"_id": {
+				"$oid": "605c72ef1532071cba029d80"
+			},
+			"rideId": {
+				"$oid": "605c72ef1532071cba029d70"
+			},
+			"userId": {
+				"$oid": "605c72ef1532071cba029d65"
+			},
+			"bookingTime": {
+				"$date": "2025-04-03T12:00:00Z"
+			},
+			"status": "confirmed",
+			"createdAt": {
+				"$date": "2025-04-03T00:00:00Z"
+			},
+			"updatedAt": {
+				"$date": "2025-04-03T00:00:00Z"
+			}
+		},
+		{
+			"_id": {
+				"$oid": "605c72ef1532071cba029d81"
+			},
+			"rideId": {
+				"$oid": "605c72ef1532071cba029d71"
+			},
+			"userId": {
+				"$oid": "605c72ef1532071cba029d65"
+			},
+			"bookingTime": {
+				"$date": "2025-04-04T09:15:00Z"
+			},
+			"status": "pending",
+			"createdAt": {
+				"$date": "2025-04-04T00:00:00Z"
+			},
+			"updatedAt": {
+				"$date": "2025-04-04T00:00:00Z"
+			}
+		}
 	],
 	"messages": [
-	  {
-		"_id": { "$oid": "605c72ef1532071cba029d90" },
-		"senderId": { "$oid": "605c72ef1532071cba029d65" },
-		"receiverId": { "$oid": "605c72ef1532071cba029d60" },
-		"content": "Hello, I would like to join your ride to Lyon.",
-		"sentAt": { "$date": "2025-04-03T10:00:00Z" },
-		"createdAt": { "$date": "2025-04-03T00:00:00Z" },
-		"updatedAt": { "$date": "2025-04-03T00:00:00Z" }
-	  },
-	  {
-		"_id": { "$oid": "605c72ef1532071cba029d91" },
-		"senderId": { "$oid": "605c72ef1532071cba029d60" },
-		"receiverId": { "$oid": "605c72ef1532071cba029d65" },
-		"content": "Sure, I have space available. Looking forward to meeting you!",
-		"sentAt": { "$date": "2025-04-03T10:15:00Z" },
-		"createdAt": { "$date": "2025-04-03T00:00:00Z" },
-		"updatedAt": { "$date": "2025-04-03T00:00:00Z" }
-	  }
+		{
+			"_id": {
+				"$oid": "605c72ef1532071cba029d90"
+			},
+			"senderId": {
+				"$oid": "605c72ef1532071cba029d65"
+			},
+			"receiverId": {
+				"$oid": "605c72ef1532071cba029d60"
+			},
+			"content": "Hello, I would like to join your ride to Lyon.",
+			"sentAt": {
+				"$date": "2025-04-03T10:00:00Z"
+			},
+			"createdAt": {
+				"$date": "2025-04-03T00:00:00Z"
+			},
+			"updatedAt": {
+				"$date": "2025-04-03T00:00:00Z"
+			}
+		},
+		{
+			"_id": {
+				"$oid": "605c72ef1532071cba029d91"
+			},
+			"senderId": {
+				"$oid": "605c72ef1532071cba029d60"
+			},
+			"receiverId": {
+				"$oid": "605c72ef1532071cba029d65"
+			},
+			"content": "Sure, I have space available. Looking forward to meeting you!",
+			"sentAt": {
+				"$date": "2025-04-03T10:15:00Z"
+			},
+			"createdAt": {
+				"$date": "2025-04-03T00:00:00Z"
+			},
+			"updatedAt": {
+				"$date": "2025-04-03T00:00:00Z"
+			}
+		}
 	]
-  }
+}

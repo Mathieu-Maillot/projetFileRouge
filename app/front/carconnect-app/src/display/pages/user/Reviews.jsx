@@ -3,7 +3,7 @@ import { renderStars } from '../../components/ui/ratings/Stars';
 const Reviews = ({ user, reviews, data }) => {
 	return (
 		<>
-			<div id="reviews">
+			<div id="reviews" className='w_100'>
 				<div className="flex column gap1">
 					<h1>Mes notes</h1>
 					<ul className='flex column gap1 pad1'>

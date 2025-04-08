@@ -84,3 +84,12 @@
 		border-color: var(--border_color01);
 	}
 }
+
+#display_profile{
+	width: 100%;
+	.wrapper_wrap{
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+}

@@ -10,7 +10,7 @@ const NotFound = () => {
 			<div className="container">
 				<div className="flex column gap2 a_center j_center">
 					<div className="element">
-						<h1>Errerur 404. La page est introuvable</h1>
+						<h1>Erreur 404. La page est introuvable</h1>
 					</div>
 					<div className="element">
 						<Button variant='success' onClick={() => navigate("/")}>Retour à la page d'accueil</Button>
