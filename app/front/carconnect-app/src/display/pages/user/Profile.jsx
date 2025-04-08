@@ -27,7 +27,7 @@ const Profile = () => {
 						<div className="wrapper margin_top08">
 							<div className="flex column gap1">
 								<h1>Menu</h1>
-								<ul className='flex column gap1 pad1'>
+								<ul className='flex column gap1'>
 									<li onClick={() => navigate("/account/profile")}><p>Profil</p></li>
 									<li onClick={() => navigate("/account/settings")}><p>Paramètres</p></li>
 									<li onClick={() => navigate("/account/rides")}><p>Trajets</p></li>

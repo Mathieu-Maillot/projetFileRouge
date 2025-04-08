@@ -13,7 +13,7 @@ const DisplayProfile = ({ user, data }) => {
 					<h1>Mon profil</h1>
 					<div className='flex column gap1 pad1'>
 						<div className="element_box">
-							<h1>Identité</h1>
+							<h1 className='color_primary'>Identité</h1>
 							<div className="wrapper_wrap">
 								<div className="element_row gap1">
 									<p>{user?.firstName}</p>
@@ -34,18 +34,18 @@ const DisplayProfile = ({ user, data }) => {
 							</div>
 						</div>
 						<div className="element_box">
-							<h1>Notes</h1>
+							<h1 className='color_primary'>Notes</h1>
 							<div className="flex column gap1">
 								<div className="element">
 									<p>Nombre de notes : <strong> {user?.reviews?.length}</strong></p>
 								</div>
 								<div className="element">
-									<p>Moyennes : {averageRating}</p>
+									<p>Moyenne : {averageRating}</p>
 								</div>
 							</div>
 						</div>
 						<div className="element_box">
-							<h1>Trajets</h1>
+							<h1 className='color_primary'>Trajets</h1>
 							<div className="flex column gap1">
 								<div className="element">
 									<p>Nombre de trajets : <strong> {findRides?.length}</strong></p>
@@ -54,7 +54,7 @@ const DisplayProfile = ({ user, data }) => {
 							</div>
 						</div>
 						<div className="element_box">
-							<h1>Réservations</h1>
+							<h1 className='color_primary'>Réservations</h1>
 							<div className="flex column gap1">
 								<div className="element">
 								<p>Nombre de Réservations : <strong>{(findBookings?.length) || 0}</strong></p>

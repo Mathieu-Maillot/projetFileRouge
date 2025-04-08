@@ -38,8 +38,7 @@
 	}
 
 	.sidebar {
-		border-right: var(--border_color01);
-		padding: 1rem;
+		border-inline: var(--border_color01);
 		flex-basis: 15%;
 
 		@media (max-width: v.$lg_breakpoint) {
@@ -49,8 +48,12 @@
 			flex-basis: 100%;
 			flex-direction: column;
 		}
-
+		li{
+			cursor: pointer;
+			border-top: var(--border_color01);
+			}
 		p {
+			padding: 0.25rem 0.5rem;
 			position: relative;
 			display: inline-block;
 			transition: color 0.3s ease;
