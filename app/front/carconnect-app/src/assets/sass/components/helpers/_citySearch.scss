@@ -28,7 +28,7 @@
     border: 1px solid #ddd;
     border-radius: 4px;
     background-color: #fff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); 
+    box-shadow: var(--box_shadow01)
 }
 
 .city_search_item {

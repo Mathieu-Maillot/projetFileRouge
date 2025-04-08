@@ -10,7 +10,7 @@ const DropDownNav = ({user}) => {
     
     const userLinks = [
         { name: 'Mon profil', path: '/account/profile', icon: 'user' },
-        { name: 'Mes trajets', path: '/account/trips', icon: 'car' },
+        { name: 'Mes trajets', path: '/account/rides', icon: 'car' },
         { name: 'Mes réservations', path: '/account/bookings', icon: 'calendar' },
         { name: 'Mes messages', path: '/account/messages', icon: 'message-square' },
         { name: 'Paramètres', path: '/account/settings', icon: 'settings' },
@@ -41,9 +41,9 @@ const DropDownNav = ({user}) => {
                 {isOpen && (
                     <div className="wrapper_dropdown">
                         {userLinks.map((link, index) => (
-                            <div key={index} className="element flex gap1 a_center">
+                            <div key={index} className="element flex gap1 a_center" onClick={() => handleNavigate(link.path)}>
                                 <Icon type={link.icon} size="1.5rem" />
-                                <p onClick={() => handleNavigate(link.path)}>{link.name}</p>
+                                <p>{link.name}</p>
                             </div>
                         ))}
                         <div className="divider"></div>

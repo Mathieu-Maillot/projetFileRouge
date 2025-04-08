@@ -41,7 +41,7 @@ const AuthManagement = () => {
 			setAuthenticated(true);
 			login(user, fakeToken);
 
-			navigate('/account/informations');
+			navigate('/routes/search');
 		} else {
 			console.log('Login failed: Invalid credentials');
 			errorPop('Email ou mot de passe incorrect');

@@ -3,7 +3,8 @@
 #profile {
 	.container {
 		display: flex;
-gap: 4rem;
+		gap: 4rem;
+
 		@media (max-width: v.$lg_breakpoint) {
 			flex-direction: column;
 		}
@@ -73,8 +74,8 @@ gap: 4rem;
 	}
 }
 
-#reviews{
-	.wrapper_review{
+#reviews {
+	.wrapper_review {
 		padding: 2rem;
 		border-radius: 0.5rem;
 		width: 100%;

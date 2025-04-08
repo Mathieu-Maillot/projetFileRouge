@@ -35,8 +35,10 @@ const AppRoutes = () => {
 						<Route element={<AuthGuard />}>
 
 							<Route exact path="/account/settings" element={<Profile />} />
+							<Route exact path="/account/profile" element={<Profile />} />
 							<Route exact path="/account/reviews" element={<Profile />} />
 							<Route exact path="/account/messages" element={<Profile />} />
+							<Route exact path="/account/bookings" element={<Profile />} />
 							<Route exact path="/account/rides" element={<Profile />} />
 							<Route exact path="/routes/publish/traject" element={<Traject />} />
 

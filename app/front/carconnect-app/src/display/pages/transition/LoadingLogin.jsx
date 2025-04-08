@@ -8,7 +8,7 @@ const LoadingLogin = () => {
 					<div className="wrapper">
 						<h1>Vous devez vous connecter</h1>
 					</div>
-				</div>
+				</div>	
 			</div>
 		</>
 	)

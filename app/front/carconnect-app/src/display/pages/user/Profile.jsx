@@ -2,12 +2,14 @@ import React from 'react'
 import data from '../../../temp/data.json'
 import Icon from '../../components/utils/Icon';
 import { useLocation, useNavigate } from 'react-router-dom';
-import ProfileInformations from './ProfileInformations';
+import Settings from './Settings';
 import Reviews from './Reviews';
+import DisplayProfile from './DisplayProfile';
 const Profile = () => {
 	const navigate = useNavigate();
 	const location = useLocation();
 	const pathInformations = location.pathname === '/account/settings';
+	const pathProfile = location.pathname === '/account/profile';
 	const pathReviews = location.pathname === '/account/reviews';
 	const user = data?.users?.find(user => user._id.$oid === '605c72ef1532071cba029d60');
     const reviews = user?.reviews;
@@ -20,7 +22,10 @@ const Profile = () => {
 							<div className="flex column gap1">
 								<h1>Menu</h1>
 								<ul className='flex column gap1 pad1'>
-									<li onClick={() => navigate("/account/settings")}><p>Informations</p></li>
+									<li onClick={() => navigate("/account/profile")}><p>Profil</p></li>
+									<li onClick={() => navigate("/account/settings")}><p>Paramètres</p></li>
+									<li onClick={() => navigate("/account/rides")}><p>Trajets</p></li>
+									<li onClick={() => navigate("/account/bookings")}><p>Réservations</p></li>
 									<li onClick={() => navigate("/account/reviews")}><p>Notes</p></li>
 									<li onClick={() => navigate("/account/messages")}><p>Messages</p></li>
 								</ul>
@@ -29,7 +34,8 @@ const Profile = () => {
 					</div>
 					<div className="container_content">
 						<div className="wrapper_top flex gap 1rem">
-							{pathInformations && <ProfileInformations user={user} />}
+							{pathInformations && <Settings user={user} />}
+							{pathProfile && <DisplayProfile user={user} />}
 							{pathReviews && <Reviews user={user} reviews={reviews} data={data}/>}
 						</div>
 					</div>

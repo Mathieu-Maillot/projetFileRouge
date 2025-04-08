@@ -17,7 +17,6 @@ const Check = () => {
 	const pathDriver = location.pathname === '/auth/driver';
 	const pathLogin = location.pathname === '/auth/login';
 	const checkManagement = (formData) => {
-		console.log(formData);
 		if (pathCheck) {
 			handleCheck(formData);
 		}

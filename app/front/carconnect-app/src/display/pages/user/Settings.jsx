@@ -2,7 +2,7 @@ import React from 'react'
 import FormButton from '../../components/utils/FormButton'
 // import UserManagement from '../../../data/user/UserManagement' 
 
-const ProfileInformations = ({ user }) => {
+const Settings = ({ user }) => {
 	//   const { updateUserProfile } = UserManagement();
 
 	const handleSaveProfile = (updatedData) => {
@@ -58,4 +58,4 @@ const ProfileInformations = ({ user }) => {
 	)
 }
 
-export default ProfileInformations
+export default Settings
