@@ -37,10 +37,11 @@ const DetailsTraject = () => {
 										</div>
 									</div>
 								</div>
+								<div className="element_box">
+									
+								</div>
 							</div>
-							<div className="container_details">
-								<h1>Details</h1>
-							</div>
+							
 						</div>
 					</div>
 				</div>

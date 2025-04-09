@@ -1,12 +1,21 @@
+@use '../../components/utils/variables' as v;
 #details_traject{
 	.container_content{
-		flex-basis: 45%;
-	}
-	.container_details{
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
 		flex-basis: 55%;
+		@media (max-width : v.$lg_breakpoint){
+			flex-basis: 100%;
+		}
 	}
+	
 	.container_whole{
 		display: flex;
+		gap: 4rem;
+		@media (max-width : v.$lg_breakpoint){
+		flex-direction: column;
+		}
 	}
 	h1{
 		font-size: calc(5.5rem + 0.25vw);
