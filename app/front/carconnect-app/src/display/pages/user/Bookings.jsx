@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { getFormattedDate, linkBookingsForUser } from '../../components/utils/DataHelpers';
 import Search from '../../components/helpers/Search';
+import { useNavigate } from 'react-router-dom';
 
 const Bookings = ({ user, data }) => {
     const [searchTerm, setSearchTerm] = useState("");
     const userBookings = linkBookingsForUser(user, data);
-    
+	const navigate = useNavigate();
     const handleSearch = (e) => {
         setSearchTerm(e.target.value);
     };
@@ -52,9 +53,11 @@ const Bookings = ({ user, data }) => {
                                         </p>
                                     </div>
                                     <div className="element">
-                                        <p>{booking?.ride?.price} € - <span className={`status-${booking?.booking?.status}`}>{booking?.booking?.status}</span></p>
+                                        <p>{booking?.ride?.price} € - <span className={`status_${booking?.booking?.status}`}>{booking?.booking?.status}</span></p>
                                     </div>
                                 </li>
+								<p className='text_link' onClick={() => navigate(`/rides/${booking?.ride?._id?.$oid}`)}>Regarder le trajet</p>
+
                             </ul>
                         ))
                     ) : (
@@ -66,18 +69,6 @@ const Bookings = ({ user, data }) => {
                     )}
                 </div>
             </div>
-
-            <style jsx>{`
-                .status-confirmed {
-                    color: #4CAF50;
-                }
-                .status-pending {
-                    color: #FF9800;
-                }
-                .status-cancelled {
-                    color: #F44336;
-                }
-            `}</style>
         </div>
     );
 };

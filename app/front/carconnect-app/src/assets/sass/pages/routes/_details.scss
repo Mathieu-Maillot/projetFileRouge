@@ -53,5 +53,12 @@
 		height: 2px;
 		background: var(--text_color02);
 	}
+	.wrapper_driver{
+		display: flex;
+		border-radius: 0.5rem;
+		border: var(--border_color01);
+		padding: 1rem;
+		flex-direction: column;
+	}
 	
 }

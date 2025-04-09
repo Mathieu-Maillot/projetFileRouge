@@ -18,9 +18,9 @@ const Profile = () => {
 	const pathRides = location.pathname === '/account/rides';
 	const pathBookings = location.pathname === '/account/bookings';
 	const pathMessages = location.pathname === '/account/messages';
-		const { user } = useStore();
-	
-    const reviews = user?.reviews;
+	const { user } = useStore();
+
+	const reviews = user?.reviews;
 	return (
 		<>
 			<div id="profile">
@@ -44,10 +44,10 @@ const Profile = () => {
 						<div className="wrapper_top flex gap 1rem">
 							{pathInformations && <Settings user={user} />}
 							{pathProfile && <DisplayProfile user={user} data={data} />}
-							{pathReviews && <Reviews user={user} reviews={reviews} data={data}/>}
-							{pathRides && <Rides user={user} reviews={reviews} data={data}/>}
-							{pathBookings && <Bookings user={user} reviews={reviews} data={data}/>}
-							{pathMessages && <Messages user={user} reviews={reviews} data={data}/>}
+							{pathReviews && <Reviews user={user} reviews={reviews} data={data} />}
+							{pathRides && <Rides user={user} reviews={reviews} data={data} />}
+							{pathBookings && <Bookings user={user} reviews={reviews} data={data} />}
+							{pathMessages && <Messages user={user} reviews={reviews} data={data} />}
 						</div>
 					</div>
 				</div>

@@ -80,9 +80,8 @@ const Rides = ({ user, data }) => {
 														<li key={idx} className="passenger-item">
 															<div className="passenger-info">
 																<p><strong>{p.passenger?.firstName} {p.passenger?.lastName}</strong></p>
-																<p>Status: <span className={`status-${p.booking?.status}`}>{p.booking?.status}</span></p>
+																<p>Status: <span className={`status_${p.booking?.status}`}>{p.booking?.status}</span></p>
 																<p>Réservé le: {getFormattedDate(p.booking?.createdAt?.$date)}</p>
-																<p className='text_link' onClick={() => navigate(`/rides/${ride._id?.$oid}`)}>Administrer le trajet</p>
 															</div>
 														</li>
 													))}
@@ -90,6 +89,8 @@ const Rides = ({ user, data }) => {
 											) : (
 												<p className="no-passengers">Aucun passager n'a encore réservé ce trajet</p>
 											)}
+											<p className='text_link' onClick={() => navigate(`/rides/${ride._id?.$oid}`)}>Administrer le trajet</p>
+
 										</div>
 									)}
 								</div>

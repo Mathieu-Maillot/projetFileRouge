@@ -59,6 +59,10 @@
 	border: var(--border_color02);
 	color: white;
 }
+.btn_warning {
+	border: var(--border_color02);
+	background-color: var(--color_warning);
+}
 
 .btn_close {
 	background-color: var(--color_cancel);
@@ -175,4 +179,20 @@
 }
 .borderbottom {
 	border-bottom: var(--border_color01);
+}
+.status_confirmed {
+	color: var(--color_primary);
+	font-weight: bold;
+}
+
+.status_pending {
+	color: var(--color_pending);
+	font-weight: bold;
+
+}
+
+.status_cancelled {
+	color: var(--color_warning);
+	font-weight: bold;
+
 }
