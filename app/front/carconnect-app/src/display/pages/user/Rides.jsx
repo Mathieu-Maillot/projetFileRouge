@@ -89,7 +89,7 @@ const Rides = ({ user, data }) => {
 											) : (
 												<p className="no-passengers">Aucun passager n'a encore réservé ce trajet</p>
 											)}
-											<p className='text_link' onClick={() => navigate(`/rides/${ride._id?.$oid}`)}>Administrer le trajet</p>
+											<p className='text_link text_color_blue cursor_pointer' onClick={() => navigate(`/rides/${ride._id?.$oid}`)}>Administrer le trajet</p>
 
 										</div>
 									)}

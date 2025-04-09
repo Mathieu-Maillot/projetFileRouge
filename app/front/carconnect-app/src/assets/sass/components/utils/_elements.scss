@@ -157,10 +157,15 @@
 
 .text_link {
 	text-decoration: underline;
-	color: var(--text_link);
 	cursor: pointer;
 }
 
+.text_color_blue{
+	color : var(--text_link);
+}
+.text_color_warning{
+	color: var(--color_warning);
+}
 .element_box {
 	width: 100%;
 	height: auto;

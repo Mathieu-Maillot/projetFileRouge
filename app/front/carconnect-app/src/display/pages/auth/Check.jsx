@@ -88,8 +88,8 @@ const Check = () => {
 								{pathLogin &&
 									<>
 										<div className="element_column gap1">
-											<p className='text_link' onClick={() => navigate("/auth/forgotpassword")}>Mot de passe oublié ?</p>
-											<p className='text_link' onClick={() => navigate("/auth/register")}>Pas encore de compte ?</p>
+											<p className='text_link text_color_blue' onClick={() => navigate("/auth/forgotpassword")}>Mot de passe oublié ?</p>
+											<p className='text_link text_color_blue' onClick={() => navigate("/auth/register")}>Pas encore de compte ?</p>
 										</div>
 
 
