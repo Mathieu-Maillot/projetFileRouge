@@ -36,6 +36,17 @@ export const linkBookingsForUser = (user, data) => {
 			return { booking, ride, driver, passenger: user };
 		});
 };
+export const linkPassengersForRide = (ride, data) => {
+    if (!ride || !data?.bookings) return [];
+    
+    return data.bookings
+        .filter(booking => booking.rideId?.$oid === ride._id?.$oid)
+        .map(booking => {
+            const passenger = data.users?.find(u => u._id?.$oid === booking.userId?.$oid);
+            return { booking, passenger };
+        });
+};
+
 
 export const getFormattedDate = (dateString) => {
 	if (!dateString) return "";
@@ -45,6 +56,13 @@ export const getFormattedDate = (dateString) => {
 	const monthName = monthNames[dateObj.getMonth()];
 	const hour = dateObj.getHours();
 	return `${hour}h, le ${day} ${monthName}`;
+};
+export const getFormattedTime = (dateString) => {
+	if (!dateString) return "";
+	const dateObj = new Date(dateString);
+	const day = dateObj.getDate().toString().padStart(2, "0");
+	const hour = dateObj.getHours();
+	return `${hour}h`;
 };
 
 export const getFormattedBirthDate = (dateString) => {

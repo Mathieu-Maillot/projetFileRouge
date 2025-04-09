@@ -88,3 +88,44 @@
 		flex-wrap: wrap;
 	}
 }
+
+#rides{
+	
+	.show-details {
+		color: #3498db;
+		font-size: 1.5rem;
+		text-align: right;
+	}
+	.passengers-list {
+		margin-top: 10px;
+		padding: 10px 15px;
+		background: #f9f9f9;
+		border-radius: 5px;
+		border-top: 1px solid #eee;
+	}
+	.passenger-item {
+		padding: 8px 0;
+		border-bottom: 1px solid #eee;
+	}
+	.passenger-item:last-child {
+		border-bottom: none;
+	}
+	.passenger-info {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+	}
+	.no-passengers {
+		font-style: italic;
+		color: #777;
+	}
+	.status-confirmed {
+		color: #4CAF50;
+	}
+	.status-pending {
+		color: #FF9800;
+	}
+	.status-cancelled {
+		color: #F44336;
+	}
+}

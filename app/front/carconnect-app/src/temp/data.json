@@ -336,49 +336,137 @@
 		}
 	],
 	"rides": [
-		{
-			"_id": {
-				"$oid": "605c72ef1532071cba029d70"
-			},
-			"departureLocation": "Paris",
-			"arrivalLocation": "Lyon",
-			"departureTime": {
-				"$date": "2025-04-05T09:00:00Z"
-			},
-			"driverId": {
-				"$oid": "605c72ef1532071cba029d60"
-			},
-			"availableSeats": 3,
-			"createdAt": {
-				"$date": "2025-04-03T00:00:00Z"
-			},
-			"updatedAt": {
-				"$date": "2025-04-03T00:00:00Z"
-			},
-			"price": 45
-		},
-		{
-			"_id": {
-				"$oid": "605c72ef1532071cba029d71"
-			},
-			"departureLocation": "Marseille",
-			"arrivalLocation": "Nice",
-			"departureTime": {
-				"$date": "2025-04-06T10:30:00Z"
-			},
-			"driverId": {
-				"$oid": "605c72ef1532071cba029d62"
-			},
-			"availableSeats": 2,
-			"createdAt": {
-				"$date": "2025-04-02T00:00:00Z"
-			},
-			"updatedAt": {
-				"$date": "2025-04-03T00:00:00Z"
-			},
-			"price": 45
-		}
-	],
+        {
+            "_id": {
+                "$oid": "605c72ef1532071cba029d70"
+            },
+            "departureLocation": "Paris",
+            "arrivalLocation": "Lyon",
+            "departureTime": {
+                "$date": "2025-04-05T09:00:00Z"
+            },
+            "arrivalTime": {
+                "$date": "2025-04-05T12:30:00Z"
+            },
+            "driverId": {
+                "$oid": "605c72ef1532071cba029d60"
+            },
+            "availableSeats": 3,
+            "createdAt": {
+                "$date": "2025-04-03T00:00:00Z"
+            },
+            "updatedAt": {
+                "$date": "2025-04-03T00:00:00Z"
+            },
+            "price": 45,
+            "vehicle": "Volkswagen Golf",
+            "description": "Trajet direct avec une courte pause à Beaune. Coffre spacieux pour les bagages."
+        },
+        {
+            "_id": {
+                "$oid": "605c72ef1532071cba029d71"
+            },
+            "departureLocation": "Marseille",
+            "arrivalLocation": "Nice",
+            "departureTime": {
+                "$date": "2025-04-06T10:30:00Z"
+            },
+            "arrivalTime": {
+                "$date": "2025-04-06T12:45:00Z"
+            },
+            "driverId": {
+                "$oid": "605c72ef1532071cba029d62"
+            },
+            "availableSeats": 2,
+            "createdAt": {
+                "$date": "2025-04-02T00:00:00Z"
+            },
+            "updatedAt": {
+                "$date": "2025-04-03T00:00:00Z"
+            },
+            "price": 25,
+            "vehicle": "Renault Clio",
+            "description": "Trajet par l'autoroute A8, vue sur la mer. Climatisation disponible."
+        },
+        {
+            "_id": {
+                "$oid": "605c72ef1532071cba029d72"
+            },
+            "departureLocation": "Toulouse",
+            "arrivalLocation": "Bordeaux",
+            "departureTime": {
+                "$date": "2025-04-08T08:00:00Z"
+            },
+            "arrivalTime": {
+                "$date": "2025-04-08T10:15:00Z"
+            },
+            "driverId": {
+                "$oid": "605c72ef1532071cba029d63"
+            },
+            "availableSeats": 3,
+            "createdAt": {
+                "$date": "2025-04-04T00:00:00Z"
+            },
+            "updatedAt": {
+                "$date": "2025-04-04T00:00:00Z"
+            },
+            "price": 20,
+            "vehicle": "Peugeot 208",
+            "description": "Trajet rapide avec musique. Possibilité d'arrêt à Agen si besoin."
+        },
+        {
+            "_id": {
+                "$oid": "605c72ef1532071cba029d73"
+            },
+            "departureLocation": "Paris",
+            "arrivalLocation": "Lille",
+            "departureTime": {
+                "$date": "2025-04-10T14:00:00Z"
+            },
+            "arrivalTime": {
+                "$date": "2025-04-10T16:30:00Z"
+            },
+            "driverId": {
+                "$oid": "605c72ef1532071cba029d64"
+            },
+            "availableSeats": 4,
+            "createdAt": {
+                "$date": "2025-04-05T00:00:00Z"
+            },
+            "updatedAt": {
+                "$date": "2025-04-05T00:00:00Z"
+            },
+            "price": 30,
+            "vehicle": "Citroën C3",
+            "description": "Trajet confortable avec pause café à Amiens. Animal non accepté."
+        },
+        {
+            "_id": {
+                "$oid": "605c72ef1532071cba029d74"
+            },
+            "departureLocation": "Paris",
+            "arrivalLocation": "Nantes",
+            "departureTime": {
+                "$date": "2025-04-09T09:30:00Z"
+            },
+            "arrivalTime": {
+                "$date": "2025-04-09T13:45:00Z"
+            },
+            "driverId": {
+                "$oid": "605c72ef1532071cba029d60"
+            },
+            "availableSeats": 3,
+            "createdAt": {
+                "$date": "2025-04-03T15:00:00Z"
+            },
+            "updatedAt": {
+                "$date": "2025-04-03T15:00:00Z"
+            },
+            "price": 35,
+            "vehicle": "Volkswagen Golf",
+            "description": "Trajet direct par l'autoroute. Départ près de la gare Montparnasse."
+        }
+    ],
 	"bookings": [
 		{
 			"_id": {

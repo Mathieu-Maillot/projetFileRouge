@@ -11,6 +11,7 @@ import Profile from './display/pages/user/Profile';
 import AuthGuard from './display/guards/AuthGuard';
 import NotFound from './display/pages/NotFound';
 import Traject from './display/pages/routes/Traject';
+import DetailsTraject from './display/pages/routes/DetailsTraject';
 
 const AppRoutes = () => {
 	const location = useLocation();
@@ -33,14 +34,17 @@ const AppRoutes = () => {
 						<Route path="/" element={<App />} />
 						<Route path="*" element={<NotFound />} />
 						<Route element={<AuthGuard />}>
-
+							{/* Account */}
 							<Route exact path="/account/settings" element={<Profile />} />
 							<Route exact path="/account/profile" element={<Profile />} />
 							<Route exact path="/account/reviews" element={<Profile />} />
 							<Route exact path="/account/messages" element={<Profile />} />
 							<Route exact path="/account/bookings" element={<Profile />} />
 							<Route exact path="/account/rides" element={<Profile />} />
+
+							{/* Rides */}
 							<Route exact path="/routes/publish/traject" element={<Traject />} />
+							<Route exact path="/rides/:id" element={<DetailsTraject />} />
 
 						</Route>
 						<Route exact path="/routes/search" element={<SearchTraject />} />
