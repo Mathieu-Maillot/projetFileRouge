@@ -3,7 +3,6 @@
 #profile {
 	.container {
 		display: flex;
-		gap: 4rem;
 
 		@media (max-width: v.$lg_breakpoint) {
 			flex-direction: column;
@@ -12,11 +11,7 @@
 
 	.container_content {
 		flex-basis: 95%;
-		padding: 8rem;
-
-		@media (max-width: v.$lg_breakpoint) {
-			padding: 0;
-		}
+		padding-left: 4rem;
 
 		.btn_wrapper {
 			flex-basis: 25%;
@@ -38,19 +33,16 @@
 	}
 
 	.sidebar {
-		border-inline: var(--border_color01);
 		flex-basis: 15%;
+		
 
 		@media (max-width: v.$lg_breakpoint) {
-			border-right: none;
-			border-bottom: var(--border_color01);
 			padding: 0.5rem;
 			flex-basis: 100%;
 			flex-direction: column;
 		}
 		li{
 			cursor: pointer;
-			border-top: var(--border_color01);
 			}
 		p {
 			padding: 0.25rem 0.5rem;

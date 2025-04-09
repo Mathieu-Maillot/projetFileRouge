@@ -4,7 +4,7 @@ const Bookings = ({ user, data }) => {
 	const findBookings = linkBookingsForUser(user, data);
 
 	return (
-		<div id="bookings" className="w_100">
+		<div id="bookings" className="w_100 margin_top08">
 			<div className="flex column gap1">
 				<h1>Mes réservations</h1>
 				<div className="flex column gap1 pad1">

@@ -13,6 +13,7 @@
 @use "./pages/routes/publish";
 @use "./pages/auth/check";
 @use "./pages/user/profile";
+@use "./pages/user/messages";
 @use "./pages/NotFound";
 
 .app_container {

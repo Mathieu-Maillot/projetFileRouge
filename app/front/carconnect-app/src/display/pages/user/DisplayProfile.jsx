@@ -8,9 +8,9 @@ const DisplayProfile = ({ user, data }) => {
 	const averageRating = getAverageRating(user?.reviews);
 	return (
 		<>
-			<div id="display_profile">
+			<div id="display_profile" className='margin_top08'>
 				<div className="flex column gap1">
-					<h1>Mon profil</h1>
+						<h1>Mon profil</h1>
 					<div className='flex column gap1 pad1'>
 						<div className="element_box">
 							<h1 className='color_primary'>Identité</h1>
@@ -26,7 +26,7 @@ const DisplayProfile = ({ user, data }) => {
 							<div className="element">
 								<p>{user?.email}</p>
 							</div>
-							<div className="border">
+							<div className="bordertop">
 								<div className="element">
 									<p>Née le  {getFormattedBirthDate(user?.birthdate)}</p>
 									<p>{calculateAge(user?.birthdate)} ans</p>
@@ -50,17 +50,17 @@ const DisplayProfile = ({ user, data }) => {
 								<div className="element">
 									<p>Nombre de trajets : <strong> {findRides?.length}</strong></p>
 								</div>
-								
+
 							</div>
 						</div>
 						<div className="element_box">
 							<h1 className='color_primary'>Réservations</h1>
 							<div className="flex column gap1">
 								<div className="element">
-								<p>Nombre de Réservations : <strong>{(findBookings?.length) || 0}</strong></p>
+									<p>Nombre de Réservations : <strong>{(findBookings?.length) || 0}</strong></p>
 
 								</div>
-								
+
 							</div>
 						</div>
 					</div>

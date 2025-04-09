@@ -8,6 +8,7 @@ import DisplayProfile from './DisplayProfile';
 import useStore from '../../../cfg/store/AuthStore';
 import Rides from './Rides';
 import Bookings from './Bookings';
+import Messages from './Messages';
 const Profile = () => {
 	const navigate = useNavigate();
 	const location = useLocation();
@@ -16,6 +17,7 @@ const Profile = () => {
 	const pathReviews = location.pathname === '/account/reviews';
 	const pathRides = location.pathname === '/account/rides';
 	const pathBookings = location.pathname === '/account/bookings';
+	const pathMessages = location.pathname === '/account/messages';
 		const { user } = useStore();
 	
     const reviews = user?.reviews;
@@ -45,6 +47,7 @@ const Profile = () => {
 							{pathReviews && <Reviews user={user} reviews={reviews} data={data}/>}
 							{pathRides && <Rides user={user} reviews={reviews} data={data}/>}
 							{pathBookings && <Bookings user={user} reviews={reviews} data={data}/>}
+							{pathMessages && <Messages user={user} reviews={reviews} data={data}/>}
 						</div>
 					</div>
 				</div>

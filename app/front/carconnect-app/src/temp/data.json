@@ -424,47 +424,404 @@
 		}
 	],
 	"messages": [
-		{
-			"_id": {
-				"$oid": "605c72ef1532071cba029d90"
-			},
-			"senderId": {
-				"$oid": "605c72ef1532071cba029d65"
-			},
-			"receiverId": {
-				"$oid": "605c72ef1532071cba029d60"
-			},
-			"content": "Hello, I would like to join your ride to Lyon.",
-			"sentAt": {
-				"$date": "2025-04-03T10:00:00Z"
-			},
-			"createdAt": {
-				"$date": "2025-04-03T00:00:00Z"
-			},
-			"updatedAt": {
-				"$date": "2025-04-03T00:00:00Z"
-			}
-		},
-		{
-			"_id": {
-				"$oid": "605c72ef1532071cba029d91"
-			},
-			"senderId": {
-				"$oid": "605c72ef1532071cba029d60"
-			},
-			"receiverId": {
-				"$oid": "605c72ef1532071cba029d65"
-			},
-			"content": "Sure, I have space available. Looking forward to meeting you!",
-			"sentAt": {
-				"$date": "2025-04-03T10:15:00Z"
-			},
-			"createdAt": {
-				"$date": "2025-04-03T00:00:00Z"
-			},
-			"updatedAt": {
-				"$date": "2025-04-03T00:00:00Z"
-			}
-		}
-	]
+        {
+            "_id": {
+                "$oid": "605c72ef1532071cba029d90"
+            },
+            "senderId": {
+                "$oid": "605c72ef1532071cba029d65"
+            },
+            "receiverId": {
+                "$oid": "605c72ef1532071cba029d60"
+            },
+            "content": "Hello, I would like to join your ride to Lyon.",
+            "sentAt": {
+                "$date": "2025-04-03T10:00:00Z"
+            },
+            "createdAt": {
+                "$date": "2025-04-03T00:00:00Z"
+            },
+            "updatedAt": {
+                "$date": "2025-04-03T00:00:00Z"
+            }
+        },
+        {
+            "_id": {
+                "$oid": "605c72ef1532071cba029d91"
+            },
+            "senderId": {
+                "$oid": "605c72ef1532071cba029d60"
+            },
+            "receiverId": {
+                "$oid": "605c72ef1532071cba029d65"
+            },
+            "content": "Sure, I have space available. Looking forward to meeting you!",
+            "sentAt": {
+                "$date": "2025-04-03T10:15:00Z"
+            },
+            "createdAt": {
+                "$date": "2025-04-03T00:00:00Z"
+            },
+            "updatedAt": {
+                "$date": "2025-04-03T00:00:00Z"
+            }
+        },
+        {
+            "_id": {
+                "$oid": "605c72ef1532071cba029d92"
+            },
+            "senderId": {
+                "$oid": "605c72ef1532071cba029d65"
+            },
+            "receiverId": {
+                "$oid": "605c72ef1532071cba029d60"
+            },
+            "content": "Great! Where exactly is the meeting point in Paris?",
+            "sentAt": {
+                "$date": "2025-04-03T10:30:00Z"
+            },
+            "createdAt": {
+                "$date": "2025-04-03T00:00:00Z"
+            },
+            "updatedAt": {
+                "$date": "2025-04-03T00:00:00Z"
+            }
+        },
+        {
+            "_id": {
+                "$oid": "605c72ef1532071cba029d93"
+            },
+            "senderId": {
+                "$oid": "605c72ef1532071cba029d60"
+            },
+            "receiverId": {
+                "$oid": "605c72ef1532071cba029d65"
+            },
+            "content": "Let's meet at Gare de Lyon, in front of the main entrance at 8:45 AM.",
+            "sentAt": {
+                "$date": "2025-04-03T10:45:00Z"
+            },
+            "createdAt": {
+                "$date": "2025-04-03T00:00:00Z"
+            },
+            "updatedAt": {
+                "$date": "2025-04-03T00:00:00Z"
+            }
+        },
+        {
+            "_id": {
+                "$oid": "605c72ef1532071cba029d94"
+            },
+            "senderId": {
+                "$oid": "605c72ef1532071cba029d65"
+            },
+            "receiverId": {
+                "$oid": "605c72ef1532071cba029d60"
+            },
+            "content": "Perfect. I'll be there on time. I'm bringing one small suitcase, is that OK?",
+            "sentAt": {
+                "$date": "2025-04-03T11:00:00Z"
+            },
+            "createdAt": {
+                "$date": "2025-04-03T00:00:00Z"
+            },
+            "updatedAt": {
+                "$date": "2025-04-03T00:00:00Z"
+            }
+        },
+        {
+            "_id": {
+                "$oid": "605c72ef1532071cba029d95"
+            },
+            "senderId": {
+                "$oid": "605c72ef1532071cba029d60"
+            },
+            "receiverId": {
+                "$oid": "605c72ef1532071cba029d65"
+            },
+            "content": "Yes, one small suitcase is fine. See you on Saturday!",
+            "sentAt": {
+                "$date": "2025-04-03T11:15:00Z"
+            },
+            "createdAt": {
+                "$date": "2025-04-03T00:00:00Z"
+            },
+            "updatedAt": {
+                "$date": "2025-04-03T00:00:00Z"
+            }
+        },
+        {
+            "_id": {
+                "$oid": "605c72ef1532071cba029d96"
+            },
+            "senderId": {
+                "$oid": "605c72ef1532071cba029d65"
+            },
+            "receiverId": {
+                "$oid": "605c72ef1532071cba029d62"
+            },
+            "content": "Bonjour Clara, est-ce que votre trajet Marseille-Nice a encore des places disponibles?",
+            "sentAt": {
+                "$date": "2025-04-04T09:00:00Z"
+            },
+            "createdAt": {
+                "$date": "2025-04-04T09:00:00Z"
+            },
+            "updatedAt": {
+                "$date": "2025-04-04T09:00:00Z"
+            }
+        },
+        {
+            "_id": {
+                "$oid": "605c72ef1532071cba029d97"
+            },
+            "senderId": {
+                "$oid": "605c72ef1532071cba029d62"
+            },
+            "receiverId": {
+                "$oid": "605c72ef1532071cba029d65"
+            },
+            "content": "Bonjour Thomas, oui j'ai encore 2 places. Vous souhaitez réserver?",
+            "sentAt": {
+                "$date": "2025-04-04T09:10:00Z"
+            },
+            "createdAt": {
+                "$date": "2025-04-04T09:10:00Z"
+            },
+            "updatedAt": {
+                "$date": "2025-04-04T09:10:00Z"
+            }
+        },
+        {
+            "_id": {
+                "$oid": "605c72ef1532071cba029d98"
+            },
+            "senderId": {
+                "$oid": "605c72ef1532071cba029d65"
+            },
+            "receiverId": {
+                "$oid": "605c72ef1532071cba029d62"
+            },
+            "content": "Oui, je souhaite réserver une place. Est-ce que vous acceptez les animaux? J'ai un petit chien.",
+            "sentAt": {
+                "$date": "2025-04-04T09:15:00Z"
+            },
+            "createdAt": {
+                "$date": "2025-04-04T09:15:00Z"
+            },
+            "updatedAt": {
+                "$date": "2025-04-04T09:15:00Z"
+            }
+        },
+        {
+            "_id": {
+                "$oid": "605c72ef1532071cba029d99"
+            },
+            "senderId": {
+                "$oid": "605c72ef1532071cba029d62"
+            },
+            "receiverId": {
+                "$oid": "605c72ef1532071cba029d65"
+            },
+            "content": "Désolée, mais je n'accepte pas les animaux dans ma voiture car je suis allergique.",
+            "sentAt": {
+                "$date": "2025-04-04T09:18:00Z"
+            },
+            "createdAt": {
+                "$date": "2025-04-04T09:18:00Z"
+            },
+            "updatedAt": {
+                "$date": "2025-04-04T09:18:00Z"
+            }
+        },
+        {
+            "_id": {
+                "$oid": "605c72ef1532071cba029d9a"
+            },
+            "senderId": {
+                "$oid": "605c72ef1532071cba029d65"
+            },
+            "receiverId": {
+                "$oid": "605c72ef1532071cba029d62"
+            },
+            "content": "Je comprends, pas de problème. Je vais chercher une autre solution. Merci quand même!",
+            "sentAt": {
+                "$date": "2025-04-04T09:22:00Z"
+            },
+            "createdAt": {
+                "$date": "2025-04-04T09:22:00Z"
+            },
+            "updatedAt": {
+                "$date": "2025-04-04T09:22:00Z"
+            }
+        },
+        {
+            "_id": {
+                "$oid": "605c72ef1532071cba029d9b"
+            },
+            "senderId": {
+                "$oid": "605c72ef1532071cba029d65"
+            },
+            "receiverId": {
+                "$oid": "605c72ef1532071cba029d63"
+            },
+            "content": "Bonjour Hugo, j'ai vu que vous organisez souvent des trajets vers Bordeaux. Prévoyez-vous un trajet prochainement?",
+            "sentAt": {
+                "$date": "2025-04-04T14:30:00Z"
+            },
+            "createdAt": {
+                "$date": "2025-04-04T14:30:00Z"
+            },
+            "updatedAt": {
+                "$date": "2025-04-04T14:30:00Z"
+            }
+        },
+        {
+            "_id": {
+                "$oid": "605c72ef1532071cba029d9c"
+            },
+            "senderId": {
+                "$oid": "605c72ef1532071cba029d63"
+            },
+            "receiverId": {
+                "$oid": "605c72ef1532071cba029d65"
+            },
+            "content": "Bonjour Thomas, oui je prévois un trajet Toulouse-Bordeaux le weekend prochain. Je publierai les détails demain.",
+            "sentAt": {
+                "$date": "2025-04-04T14:45:00Z"
+            },
+            "createdAt": {
+                "$date": "2025-04-04T14:45:00Z"
+            },
+            "updatedAt": {
+                "$date": "2025-04-04T14:45:00Z"
+            }
+        },
+        {
+            "_id": {
+                "$oid": "605c72ef1532071cba029d9d"
+            },
+            "senderId": {
+                "$oid": "605c72ef1532071cba029d65"
+            },
+            "receiverId": {
+                "$oid": "605c72ef1532071cba029d63"
+            },
+            "content": "Parfait! Je suis intéressé. Pourriez-vous me notifier quand vous aurez publié le trajet?",
+            "sentAt": {
+                "$date": "2025-04-04T14:50:00Z"
+            },
+            "createdAt": {
+                "$date": "2025-04-04T14:50:00Z"
+            },
+            "updatedAt": {
+                "$date": "2025-04-04T14:50:00Z"
+            }
+        },
+        {
+            "_id": {
+                "$oid": "605c72ef1532071cba029d9e"
+            },
+            "senderId": {
+                "$oid": "605c72ef1532071cba029d63"
+            },
+            "receiverId": {
+                "$oid": "605c72ef1532071cba029d65"
+            },
+            "content": "Bien sûr, je vous enverrai un message dès que le trajet sera disponible sur la plateforme.",
+            "sentAt": {
+                "$date": "2025-04-04T14:55:00Z"
+            },
+            "createdAt": {
+                "$date": "2025-04-04T14:55:00Z"
+            },
+            "updatedAt": {
+                "$date": "2025-04-04T14:55:00Z"
+            }
+        },
+        {
+            "_id": {
+                "$oid": "605c72ef1532071cba029d9f"
+            },
+            "senderId": {
+                "$oid": "605c72ef1532071cba029d65"
+            },
+            "receiverId": {
+                "$oid": "605c72ef1532071cba029d64"
+            },
+            "content": "Bonjour Sophie, j'ai une question concernant votre trajet vers Lille la semaine prochaine. Est-ce qu'il y a des arrêts prévus en cours de route?",
+            "sentAt": {
+                "$date": "2025-04-05T10:00:00Z"
+            },
+            "createdAt": {
+                "$date": "2025-04-05T10:00:00Z"
+            },
+            "updatedAt": {
+                "$date": "2025-04-05T10:00:00Z"
+            }
+        },
+        {
+            "_id": {
+                "$oid": "605c72ef1532071cba029da0"
+            },
+            "senderId": {
+                "$oid": "605c72ef1532071cba029d64"
+            },
+            "receiverId": {
+                "$oid": "605c72ef1532071cba029d65"
+            },
+            "content": "Bonjour Thomas, je prévois un court arrêt à Amiens pour une pause café, environ 15-20 minutes.",
+            "sentAt": {
+                "$date": "2025-04-05T10:10:00Z"
+            },
+            "createdAt": {
+                "$date": "2025-04-05T10:10:00Z"
+            },
+            "updatedAt": {
+                "$date": "2025-04-05T10:10:00Z"
+            }
+        },
+        {
+            "_id": {
+                "$oid": "605c72ef1532071cba029da1"
+            },
+            "senderId": {
+                "$oid": "605c72ef1532071cba029d60"
+            },
+            "receiverId": {
+                "$oid": "605c72ef1532071cba029d66"
+            },
+            "content": "Bonjour Julie, j'organise un trajet Paris-Nantes ce dimanche. Seriez-vous intéressée?",
+            "sentAt": {
+                "$date": "2025-04-03T15:00:00Z"
+            },
+            "createdAt": {
+                "$date": "2025-04-03T15:00:00Z"
+            },
+            "updatedAt": {
+                "$date": "2025-04-03T15:00:00Z"
+            }
+        },
+        {
+            "_id": {
+                "$oid": "605c72ef1532071cba029da2"
+            },
+            "senderId": {
+                "$oid": "605c72ef1532071cba029d66"
+            },
+            "receiverId": {
+                "$oid": "605c72ef1532071cba029d60"
+            },
+            "content": "Bonjour Alice, oui je suis intéressée! Quelle heure de départ prévoyez-vous?",
+            "sentAt": {
+                "$date": "2025-04-03T15:15:00Z"
+            },
+            "createdAt": {
+                "$date": "2025-04-03T15:15:00Z"
+            },
+            "updatedAt": {
+                "$date": "2025-04-03T15:15:00Z"
+            }
+        }
+    ]
 }

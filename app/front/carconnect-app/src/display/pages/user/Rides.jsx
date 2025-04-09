@@ -5,7 +5,7 @@ const Rides = ({ user, data }) => {
 	const findRides = data?.rides?.filter(ride => ride.driverId?.$oid === user?._id?.$oid) || []
 
 	return (
-		<div id="rides" className="w_100">
+		<div id="rides" className="w_100 margin_top08">
 			<div className="flex column gap1">
 				<h1>Mes trajets</h1>
 				<div className="flex column gap1 pad1">

@@ -44,7 +44,7 @@ export const getFormattedDate = (dateString) => {
 	const monthNames = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"];
 	const monthName = monthNames[dateObj.getMonth()];
 	const hour = dateObj.getHours();
-	return `${day} ${monthName}, à ${hour}h`;
+	return `${hour}h, le ${day} ${monthName}`;
 };
 
 export const getFormattedBirthDate = (dateString) => {

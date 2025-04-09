@@ -12,8 +12,8 @@ const Settings = ({ user }) => {
 
 	return (
 		<>
-			<div className="profile_container flex column gap2">
-
+			<div className="profile_container flex column gap2 margin_top08">
+				<h1>Paramètres</h1>
 				<FormButton
 					title="Informations personnelles"
 					buttonName="Informations personnelles"
