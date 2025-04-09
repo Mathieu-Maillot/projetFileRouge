@@ -4,15 +4,18 @@ import useAuthStore from '../../cfg/store/AuthStore'
 
 const TrajectManagement = () => {
     const navigate = useNavigate();
-    const { user, isAuthenticated, errorPop, successPop, setData } = useAuthStore();
+    const { user, isAuthenticated, setData, errorPop, successPop } = useAuthStore();
 
     const handlePublishTraject = async (data) => {
-        if (user?.role !== 'driver' && isAuthenticated) {
-            navigate('/auth/driver', { replace: true });
+        if (!isAuthenticated) {
+            errorPop("Vous devez vous connecter pour publier un trajet");
+            navigate('/auth/login', { replace: true });
             return;
         }
-        if (!isAuthenticated) {
-            navigate('/auth/login', { replace: true });
+        
+        if (user?.role !== 'driver' && isAuthenticated) {
+            errorPop("Vous devez être conducteur pour publier un trajet");
+            navigate('/auth/driver', { replace: true });
             return;
         }
 
@@ -46,17 +49,18 @@ const TrajectManagement = () => {
             existingData.state.data.rides = [...existingData.state.data.rides, newTraject];
             localStorage.setItem('app-storage', JSON.stringify(existingData));
             
-            // Also update the Zustand store
             setData({...existingData.state.data});
-            
-            navigate('/account/rides', { replace: true });
+            successPop("Votre trajet a été publié avec succès");
+            navigate('/routes/publish/traject', { replace: true });
         } catch (error) {
             console.error("Error publishing traject:", error);
+            errorPop("Une erreur est survenue lors de la publication du trajet");
         }
     }
 
     const handleDeleteTraject = async (trajectId) => {
         if (!isAuthenticated) {
+            errorPop("Vous devez vous connecter pour effectuer cette action");
             navigate('/auth/login', { replace: true });
             return false;
         }
@@ -65,12 +69,8 @@ const TrajectManagement = () => {
             console.log("Attempting to delete trajectory with ID:", trajectId);
             
             let storage = localStorage.getItem('app-storage');
-            console.log("Raw storage data:", storage);
-            
             let existingData = JSON.parse(storage || '{}');
-            console.log("Parsed storage data:", existingData);
             
-            // Initialize the structure if it doesn't exist
             if (!existingData.state) {
                 existingData.state = {};
             }
@@ -83,6 +83,7 @@ const TrajectManagement = () => {
                 console.log("Initializing rides array");
                 existingData.state.data.rides = [];
                 localStorage.setItem('app-storage', JSON.stringify(existingData));
+                errorPop("Aucun trajet trouvé");
                 return false; // Nothing to delete
             }
             
@@ -90,19 +91,14 @@ const TrajectManagement = () => {
                 ride => ride._id.$oid === trajectId
             );
             
-            console.log("Found trajectory at index:", trajectIndex);
-            
             if (trajectIndex !== -1) {
                 const traject = existingData.state.data.rides[trajectIndex];
                 
                 const isOwner = traject.driverId.$oid === (user._id.$oid || user._id);
                 const isAdmin = user.role === 'admin';
                 
-                console.log("Is user the owner?", isOwner);
-                console.log("Is user admin?", isAdmin);
-                
                 if (!isOwner && !isAdmin) {
-                    console.error("Unauthorized: You are not the driver of this ride");
+                    errorPop("Vous n'êtes pas autorisé à supprimer ce trajet");
                     return false;
                 }
                 
@@ -117,19 +113,17 @@ const TrajectManagement = () => {
                 }
                 
                 localStorage.setItem('app-storage', JSON.stringify(existingData));
-                
-                // Also update the Zustand store
                 setData({...existingData.state.data});
-                
-                console.log("Trajectory deleted successfully");
+                successPop("Trajet supprimé avec succès");
                 
                 return true;
             } else {
-                console.error("Trajectory not found");
+                errorPop("Trajet introuvable");
                 return false;
             }
         } catch (error) {
             console.error("Error deleting trajectory:", error);
+            errorPop("Une erreur est survenue lors de la suppression du trajet");
             return false;
         }
     }

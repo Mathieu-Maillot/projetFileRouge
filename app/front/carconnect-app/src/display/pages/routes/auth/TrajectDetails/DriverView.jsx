@@ -1,8 +1,8 @@
 import React from 'react'
-import { linkPassengersForRide, getFormattedDate } from '../../../components/utils/DataHelpers'
-import Button from '../../../components/helpers/Button'
-import RideManagement from '../../../../data/routes/RideManagement'
-import TrajectManagement from '../../../../data/auth/TrajectManagement'
+import { linkPassengersForRide, getFormattedDate } from '../../../../components/utils/DataHelpers'
+import Button from '../../../../components/helpers/Button'
+import RideManagement from '../../../../../data/routes/RideManagement'
+import TrajectManagement from '../../../../../data/auth/TrajectManagement'
 const DriverView = ({ ride, data }) => {
 	const passengers = linkPassengersForRide(ride, data)
 	const { deletePassengerFromRide } = RideManagement();

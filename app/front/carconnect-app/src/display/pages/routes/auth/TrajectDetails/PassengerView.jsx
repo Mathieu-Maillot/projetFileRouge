@@ -1,7 +1,7 @@
 import React from 'react'
-import { getAverageRating, getFormattedDate } from '../../../components/utils/DataHelpers';
-import Button from '../../../components/helpers/Button';
-import Icon from '../../../components/utils/Icon';
+import { getAverageRating, getFormattedDate } from '../../../../components/utils/DataHelpers';
+import Button from '../../../../components/helpers/Button';
+import Icon from '../../../../components/utils/Icon';
 import { Navigate, useNavigate } from 'react-router-dom';
 
 const PassengerView = ({ data, user, ride }) => {

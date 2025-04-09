@@ -10,18 +10,26 @@ import Check from './display/pages/auth/Check';
 import Profile from './display/pages/user/Profile';
 import AuthGuard from './display/guards/AuthGuard';
 import NotFound from './display/pages/NotFound';
-import Traject from './display/pages/routes/Traject';
-import DetailsTraject from './display/pages/routes/DetailsTraject';
+import DetailsTraject from './display/pages/routes/auth/TrajectDetails/DetailsTraject';
 import ProfileDetails from './display/pages/public/ProfileDetails';
-
+import AuthPublish from './display/pages/routes/auth/AuthPublish';
+import { useAuthStore } from './cfg/store/AuthStore';
+import Popup from './display/components/utils/Popup';
 const AppRoutes = () => {
 	const location = useLocation();
 	const isAuthRoute = location.pathname.startsWith("/auth");
+	const { popup } = useAuthStore();
 
 	return (
 		<>
 			{!isAuthRoute && <Header />}
-
+			{popup.isOpen && (
+				<Popup
+					isOpen={popup.isOpen}
+					message={popup.message}
+					type={popup.type}
+				/>
+			)}
 			{isAuthRoute ? (
 				<Routes>
 					<Route exact path="/auth/check" element={<Check />} />
@@ -45,7 +53,7 @@ const AppRoutes = () => {
 							<Route exact path="/account/rides" element={<Profile />} />
 
 							{/* Rides */}
-							<Route exact path="/routes/publish/traject" element={<Traject />} />
+							<Route exact path="/routes/publish/traject/" element={<AuthPublish />} />
 							<Route exact path="/rides/:id" element={<DetailsTraject />} />
 
 						</Route>

@@ -1,10 +1,10 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import data from '../../../temp/data.json'
-import { getFormattedDate, getFormattedTime, linkPassengersForRide } from '../../components/utils/DataHelpers';
-import DriverView from './Details/DriverView';
-import PassengerView from './Details/PassengerView';
-import useStore from '../../../cfg/store/AuthStore';
+import data from '../../../../../temp/data.json'
+import { getFormattedDate, getFormattedTime, linkPassengersForRide } from '../../../../components/utils/DataHelpers';
+import DriverView from './DriverView';
+import PassengerView from './PassengerView'
+import useStore from '../../../../../cfg/store/AuthStore';
 const DetailsTraject = () => {
 	const { id } = useParams();
 	const Ride = data?.rides?.find(ride => ride._id?.$oid === id);
