@@ -44,7 +44,10 @@ const DetailsTraject = () => {
 								<div className="element_box">
 									<div className="container">
 										<div className="wrapper">
-											{isDriver ? <DriverView data={data} ride={Ride} /> : <PassengerView data={data} user={user} ride={Ride} />}
+											{isDriver ?
+												<DriverView data={data} ride={Ride} />
+												:
+												<PassengerView data={data} user={user} ride={Ride} />}
 
 										</div>
 									</div>

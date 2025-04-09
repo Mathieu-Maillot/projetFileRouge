@@ -127,6 +127,7 @@
 				"brand": "Renault",
 				"model": "Clio",
 				"capacity": 4,
+				"color" : "black",
 				"createdAt": {
 					"$date": "2025-04-01T00:00:00Z"
 				},
