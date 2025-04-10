@@ -1,33 +1,32 @@
-﻿using MongoDB.Bson;
-using UserMicroservice.Repositories.Interfaces;
-using UserMicroservice.Services.Interfaces;
-using UserMicroService.Models;
-using UserMicroService.Repositories.Interfaces;
+﻿using CarConnectAPI.Models;
+using CarConnectAPI.Repositories.Interfaces;
+using CarConnectAPI.Services.Interfaces;
+using MongoDB.Bson;
 
-namespace UserMicroservice.Services
+namespace CarConnectAPI.Services
 {
-    public class VehicleService : IVehicleService<Vehicle, ObjectId>
+    public class VehicleService : IVehicleService<Vehicle, string>
     {
-        private readonly IVehicleRepository<Vehicle, ObjectId> _vehicleRepository;
+        private readonly IVehicleRepository<Vehicle, string> _vehicleRepository;
 
-        public VehicleService(IVehicleRepository<Vehicle, ObjectId> vehicleRepository)
+        public VehicleService(IVehicleRepository<Vehicle, string> vehicleRepository)
         {
             _vehicleRepository = vehicleRepository;
         }
 
-        public async Task CreateVehicleAsync(ObjectId userId, Vehicle vehicle)
+        public async Task CreateVehicleAsync(string userId, Vehicle vehicle)
         {
             try
             {
                 await _vehicleRepository.CreateVehicleAsync(userId, vehicle);
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 throw new Exception($"Error creating vehicle: {ex.Message}");
             }
         }
 
-        public async Task<Vehicle> GetVehicleByUserIdAsync(ObjectId userId, ObjectId vehicleId)
+        public async Task<Vehicle> GetVehicleByUserIdAsync(string userId, string vehicleId)
         {
             try
             {
@@ -40,7 +39,7 @@ namespace UserMicroservice.Services
             }
         }
 
-        public async Task<List<Vehicle>> GetVehiclesByUserIdAsync(ObjectId userId)
+        public async Task<List<Vehicle>> GetVehiclesByUserIdAsync(string userId)
         {
             try
             {
@@ -52,7 +51,7 @@ namespace UserMicroservice.Services
             }
         }
 
-        public async Task UpdateVehicleAsync(ObjectId userId, Vehicle vehicle)
+        public async Task UpdateVehicleAsync(string userId, Vehicle vehicle)
         {
             try
             {
@@ -64,9 +63,16 @@ namespace UserMicroservice.Services
             }
         }
 
-        public async Task DeleteVehicleAsync(ObjectId userId, ObjectId VehicleId)
+        public async Task DeleteVehicleAsync(string userId, string VehicleId)
         {
-            
+            try
+            {
+                await _vehicleRepository.DeleteVehicleAsync(userId, VehicleId);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Error deleting vehicle: {ex.Message}");
+            }
         }
     }
 }

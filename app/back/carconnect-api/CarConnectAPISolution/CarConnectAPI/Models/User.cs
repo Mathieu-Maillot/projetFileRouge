@@ -1,11 +1,12 @@
-﻿using MongoDB.Bson;
+﻿using CarConnectAPI.Helpers;
+using MongoDB.Bson;
 
 namespace CarConnectAPI.Models
 {
     public class User
     {
-        public ObjectId Id { get; set; } = ObjectId.GenerateNewId();
-        public ObjectId CreatedBy { get; set; }
+        public string Id { get; set; } = RandomStringGenerator.StringGenerator(12);
+        public string? CreatedBy { get; set; } 
         public string? Firstname { get; set; }
         public string? Lastname { get; set; }
         public string Fullname => $"{Firstname} {Lastname}";
