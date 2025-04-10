@@ -5,6 +5,7 @@ import Icon from '../../components/utils/Icon';
 import Dropdown from '../../components/utils/Dropdown';
 import data from '../../../temp/data.json';
 import { getFormattedDate, getFormattedTime } from '../../components/utils/DataHelpers';
+import FormSearch from '../../components/utils/FormSearch';
 
 const SearchTraject = () => {
     const navigate = useNavigate();
@@ -159,7 +160,7 @@ const SearchTraject = () => {
                     </div>
                 )}
                 <div className="wrapper">
-                    <Form
+                    <FormSearch
                         formAction={handleSearchTraject}
                         inputCount={2}  
                         placeholder={['Ville de départ', "Ville d'arrivée"]}
