@@ -4,7 +4,7 @@ namespace UserMicroService.Models
 {
     public class Vehicle
     {
-        public ObjectId Id { get; set; }
+        public ObjectId Id { get; set; } = ObjectId.GenerateNewId();
         public string? Brand { get; set; }
         public string? Model { get; set; }
         public int Capacity { get; set; }

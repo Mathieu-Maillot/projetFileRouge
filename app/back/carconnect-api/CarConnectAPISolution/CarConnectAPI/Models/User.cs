@@ -1,7 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc.ViewEngines;
-using MongoDB.Bson;
+﻿using MongoDB.Bson;
 
-namespace UserMicroService.Models
+namespace CarConnectAPI.Models
 {
     public class User
     {

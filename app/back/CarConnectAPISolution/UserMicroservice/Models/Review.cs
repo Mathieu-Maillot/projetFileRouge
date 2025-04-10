@@ -4,7 +4,7 @@ namespace UserMicroService.Models
 {
     public class Review
     {
-        public ObjectId Id { get; set; }
+        public ObjectId Id { get; set; } = ObjectId.GenerateNewId();
         public ObjectId UserId { get; set; }
         public int Rating { get; set; }
         public string? Comment { get; set; }
