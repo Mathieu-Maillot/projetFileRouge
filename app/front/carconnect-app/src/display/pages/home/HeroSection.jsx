@@ -2,15 +2,39 @@ import React, { useState } from 'react'
 import Form from '../../components/utils/Form'
 import Icon from '../../components/utils/Icon'
 import Dropdown from '../../components/utils/Dropdown'
-
+import { formHelpers } from '../../components/utils/DataHelpers'
+import FormSearch from '../../components/utils/FormSearch'
 const HeroSection = () => {
+	const today = new Date();
+	const formattedDate = today.toISOString().slice(0, 10); 
 	const [isMobile, setIsMobile] = useState(false);
 	const [activeMenu, setActiveMenu] = useState(false);
 	const [nbrPassenger, setNbrPassenger] = useState(1);
-	const handleSearchTraject = () => {
-		console.log('searching trajectory')
+	const [selectedDate, setSelectedDate] = useState(formattedDate);
+	const [data, setData] = useState({});
+	const handleDateChange = (value) => {
+		
+		setSelectedDate(value);
+	};
+	const handleSearchTraject = (formData) => {
+		setData({...data, formData, selectedDate })
+		console.log(data);
 	}
-
+	const customFormInputs = () => {
+		return (
+			<>
+				<div className="form_element">
+					<input
+						type="date"
+						id="search-date"
+						className='input_default'
+						value={selectedDate}
+						onChange={(e) => handleDateChange(e.target.value)}
+					/>
+				</div>
+			</>
+		);
+	};
 	const handleButtonForm = () => {
 		return (
 			<div className="form_element relative">
@@ -18,7 +42,7 @@ const HeroSection = () => {
 					type='button'
 					onClick={() => setActiveMenu(!activeMenu)}
 					className='btn btn_form'
-					style={{width:'100%' , textAlign:'left'}}
+					style={{ width: '100%', textAlign: 'left' }}
 				>
 					{nbrPassenger} {nbrPassenger <= 1 ? "Passager" : "Passagers"}
 				</button>
@@ -47,15 +71,23 @@ const HeroSection = () => {
 						<p className='text_color02'>Trouvez rapidement votre trajet idéal pour aller d'un point A à un point B en quelques clics. Économisez sur vos déplacements tout en réduisant votre empreinte carbone grâce à notre service de covoiturage simple et efficace.
 						</p>
 					</div>
-					<Form
-						formAction={handleSearchTraject}
-						inputCount={3}
-						placeholder={['Départ', "Destination", "Date"]}
-						inputTypes={['search', 'search', 'date']} inputName={['depart', "arrival", "date"]}
-						buttonName="Rechercher"
-						btnClass="btn btn_base"
-						children={handleButtonForm()}
-					/>
+					<div className="wrapper">
+						<FormSearch
+							formAction={handleSearchTraject}
+							inputCount={2}
+							placeholder={['Ville de départ', "Ville d'arrivée"]}
+							inputTypes={['search', 'search']}
+							inputName={['depart', "arrival"]}
+							buttonName="Rechercher"
+							btnClass="btn btn_base"
+							children={
+								<>
+									{customFormInputs()}
+									{handleButtonForm()}
+								</>
+							}
+						/>
+					</div>
 				</div>
 			</div>
 			<div className="container_features">

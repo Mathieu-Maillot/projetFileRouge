@@ -23,9 +23,9 @@ export const calculateAge = (birthdate) => {
 };
 
 export const findRidesWhereUserIsDriver = (user, data) => {
-    if (!user || !data?.rides) return [];
-    
-    return data.rides.filter(ride => ride.driverId?.$oid === user._id?.$oid);
+	if (!user || !data?.rides) return [];
+
+	return data.rides.filter(ride => ride.driverId?.$oid === user._id?.$oid);
 };
 
 export const getAverageRating = (reviews) => {
@@ -44,14 +44,14 @@ export const linkBookingsForUser = (user, data) => {
 		});
 };
 export const linkPassengersForRide = (ride, data) => {
-    if (!ride || !data?.bookings) return [];
-    
-    return data.bookings
-        .filter(booking => booking.rideId?.$oid === ride._id?.$oid)
-        .map(booking => {
-            const passenger = data.users?.find(u => u._id?.$oid === booking.userId?.$oid);
-            return { booking, passenger };
-        });
+	if (!ride || !data?.bookings) return [];
+
+	return data.bookings
+		.filter(booking => booking.rideId?.$oid === ride._id?.$oid)
+		.map(booking => {
+			const passenger = data.users?.find(u => u._id?.$oid === booking.userId?.$oid);
+			return { booking, passenger };
+		});
 };
 
 
@@ -83,21 +83,29 @@ export const getFormattedBirthDate = (dateString) => {
 
 
 export const calculateTimeBetween = (departureTimeStr, arrivalTimeStr) => {
-  if (!departureTimeStr || !arrivalTimeStr) return "Durée inconnue";
-  
-  const departureTime = new Date(departureTimeStr);
-  const arrivalTime = new Date(arrivalTimeStr);
-  
-  const diffMs = arrivalTime - departureTime;
-  
-  const hours = Math.floor(diffMs / (1000 * 60 * 60));
-  const minutes = Math.floor((diffMs % (1000 * 60 * 60)) / (1000 * 60));
-  
-  if (hours === 0) {
-    return `${minutes}min`;
-  } else if (minutes === 0) {
-    return `${hours}h`;
-  } else {
-    return `${hours}h ${minutes}min`;
-  }
+	if (!departureTimeStr || !arrivalTimeStr) return "Durée inconnue";
+
+	const departureTime = new Date(departureTimeStr);
+	const arrivalTime = new Date(arrivalTimeStr);
+
+	const diffMs = arrivalTime - departureTime;
+
+	const hours = Math.floor(diffMs / (1000 * 60 * 60));
+	const minutes = Math.floor((diffMs % (1000 * 60 * 60)) / (1000 * 60));
+
+	if (hours === 0) {
+		return `${minutes}min`;
+	} else if (minutes === 0) {
+		return `${hours}h`;
+	} else {
+		return `${hours}h ${minutes}min`;
+	}
+}
+
+export const formHelpers = (formData, setData) => {
+	const obj = {};
+	formData.forEach((value, key) => {
+		obj[key] = value;
+	});
+	return obj;
 }

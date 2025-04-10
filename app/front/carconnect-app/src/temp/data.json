@@ -25,7 +25,7 @@
                 "brand": "Volkswagen",
                 "model": "Golf",
                 "capacity": 4,
-                "color": "blue",
+                "color": "Bleu",
                 "createdAt": {
                     "$date": "2025-04-01T00:00:00Z"
                 },
@@ -138,7 +138,7 @@
                 "brand": "Renault",
                 "model": "Clio",
                 "capacity": 4,
-                "color": "black",
+                "color": "Noir",
                 "createdAt": {
                     "$date": "2025-04-01T00:00:00Z"
                 },
@@ -200,7 +200,7 @@
                 "brand": "Peugeot",
                 "model": "208",
                 "capacity": 3,
-                "color": "gray",
+                "color": "Grise",
                 "createdAt": {
                     "$date": "2025-04-03T00:00:00Z"
                 },
@@ -249,7 +249,7 @@
                 "brand": "Citroën",
                 "model": "C3",
                 "capacity": 4,
-                "color": "white",
+                "color": "Blanche",
                 "createdAt": {
                     "$date": "2025-04-02T00:00:00Z"
                 },
