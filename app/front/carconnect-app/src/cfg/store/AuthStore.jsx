@@ -25,6 +25,7 @@ export const useStore = create(
       token: null,
       isAuthenticated: false,      
       data: {},
+      dataUser: {},
       popup: {
         isOpen: false,
         message: "",
@@ -90,6 +91,7 @@ export const useStore = create(
       
       setAuthenticated: (status) => set({ isAuthenticated: status }),
       setData: (data) => set({ data }),
+      setDataUser: (dataUser) => set({ dataUser }),
       
       errorPop: (message) => {
         set({

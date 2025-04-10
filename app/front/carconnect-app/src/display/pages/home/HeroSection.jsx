@@ -1,24 +1,28 @@
 import React, { useState } from 'react'
-import Form from '../../components/utils/Form'
 import Icon from '../../components/utils/Icon'
 import Dropdown from '../../components/utils/Dropdown'
-import { formHelpers } from '../../components/utils/DataHelpers'
 import FormSearch from '../../components/utils/FormSearch'
+import { useAuthStore } from '../../../cfg/store/AuthStore'
+import { useNavigate } from 'react-router-dom'
 const HeroSection = () => {
 	const today = new Date();
-	const formattedDate = today.toISOString().slice(0, 10); 
+	const formattedDate = today.toISOString().slice(0, 10);
+	const dataUser = useAuthStore(state => state.dataUser);
+	const setDataUser = useAuthStore((state) => state.setDataUser);
+
 	const [isMobile, setIsMobile] = useState(false);
 	const [activeMenu, setActiveMenu] = useState(false);
 	const [nbrPassenger, setNbrPassenger] = useState(1);
 	const [selectedDate, setSelectedDate] = useState(formattedDate);
-	const [data, setData] = useState({});
+	const navigate = useNavigate();
 	const handleDateChange = (value) => {
-		
+
 		setSelectedDate(value);
 	};
 	const handleSearchTraject = (formData) => {
-		setData({...data, formData, selectedDate })
-		console.log(data);
+		setDataUser({ formData, selectedDate })
+		console.log(dataUser)
+		navigate("/routes/search")
 	}
 	const customFormInputs = () => {
 		return (
@@ -77,7 +81,7 @@ const HeroSection = () => {
 							inputCount={2}
 							placeholder={['Ville de départ', "Ville d'arrivée"]}
 							inputTypes={['search', 'search']}
-							inputName={['depart', "arrival"]}
+							inputName={['departLocation', "arrivalLocation"]}
 							buttonName="Rechercher"
 							btnClass="btn btn_base"
 							children={

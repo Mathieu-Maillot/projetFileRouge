@@ -112,6 +112,7 @@ const CitySearch = ({ onSelectCity, placeholder = "Rechercher une ville..." }) =
                     ))}
                 </ul>
             )}
+			<label htmlFor=""></label>
         </div>
     );
 };
