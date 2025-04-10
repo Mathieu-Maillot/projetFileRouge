@@ -9,23 +9,17 @@ namespace UserMicroservice.Data
     {
         private readonly IMongoDatabase _database;
 
-        public MongoDbContext()
+        public MongoDbContext(IConfiguration config)
         {
-            var mongoUri = Environment.GetEnvironmentVariable("MONGO_URI")!;
-            
-            var client = new MongoClient(mongoUri);
-            _database = client.GetDatabase("gettingsStarted");
+            var username = config["MongoDb:Username"];
+            var password = config["MongoDb:Password"];
+
+            var connectionString = $"mongodb+srv://{username}:{password}@carconnect.ntsijlu.mongodb.net/?retryWrites=true&w=majority&appName=CarConnect"
+
+            var client = new MongoClient(connectionString);
+            _database = client.GetDatabase("CarConnnectDatabase");
         }
 
-        public virtual IMongoCollection<User> UserCollection => _database.GetCollection<User>("Users");
-        
-        public List<Review> getReviewsByUserId(ObjectId userId)
-        {
-            var users = _database.GetCollection<User>("users")
-                                 .Find(u => u.Id == userId)
-                                 .FirstOrDefault();
-
-            return users?.Reviews ?? new List<Review>();
-        }
+        public IMongoCollection<T> GetCollection<T>(string collectionName) => _database.GetCollection<T>(collectionName);
     }
 }

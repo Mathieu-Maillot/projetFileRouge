@@ -1,7 +1,11 @@
-using Microsoft.AspNetCore.Identity;
-using UserMicroservice.Data;
-using UserMicroservice.Helpers;
-using UserMicroservice.Services;
+using MongoDB.Bson;
+using MongoDB.Driver;
+using UserMicroService.Data;
+using UserMicroService.Models;
+using UserMicroService.Repositories;
+using UserMicroService.Repositories.Interfaces;
+using UserMicroService.Services;
+using UserMicroService.Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,11 +16,13 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// Ajouter le service MongoDbContext
+
+// Add MongoDbContext to the container
 builder.Services.AddScoped<MongoDbContext>();
-// Ajouter l'injection de dépendance
-builder.Services.AddScoped<>
-    builder.Services.AddScoped<UserService>();
+// Add  Services and Repositories to the container
+builder.Services.AddScoped<IUserRepository<User, ObjectId>, UserRepository>();
+builder.Services.AddScoped<IUserService<User,ObjectId>, UserService>();
+
 
 var app = builder.Build();
 

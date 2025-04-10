@@ -1,8 +1,3 @@
-using Microsoft.AspNetCore.Identity;
-using UserMicroservice.Data;
-using UserMicroservice.Helpers;
-using UserMicroservice.Services;
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -11,12 +6,6 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
-// Ajouter le service MongoDbContext
-builder.Services.AddScoped<MongoDbContext>();
-// Ajouter l'injection de dépendance
-builder.Services.AddScoped<>
-    builder.Services.AddScoped<UserService>();
 
 var app = builder.Build();
 
