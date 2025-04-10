@@ -1,5 +1,16 @@
 @use "../utils/variables" as v;
 
 #footer {
-	z-index: 1;
+    background-color: white;
+    height: 6rem;
+    width: 100%;
+    border-top: var(--border_color01);
+    margin-top: auto;
+    position: absolute;
+	bottom: 0;
+    .wrapper {
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
 }

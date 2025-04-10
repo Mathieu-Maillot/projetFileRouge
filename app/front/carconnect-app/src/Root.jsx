@@ -23,13 +23,13 @@ const AppRoutes = () => {
 	return (
 		<>
 			{!isAuthRoute && <Header />}
-			{popup.isOpen && (
+			{/* {popup.isOpen && (
 				<Popup
 					isOpen={popup.isOpen}
 					message={popup.message}
 					type={popup.type}
 				/>
-			)}
+			)} */}
 			{isAuthRoute ? (
 				<Routes>
 					<Route exact path="/auth/check" element={<Check />} />
@@ -43,6 +43,7 @@ const AppRoutes = () => {
 						<Route path="/" element={<App />} />
 						<Route path="/user/profile/:id" element={<ProfileDetails />} />
 						<Route path="*" element={<NotFound />} />
+						<Route exact path="/rides/:id" element={<DetailsTraject />} />
 						<Route element={<AuthGuard />}>
 							{/* Account */}
 							<Route exact path="/account/settings" element={<Profile />} />
@@ -54,7 +55,6 @@ const AppRoutes = () => {
 
 							{/* Rides */}
 							<Route exact path="/routes/publish/traject/" element={<AuthPublish />} />
-							<Route exact path="/rides/:id" element={<DetailsTraject />} />
 
 						</Route>
 						<Route exact path="/routes/search" element={<SearchTraject />} />

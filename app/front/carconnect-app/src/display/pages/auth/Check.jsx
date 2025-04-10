@@ -125,13 +125,7 @@ const Check = () => {
 					</div>
 				</div>
 			</div>
-			{popup.isOpen && (
-				<Popup
-					isOpen={popup.isOpen}
-					message={popup.message}
-					type={popup.type}
-				/>
-			)}
+		
 		</>
 	)
 }

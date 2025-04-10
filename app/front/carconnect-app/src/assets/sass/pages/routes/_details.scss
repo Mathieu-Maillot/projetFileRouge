@@ -4,7 +4,13 @@
 		display: flex;
 		flex-direction: column;
 		gap: 2rem;
-		flex-basis: 55%;
+		flex-basis: 65%;
+		@media (max-width : v.$lg_breakpoint){
+			flex-basis: 100%;
+		}
+	}
+	.container_details{
+		flex-basis: 35%;
 		@media (max-width : v.$lg_breakpoint){
 			flex-basis: 100%;
 		}
@@ -76,6 +82,9 @@
 			height: 100%;
 			place-content: center;
 		}
+	}
+	.element_driver{
+		color:  var(--text_color02);
 	}
 	
 }

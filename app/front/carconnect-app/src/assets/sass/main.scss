@@ -8,6 +8,7 @@
 @use "./components/utils/variables";
 @use "./components/helpers/citySearch";
 @use "./components/ui/header";
+@use "./components/ui/footer";
 @use "./components/ui/nav";
 @use "./pages/home/home";
 @use "./pages/routes/search";
@@ -37,10 +38,11 @@
 	gap: 4rem;
 }
 
+
 section{
 	margin-top: 8rem;
+	margin-bottom: 8rem;
 }
-
 
 .container_responsive {
 	@include mixins.flex_res(initial, center, column, row)

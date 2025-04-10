@@ -4,9 +4,10 @@ const Footer = () => {
 	return (
 		<>
 			<footer id="footer">
-				<div className="container">
+				<div className="lyt_container h_100">
+
 					<div className="wrapper">
-						
+						<h5>CarConnect © Copyright, All rights reserved</h5>
 					</div>
 				</div>
 			</footer>
