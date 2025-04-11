@@ -102,8 +102,9 @@ namespace CarConnectAPI.Controllers
         // Vehicle Part
         //-------------
 
-        [HttpPost]
+        [HttpPost("{userId}/Vehicule/")]
         [ActionName(nameof(UpdateUser))]
+
         public async Task<IActionResult> CreateVehicleForUserAsync(string userId, [FromBody] VehicleDTO vehicleDto)
         {
             var user = await _userService.GetUserByIdAsync(userId);
@@ -136,7 +137,7 @@ namespace CarConnectAPI.Controllers
             return vehicle == null ? NotFound() : Ok(vehicle);
         }
 
-        [HttpPut("{userId}/Vehicules/{vehicleId}")]
+        [HttpPut("{userId}/Vehicule/{vehicleId}")]
         public async Task<IActionResult> UpdateVehicleAsync(string userId, string vehicleId, [FromBody] Vehicle newVehicle)
         {
             var user = await _userService.GetUserByIdAsync(userId);
@@ -156,7 +157,7 @@ namespace CarConnectAPI.Controllers
             return Ok(success);
         }
 
-        [HttpDelete("{userId}/Vehicules/{vehicleId}")]
+        [HttpDelete("{userId}/Vehicule/{vehicleId}")]
         public async Task<IActionResult> DeleteVehicleAsync(string userId, string vehicleId)
         {
             var user = await _userService.GetUserByIdAsync(userId);
@@ -176,7 +177,7 @@ namespace CarConnectAPI.Controllers
         //Review part
         //-----------
 
-        [HttpPost]
+        [HttpPost("{userId}/Vehicule/")]
         [ActionName(nameof(UpdateUser))]
         public async Task<IActionResult> CreateReviewByUserId(string userId, [FromBody] Review newReview)
         {
@@ -200,7 +201,7 @@ namespace CarConnectAPI.Controllers
         }
 
 
-        [HttpGet("{userId}/review/{reviewId}")]
+        [HttpGet("{userId}/Review/{reviewId}")]
         public async Task<IActionResult> GetReviewByUserIdAsync(string userId, string reviewId)
         {
             var user = await _userService.GetUserByIdAsync(userId);
@@ -212,7 +213,7 @@ namespace CarConnectAPI.Controllers
         }
 
 
-        [HttpPut("{userId}/Reviews/{reviewId}")]
+        [HttpPut("{userId}/Review/{reviewId}")]
         public async Task<IActionResult> UpdateReviewAsync(string userId, string reviewId, [FromBody] Review newReview)
         {
             var user = await _userService.GetUserByIdAsync(userId);
@@ -232,7 +233,7 @@ namespace CarConnectAPI.Controllers
         }
 
 
-        [HttpDelete("{userId}/Reviews/{reviewId}")]
+        [HttpDelete("{userId}/Review/{reviewId}")]
         public async Task<IActionResult> DeleteReviewAsync(string userId, string reviewId)
         {
             var user = await _userService.GetUserByIdAsync(userId);
