@@ -97,7 +97,7 @@ const CitySearch = ({ onSelectCity, placeholder = "Rechercher une ville..." }) =
             />
             {loading && <p className="city_search_loading">Chargement...</p>}
             {!loading && cities.length > 0 && isDropdownOpen && (
-                <ul ref={dropdownRef} className="city_search_list">
+                <ul ref={dropdownRef} className="city_search_list">	
                     {cities.map((city) => (
                         <li 
                             key={city.code} 
