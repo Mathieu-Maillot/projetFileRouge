@@ -1,24 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Administrateur\\Desktop\\_dev\\projetFileRouge\\app\\back\\carconnect-api\\CarConnectAPISolution\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{636A0BA5-E92B-44B6-8B56-3BC5BF68A5BC}|CarConnectAPI\\CarConnectAPI.csproj|c:\\users\\administrateur\\desktop\\_dev\\projetfilerouge\\app\\back\\carconnect-api\\carconnectapisolution\\carconnectapi\\controllers\\ridecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{636A0BA5-E92B-44B6-8B56-3BC5BF68A5BC}|CarConnectAPI\\CarConnectAPI.csproj|solutionrelative:carconnectapi\\controllers\\ridecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{636A0BA5-E92B-44B6-8B56-3BC5BF68A5BC}|CarConnectAPI\\CarConnectAPI.csproj|c:\\users\\administrateur\\desktop\\_dev\\projetfilerouge\\app\\back\\carconnect-api\\carconnectapisolution\\carconnectapi\\dtos\\ridedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{636A0BA5-E92B-44B6-8B56-3BC5BF68A5BC}|CarConnectAPI\\CarConnectAPI.csproj|solutionrelative:carconnectapi\\dtos\\ridedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{636A0BA5-E92B-44B6-8B56-3BC5BF68A5BC}|CarConnectAPI\\CarConnectAPI.csproj|c:\\users\\administrateur\\desktop\\_dev\\projetfilerouge\\app\\back\\carconnect-api\\carconnectapisolution\\carconnectapi\\models\\ride.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{636A0BA5-E92B-44B6-8B56-3BC5BF68A5BC}|CarConnectAPI\\CarConnectAPI.csproj|solutionrelative:carconnectapi\\models\\ride.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{636A0BA5-E92B-44B6-8B56-3BC5BF68A5BC}|CarConnectAPI\\CarConnectAPI.csproj|c:\\users\\administrateur\\desktop\\_dev\\projetfilerouge\\app\\back\\carconnect-api\\carconnectapisolution\\carconnectapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{636A0BA5-E92B-44B6-8B56-3BC5BF68A5BC}|CarConnectAPI\\CarConnectAPI.csproj|solutionrelative:carconnectapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -26,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -39,58 +22,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "RideController.cs",
-              "DocumentMoniker": "C:\\Users\\Administrateur\\Desktop\\_dev\\projetFileRouge\\app\\back\\carconnect-api\\CarConnectAPISolution\\CarConnectAPI\\Controllers\\RideController.cs",
-              "RelativeDocumentMoniker": "CarConnectAPI\\Controllers\\RideController.cs",
-              "ToolTip": "C:\\Users\\Administrateur\\Desktop\\_dev\\projetFileRouge\\app\\back\\carconnect-api\\CarConnectAPISolution\\CarConnectAPI\\Controllers\\RideController.cs",
-              "RelativeToolTip": "CarConnectAPI\\Controllers\\RideController.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAwwD4AAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-11T11:51:38.159Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RideDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Administrateur\\Desktop\\_dev\\projetFileRouge\\app\\back\\carconnect-api\\CarConnectAPISolution\\CarConnectAPI\\DTOs\\RideDTO.cs",
-              "RelativeDocumentMoniker": "CarConnectAPI\\DTOs\\RideDTO.cs",
-              "ToolTip": "C:\\Users\\Administrateur\\Desktop\\_dev\\projetFileRouge\\app\\back\\carconnect-api\\CarConnectAPISolution\\CarConnectAPI\\DTOs\\RideDTO.cs",
-              "RelativeToolTip": "CarConnectAPI\\DTOs\\RideDTO.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAYwBUAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-11T11:50:16.747Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Ride.cs",
-              "DocumentMoniker": "C:\\Users\\Administrateur\\Desktop\\_dev\\projetFileRouge\\app\\back\\carconnect-api\\CarConnectAPISolution\\CarConnectAPI\\Models\\Ride.cs",
-              "RelativeDocumentMoniker": "CarConnectAPI\\Models\\Ride.cs",
-              "ToolTip": "C:\\Users\\Administrateur\\Desktop\\_dev\\projetFileRouge\\app\\back\\carconnect-api\\CarConnectAPISolution\\CarConnectAPI\\Models\\Ride.cs",
-              "RelativeToolTip": "CarConnectAPI\\Models\\Ride.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvxUAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-11T11:50:32.191Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\Administrateur\\Desktop\\_dev\\projetFileRouge\\app\\back\\carconnect-api\\CarConnectAPISolution\\CarConnectAPI\\Models\\User.cs",
-              "RelativeDocumentMoniker": "CarConnectAPI\\Models\\User.cs",
-              "ToolTip": "C:\\Users\\Administrateur\\Desktop\\_dev\\projetFileRouge\\app\\back\\carconnect-api\\CarConnectAPISolution\\CarConnectAPI\\Models\\User.cs",
-              "RelativeToolTip": "CarConnectAPI\\Models\\User.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAA4wBgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-11T11:49:35.967Z",
-              "EditorCaption": ""
             }
           ]
         }
