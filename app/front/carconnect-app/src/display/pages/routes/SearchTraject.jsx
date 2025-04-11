@@ -17,7 +17,7 @@ const SearchTraject = () => {
 	const [searchPerformed, setSearchPerformed] = useState(false);
 	const [searchDebug, setSearchDebug] = useState({});
 	const [selectedDate, setSelectedDate] = useState('');
-	const data = useAuthStore(state => state.data);
+	const dataUser = useAuthStore(state => state.dataUser);
 	useEffect(() => {
 		const checkIfMobile = () => {
 			const mediaQuery = window.matchMedia(`(max-width: 768px)`);

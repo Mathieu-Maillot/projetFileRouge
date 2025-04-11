@@ -63,7 +63,7 @@ const AppRoutes = () => {
 				</AppContainer>
 			)}
 
-			<Footer />
+			{/* <Footer /> */}
 		</>
 	);
 };
