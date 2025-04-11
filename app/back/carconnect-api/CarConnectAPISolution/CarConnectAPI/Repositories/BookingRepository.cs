@@ -5,7 +5,7 @@ using MongoDB.Driver;
 
 namespace CarConnectAPI.Repositories
 {
-    public class BookingRepository : IbookingRepository<Booking, string>
+    public class BookingRepository : IBookingRepository<Booking, string>
     {
         private readonly IMongoCollection<Booking> _bookings;
 

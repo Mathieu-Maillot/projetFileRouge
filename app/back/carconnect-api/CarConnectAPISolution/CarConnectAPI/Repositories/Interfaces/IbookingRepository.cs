@@ -2,7 +2,7 @@
 
 namespace CarConnectAPI.Repositories.Interfaces
 {
-    public interface IbookingRepository <T,Tid> where T : class
+    public interface IBookingRepository <T,Tid> where T : class
     {
         Task<List<T>> GetAllAsync();
         Task<T?> GetByIdAsync(Tid id);
