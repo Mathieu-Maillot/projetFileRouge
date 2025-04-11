@@ -22,7 +22,6 @@ const DriverView = ({ ride, data }) => {
 						{passengers.map((p, idx) => (
 							<li key={idx} className="passenger-item">
 								<div className="passenger-info">
-									{console.log(p)}
 									<UserCard user={p.passenger} />
 									<p>{passengers.length} / {ride.availableSeats} passagers</p>
 									<p>Status: <span className={`status_${p.booking?.status}`}>{p.booking?.status}</span></p>
