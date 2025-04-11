@@ -8,3 +8,4 @@
         Task UpdateVehicleAsync(Tid userId, T vehicle);
         Task DeleteVehicleAsync(Tid userId, Tid VehicleId);
     }
+}

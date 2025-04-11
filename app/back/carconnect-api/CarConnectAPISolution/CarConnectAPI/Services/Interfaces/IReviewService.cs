@@ -7,6 +7,5 @@
         Task CreateReviewAsync(Tid userId, T review);
         Task UpdateReviewAsync(Tid userId, T review);
         Task DeleteReviewAsync(Tid userId, Tid reviewId);
-    {
     }
 }

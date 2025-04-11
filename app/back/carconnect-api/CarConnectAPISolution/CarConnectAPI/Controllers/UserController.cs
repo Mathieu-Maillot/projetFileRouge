@@ -55,9 +55,9 @@ namespace CarConnectAPI.Controllers
 
         //Delete: api/user/{id}
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteUser(User user)
+        public async Task<IActionResult> DeleteUser(string userId)
         {
-            var deleted = await _userService.DeleteUserAsync(user);
+            var deleted = await _userService.DeleteUserAsync(userId);
             if (!deleted) return NotFound();
             return NoContent();
         }

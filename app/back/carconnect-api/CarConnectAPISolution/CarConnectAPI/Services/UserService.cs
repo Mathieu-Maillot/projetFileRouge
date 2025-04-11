@@ -14,26 +14,25 @@ namespace CarConnectAPI.Services
             _repository = repository;
         }
 
-        public Task<User> CreateUserAsync(User user) => 
-            _repository.CreateAsync(user);
+        public async Task<User> CreateUserAsync(User user) => 
+            await _repository.CreateAsync(user);
         
+        public async Task<IEnumerable<User>> GetAllUserAsync() =>
+            await _repository.GetAllAsync();
 
-        public Task<bool> DeleteUserAsync(User user) => 
-            _repository.DeleteAsync(user);
+        public async Task<IEnumerable<User>> GetAllUserAsync(Expression<Func<User, bool>> predicate) => 
+            await _repository.GetAllAsync(predicate);
 
-        public Task<IEnumerable<User>> GetAllUserAsync() =>
-            _repository.GetAllAsync();
+        public async Task<User?> GetUserAsync(Expression<Func<User, bool>> predicate) =>
+            await _repository.GetAsync(predicate);
 
-        public Task<IEnumerable<User>> GetAllUserAsync(Expression<Func<User, bool>> predicate) => 
-            _repository.GetAllAsync(predicate);
+        public async Task<User?> GetUserByIdAsync(string userId) => 
+            await _repository.GetByIdAsync(userId);
 
-        public Task<User?> GetUserAsync(Expression<Func<User, bool>> predicate) =>
-            _repository.GetAsync(predicate);
+        public async Task<bool> UpdateUserAsync(User user) =>
+            await _repository.UpdateAsync(user);
 
-        public Task<User?> GetUserByIdAsync(string userId) => 
-            _repository.GetByIdAsync(userId);
-
-        public Task<User?> UpdateUserAsync(User user) =>
-            _repository.UpdateAsync(user);
+        public async Task<bool> DeleteUserAsync(String userId) =>
+            await _repository.DeleteAsync(userId);
     }
 }

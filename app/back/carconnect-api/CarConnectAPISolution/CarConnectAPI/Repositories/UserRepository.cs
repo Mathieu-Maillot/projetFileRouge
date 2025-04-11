@@ -9,52 +9,49 @@ namespace CarConnectAPI.Repositories
 {
     public class UserRepository : IUserRepository<User,string>
     {
-        public readonly IMongoCollection<User> _userCollection;
+        public readonly IMongoCollection<User> _users;
 
         public UserRepository(MongoDbContext context)
         {
-            _userCollection = context.GetCollection<User>("User");
+            _users = context.GetCollection<User>("User");
         }
 
         public async Task<User> CreateAsync(User user)
         {
-            await _userCollection.InsertOneAsync(user);
+            await _users.InsertOneAsync(user);
             return user;
         }
 
-        public Task<IEnumerable<User>> GetAllAsync()
+        public async Task<IEnumerable<User>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            return await _users.Find(_ => true).ToListAsync();
         }
 
         public async Task<IEnumerable<User>> GetAllAsync(Expression<Func<User, bool>> predicate)
         {
-            return await _userCollection.Find(predicate).ToListAsync();
+            return await _users.Find(predicate).ToListAsync();
         }
 
         public async Task<User?> GetAsync(Expression<Func<User, bool>> predicate)
         {
-            return await _userCollection.Find(predicate).FirstOrDefaultAsync();
+            return await _users.Find(predicate).FirstOrDefaultAsync();
         }
 
         public async Task<User?> GetByIdAsync(string userId)
         {
-            return await _userCollection.Find(u => u.Id == userId).FirstOrDefaultAsync();
+            return await _users.Find(u => u.Id == userId).FirstOrDefaultAsync();
         }
 
-        public async Task<User?> UpdateAsync(User user)
+        public async Task<bool> UpdateAsync(User user)
         {
-            var updateUser = await _userCollection.ReplaceOneAsync(
-                upUser => upUser.Id == user.Id,
-                user
-            );
-            return updateUser.MatchedCount > 0 ? user : null;
+            var result = await _users.ReplaceOneAsync(u => u.Id == user.Id, user);
+            return result.IsAcknowledged && result.ModifiedCount > 0;
         }
 
-        public async Task<bool> DeleteAsync(User user)
+        public async Task<bool> DeleteAsync(string userId)
         {
-            var result = await _userCollection.DeleteOneAsync(u => u.Id == user.Id);
-            return result.DeletedCount > 0;
+            var result = await _users.DeleteOneAsync(u => u.Id == userId);
+            return result.IsAcknowledged && result.DeletedCount > 0;
         }
     }
 }

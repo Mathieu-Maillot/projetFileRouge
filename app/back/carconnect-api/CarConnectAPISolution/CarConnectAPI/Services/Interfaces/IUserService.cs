@@ -9,7 +9,7 @@ namespace CarConnectAPI.Services.Interfaces
         Task<IEnumerable<T>> GetAllUserAsync(Expression<Func<T, bool>> predicate);
         Task<T?> GetUserByIdAsync(Tid userId);
         Task<T?> GetUserAsync(Expression<Func<T, bool>> predicate);
-        Task<T?> UpdateUserAsync(T user);
-        Task<bool> DeleteUserAsync(T user);
+        Task<bool> UpdateUserAsync(T user);
+        Task<bool> DeleteUserAsync(Tid user);
     }
 }

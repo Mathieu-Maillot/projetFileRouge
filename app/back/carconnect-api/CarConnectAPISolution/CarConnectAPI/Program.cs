@@ -15,6 +15,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+
+
 builder.Services.AddScoped<MongoDbContext>();
 // Add  Services and Repositories to the container
 builder.Services.AddScoped<IUserRepository<User, string>, UserRepository>();
