@@ -1,4 +1,6 @@
-﻿namespace CarConnectAPI.DTOs
+﻿using CarConnectAPI.Models;
+
+namespace CarConnectAPI.DTOs
 {
     public class BookingDTO
     {
@@ -10,7 +12,7 @@
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
 
-        public static BookingDTO FromEntity(CarConnectAPI.Models.Booking booking)
+        public static BookingDTO FromEntity(Booking booking)
         {
             return new BookingDTO
             {

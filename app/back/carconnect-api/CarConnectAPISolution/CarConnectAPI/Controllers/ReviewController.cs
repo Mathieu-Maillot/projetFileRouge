@@ -49,7 +49,7 @@ namespace CarConnectAPI.Controllers
         }
 
 
-        [HttpGet("{reviewId}")]
+        [HttpGet("user/review/{reviewId}")]
         public async Task<IActionResult> GetReviewByUserIdAsync(string userId, string reviewId)
         {
             try

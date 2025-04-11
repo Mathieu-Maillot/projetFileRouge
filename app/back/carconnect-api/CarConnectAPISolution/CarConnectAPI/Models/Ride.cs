@@ -16,7 +16,7 @@ namespace CarConnectAPI.Models
         public DateTime CreateAt { get; set; }
         public DateTime UpdateAt { get; set; }
         public decimal Price { get; set; }
-        public string? description {  get; set; }
+        public string? Description {  get; set; }
         public bool NoSmoking { get; set; }
         public bool PetsAllowed { get; set; }
         public List<User> Passengers { get; set; } = [];

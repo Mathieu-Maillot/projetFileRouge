@@ -43,14 +43,14 @@ namespace CarConnectAPI.Controllers
             return Ok(BookingDTO.FromEntity(booking));
         }
 
-        [HttpGet("{userId}")]
+        [HttpGet("user/{userId}")]
         public async Task<IActionResult> GetBookingByUserIdAsync(string userId)
         {
             var bookings = await _bookingService.GetBookingsByUserIdAsync(userId);
             return Ok(bookings.Select(BookingDTO.FromEntity));
         }
 
-        [HttpGet("{rideId}")]
+        [HttpGet("ride/{rideId}")]
         public async Task<IActionResult> GetBookingByRideIdAsync(string rideId)
         {
             var bookings = await _bookingService.GetBookingsByRideIdAsync(rideId);
@@ -58,10 +58,12 @@ namespace CarConnectAPI.Controllers
         }
 
         [HttpPost]
+        [ActionName(nameof(GetBookingByIdAsync))]
         public async Task<IActionResult> CreateBookingAsync([FromBody] Booking booking)
         {
             var created = await _bookingService.CreateBookingAsync(booking);
-            return CreatedAtAction(nameof(GetBookingByIdAsync), new { id = created.Id }, booking);
+            var dto = BookingDTO.FromEntity(created);
+            return Created($"Booking/{created.Id}", dto);
         }
 
         [HttpPut("{bookingId}")]

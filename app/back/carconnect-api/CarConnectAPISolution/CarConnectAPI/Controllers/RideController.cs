@@ -2,6 +2,7 @@
 using CarConnectAPI.Models;
 using CarConnectAPI.Services.Interfaces;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CarConnectAPI.Controllers
@@ -30,7 +31,7 @@ namespace CarConnectAPI.Controllers
                 ArrivalTime = ride.ArrivalTime,
                 AvailableSeats = ride.AvailableSeats,
                 Price = ride.Price,
-                Description = ride.description,
+                Description = ride.Description,
                 NoSmoking = ride.NoSmoking,
                 PetsAllowed = ride.PetsAllowed
             });
@@ -56,39 +57,24 @@ namespace CarConnectAPI.Controllers
                 ArrivalTime = ride.ArrivalTime,
                 AvailableSeats = ride.AvailableSeats,
                 Price = ride.Price,
-                Description = ride.description,
+                Description = ride.Description,
                 NoSmoking = ride.NoSmoking,
-                PetsAllowed = ride.PetsAllowed
+                PetsAllowed = ride.PetsAllowed,
+                Passengers = ride.Passengers,
             };
 
             return Ok(rideDTO);
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateRideAsync([FromBody] RideDTO rideDTO)
+        [ActionName(nameof(GetRideById))]
+        public async Task<IActionResult> CreateRideAsync([FromBody] Ride ride)
         {
-            if (rideDTO is null) return BadRequest("Invalid ride Data");
-
-            var ride = new Ride
-            {
-                DepartureLocation = rideDTO.DepartureLocation!,
-                ArrivalLocation = rideDTO.ArrivalLocation!,
-                DepartureTime = rideDTO.DepartureTime,
-                ArrivalTime = rideDTO.ArrivalTime,
-                AvailableSeats = rideDTO.AvailableSeats,
-                Price = rideDTO.Price,
-                description = rideDTO.Description,
-                NoSmoking = rideDTO.NoSmoking,
-                PetsAllowed = rideDTO.PetsAllowed,
-                CreateAt = DateTime.UtcNow,
-                UpdateAt = DateTime.UtcNow
-            };
+            if (ride is null) return BadRequest("Invalid ride Data");
 
             var createdRide = await _rideService.CreateRideAsync(ride);
-            if (createdRide is null)
-                return StatusCode(500, "A problem occurred while creating the ride.");
-
-            return CreatedAtAction(nameof(GetRideById), new { id = ride.Id }, createdRide);
+            var dto = RideDTO.FromEntity(createdRide);
+            return Created($"Ride/{createdRide.Id}", dto);
         }
 
         [HttpPut("{rideId}")]
@@ -103,7 +89,7 @@ namespace CarConnectAPI.Controllers
             ride.ArrivalTime = rideDtoUp.ArrivalTime;
             ride.AvailableSeats = rideDtoUp.AvailableSeats;
             ride.Price = rideDtoUp.Price;
-            ride.description = rideDtoUp.Description;
+            ride.Description = rideDtoUp.Description;
             ride.NoSmoking = rideDtoUp.NoSmoking;
             ride.PetsAllowed = rideDtoUp.PetsAllowed;
             ride.UpdateAt = DateTime.UtcNow;
@@ -143,7 +129,7 @@ namespace CarConnectAPI.Controllers
                 ArrivalTime = ride.ArrivalTime,
                 AvailableSeats = ride.AvailableSeats,
                 Price = ride.Price,
-                Description = ride.description,
+                Description = ride.Description,
                 NoSmoking = ride.NoSmoking,
                 PetsAllowed = ride.PetsAllowed
             }).ToList();

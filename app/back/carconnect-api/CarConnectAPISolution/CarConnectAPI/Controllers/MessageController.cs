@@ -55,6 +55,8 @@ namespace CarConnectAPI.Controllers
         }
 
         [HttpPost]
+        [ActionName(nameof(CreateMessageAsync))]
+
         public async Task<IActionResult> CreateMessageAsync([FromBody] Message message)
         {
             var created = await _messageService.CreateMessageAsync(message);
@@ -68,8 +70,7 @@ namespace CarConnectAPI.Controllers
                 CreateAt = created.CreateAt,
                 UpdateAt = created.UpdateAt
             };
-
-            return CreatedAtAction(nameof(GetMessageByIdAsync), new { Id = created.Id, dto});
+            return Created($"Message/{created.Id}", dto);
         }
 
         [HttpPut("{id}")]
