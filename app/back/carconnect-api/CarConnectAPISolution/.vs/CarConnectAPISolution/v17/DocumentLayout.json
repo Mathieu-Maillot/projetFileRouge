@@ -1,18 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Administrateur\\Desktop\\_dev\\projetFileRouge\\app\\back\\carconnect-api\\CarConnectAPISolution\\",
+  "WorkspaceRootPath": "C:\\Users\\Administrateur\\Desktop\\Formation\\projetFileRouge\\projetFileRouge\\app\\back\\carconnect-api\\CarConnectAPISolution\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{636A0BA5-E92B-44B6-8B56-3BC5BF68A5BC}|CarConnectAPI\\CarConnectAPI.csproj|c:\\users\\administrateur\\desktop\\_dev\\projetfilerouge\\app\\back\\carconnect-api\\carconnectapisolution\\carconnectapi\\dtos\\bookingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{636A0BA5-E92B-44B6-8B56-3BC5BF68A5BC}|CarConnectAPI\\CarConnectAPI.csproj|solutionrelative:carconnectapi\\dtos\\bookingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{636A0BA5-E92B-44B6-8B56-3BC5BF68A5BC}|CarConnectAPI\\CarConnectAPI.csproj|c:\\users\\administrateur\\desktop\\formation\\projetfilerouge\\projetfilerouge\\app\\back\\carconnect-api\\carconnectapisolution\\carconnectapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{636A0BA5-E92B-44B6-8B56-3BC5BF68A5BC}|CarConnectAPI\\CarConnectAPI.csproj|solutionrelative:carconnectapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{636A0BA5-E92B-44B6-8B56-3BC5BF68A5BC}|CarConnectAPI\\CarConnectAPI.csproj|c:\\users\\administrateur\\desktop\\_dev\\projetfilerouge\\app\\back\\carconnect-api\\carconnectapisolution\\carconnectapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{636A0BA5-E92B-44B6-8B56-3BC5BF68A5BC}|CarConnectAPI\\CarConnectAPI.csproj|solutionrelative:carconnectapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{636A0BA5-E92B-44B6-8B56-3BC5BF68A5BC}|CarConnectAPI\\CarConnectAPI.csproj|c:\\users\\administrateur\\desktop\\formation\\projetfilerouge\\projetfilerouge\\app\\back\\carconnect-api\\carconnectapisolution\\carconnectapi\\repositories\\interfaces\\ibookingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{636A0BA5-E92B-44B6-8B56-3BC5BF68A5BC}|CarConnectAPI\\CarConnectAPI.csproj|solutionrelative:carconnectapi\\repositories\\interfaces\\ibookingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{636A0BA5-E92B-44B6-8B56-3BC5BF68A5BC}|CarConnectAPI\\CarConnectAPI.csproj|c:\\users\\administrateur\\desktop\\_dev\\projetfilerouge\\app\\back\\carconnect-api\\carconnectapisolution\\carconnectapi\\controllers\\authentificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{636A0BA5-E92B-44B6-8B56-3BC5BF68A5BC}|CarConnectAPI\\CarConnectAPI.csproj|solutionrelative:carconnectapi\\controllers\\authentificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{636A0BA5-E92B-44B6-8B56-3BC5BF68A5BC}|CarConnectAPI\\CarConnectAPI.csproj|c:\\users\\administrateur\\desktop\\formation\\projetfilerouge\\projetfilerouge\\app\\back\\carconnect-api\\carconnectapisolution\\carconnectapi\\repositories\\bookingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{636A0BA5-E92B-44B6-8B56-3BC5BF68A5BC}|CarConnectAPI\\CarConnectAPI.csproj|solutionrelative:carconnectapi\\repositories\\bookingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,11 +22,33 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 19,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IBookingRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Administrateur\\Desktop\\Formation\\projetFileRouge\\projetFileRouge\\app\\back\\carconnect-api\\CarConnectAPISolution\\CarConnectAPI\\Repositories\\Interfaces\\IBookingRepository.cs",
+              "RelativeDocumentMoniker": "CarConnectAPI\\Repositories\\Interfaces\\IBookingRepository.cs",
+              "ToolTip": "C:\\Users\\Administrateur\\Desktop\\Formation\\projetFileRouge\\projetFileRouge\\app\\back\\carconnect-api\\CarConnectAPISolution\\CarConnectAPI\\Repositories\\Interfaces\\IBookingRepository.cs",
+              "RelativeToolTip": "CarConnectAPI\\Repositories\\Interfaces\\IBookingRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T10:08:27.959Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BookingRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Administrateur\\Desktop\\Formation\\projetFileRouge\\projetFileRouge\\app\\back\\carconnect-api\\CarConnectAPISolution\\CarConnectAPI\\Repositories\\BookingRepository.cs",
+              "RelativeDocumentMoniker": "CarConnectAPI\\Repositories\\BookingRepository.cs",
+              "ToolTip": "C:\\Users\\Administrateur\\Desktop\\Formation\\projetFileRouge\\projetFileRouge\\app\\back\\carconnect-api\\CarConnectAPISolution\\CarConnectAPI\\Repositories\\BookingRepository.cs",
+              "RelativeToolTip": "CarConnectAPI\\Repositories\\BookingRepository.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAcwAcAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T10:08:22.837Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -34,51 +56,79 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Administrateur\\Desktop\\_dev\\projetFileRouge\\app\\back\\carconnect-api\\CarConnectAPISolution\\CarConnectAPI\\appsettings.json",
-              "RelativeDocumentMoniker": "CarConnectAPI\\appsettings.json",
-              "ToolTip": "C:\\Users\\Administrateur\\Desktop\\_dev\\projetFileRouge\\app\\back\\carconnect-api\\CarConnectAPISolution\\CarConnectAPI\\appsettings.json",
-              "RelativeToolTip": "CarConnectAPI\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-11T07:26:23.96Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AuthentificationController.cs",
-              "DocumentMoniker": "C:\\Users\\Administrateur\\Desktop\\_dev\\projetFileRouge\\app\\back\\carconnect-api\\CarConnectAPISolution\\CarConnectAPI\\Controllers\\AuthentificationController.cs",
-              "RelativeDocumentMoniker": "CarConnectAPI\\Controllers\\AuthentificationController.cs",
-              "ToolTip": "C:\\Users\\Administrateur\\Desktop\\_dev\\projetFileRouge\\app\\back\\carconnect-api\\CarConnectAPISolution\\CarConnectAPI\\Controllers\\AuthentificationController.cs",
-              "RelativeToolTip": "CarConnectAPI\\Controllers\\AuthentificationController.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAmwCgAAAA/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-11T07:13:14.488Z",
-              "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 247,
-          "SelectedChildIndex": 0,
-          "Children": [
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:137:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:136:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:138:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:139:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:141:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:143:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:144:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:142:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "BookingDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Administrateur\\Desktop\\_dev\\projetFileRouge\\app\\back\\carconnect-api\\CarConnectAPISolution\\CarConnectAPI\\DTOs\\BookingDTO.cs",
-              "RelativeDocumentMoniker": "CarConnectAPI\\DTOs\\BookingDTO.cs",
-              "ToolTip": "C:\\Users\\Administrateur\\Desktop\\_dev\\projetFileRouge\\app\\back\\carconnect-api\\CarConnectAPISolution\\CarConnectAPI\\DTOs\\BookingDTO.cs",
-              "RelativeToolTip": "CarConnectAPI\\DTOs\\BookingDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Administrateur\\Desktop\\Formation\\projetFileRouge\\projetFileRouge\\app\\back\\carconnect-api\\CarConnectAPISolution\\CarConnectAPI\\Program.cs",
+              "RelativeDocumentMoniker": "CarConnectAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\Administrateur\\Desktop\\Formation\\projetFileRouge\\projetFileRouge\\app\\back\\carconnect-api\\CarConnectAPISolution\\CarConnectAPI\\Program.cs",
+              "RelativeToolTip": "CarConnectAPI\\Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-11T07:31:06.432Z",
+              "WhenOpened": "2025-04-11T10:07:40.046Z",
               "EditorCaption": ""
             }
           ]
