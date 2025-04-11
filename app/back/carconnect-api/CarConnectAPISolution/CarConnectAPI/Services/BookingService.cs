@@ -7,9 +7,9 @@ namespace CarConnectAPI.Services
 {
     public class BookingService : IBookingService<Booking, string>
     {
-        private readonly IbookingRepository<Booking, string> _bookingRepository;
+        private readonly IBookingRepository<Booking, string> _bookingRepository;
 
-        public BookingService(IbookingRepository<Booking, string> bookingRepository)
+        public BookingService(IBookingRepository<Booking, string> bookingRepository)
         {
             _bookingRepository = bookingRepository;
         }

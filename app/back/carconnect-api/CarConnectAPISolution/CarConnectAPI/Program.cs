@@ -32,7 +32,7 @@ builder.Services.AddScoped<IMessageRepository<Message, string>, MessageRepositor
 builder.Services.AddScoped<IMessageService<Message, string>, MessageService>();
 
 builder.Services.AddScoped<IBookingService<Booking, string>, BookingService>();
-builder.Services.AddScoped<IbookingRepository<Booking, string>, BookingRepository>();
+builder.Services.AddScoped<IBookingRepository<Booking, string>, BookingRepository>();
 
 builder.Services.AddScoped<IRideRepository<Ride, string>, RideRepository>();
 builder.Services.AddScoped<IRideService<Ride, string>, RideService>();

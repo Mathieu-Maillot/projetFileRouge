@@ -1,7 +1,6 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Administrateur\\Desktop\\_dev\\projetFileRouge\\app\\back\\carconnect-api\\CarConnectAPISolution\\",
-  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -22,6 +21,25 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 247,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BookingDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Administrateur\\Desktop\\_dev\\projetFileRouge\\app\\back\\carconnect-api\\CarConnectAPISolution\\CarConnectAPI\\DTOs\\BookingDTO.cs",
+              "RelativeDocumentMoniker": "CarConnectAPI\\DTOs\\BookingDTO.cs",
+              "ToolTip": "C:\\Users\\Administrateur\\Desktop\\_dev\\projetFileRouge\\app\\back\\carconnect-api\\CarConnectAPISolution\\CarConnectAPI\\DTOs\\BookingDTO.cs",
+              "RelativeToolTip": "CarConnectAPI\\DTOs\\BookingDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T07:31:06.432Z",
+              "EditorCaption": ""
             }
           ]
         }
