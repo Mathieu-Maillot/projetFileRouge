@@ -29,7 +29,7 @@ namespace CarConnectAPI.Services
         public async Task<User?> GetUserByIdAsync(string userId) => 
             await _repository.GetByIdAsync(userId);
 
-        public async Task<bool> UpdateUserAsync(User user) =>
+        public async Task<User> UpdateUserAsync(User user) =>
             await _repository.UpdateAsync(user);
 
         public async Task<bool> DeleteUserAsync(String userId) =>

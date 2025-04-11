@@ -42,10 +42,14 @@ namespace CarConnectAPI.Repositories
             return await _users.Find(u => u.Id == userId).FirstOrDefaultAsync();
         }
 
-        public async Task<bool> UpdateAsync(User user)
+        public async Task<User> UpdateAsync(User user)
         {
             var result = await _users.ReplaceOneAsync(u => u.Id == user.Id, user);
-            return result.IsAcknowledged && result.ModifiedCount > 0;
+            if(result.IsAcknowledged && result.ModifiedCount > 0)
+            {
+                return user;
+            }
+            return null;
         }
 
         public async Task<bool> DeleteAsync(string userId)

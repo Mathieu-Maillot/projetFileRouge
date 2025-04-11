@@ -5,8 +5,7 @@ namespace CarConnectAPI.Models
 {
     public class User
     {
-        public string Id { get; set; } = RandomStringGenerator.StringGenerator(12);
-        public string? CreatedBy { get; set; } 
+        public string? Id { get; set; }
         public string? Firstname { get; set; }
         public string? Lastname { get; set; }
         public string Fullname => $"{Firstname} {Lastname}";

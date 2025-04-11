@@ -13,20 +13,20 @@ namespace CarConnectAPI.Helpers
             _random = random;
         }
 
-        public string StringGenerator(int length)
-        {
-            StringBuilder sb = new StringBuilder();
+        //public string StringGenerator(int length = 15)
+        //{
+        //    StringBuilder sb = new StringBuilder();
 
-            for (int i = 0; i < length; i++)
-            {
-                int index = _random.Next(_characteres.Length);
-                sb.Append(_characteres[index]);
-            }
+        //    for (int i = 0; i < length; i++)
+        //    {
+        //        int index = _random.Next(_characteres.Length);
+        //        sb.Append(_characteres[index]);
+        //    }
 
-            return sb.ToString();
-        }
+        //    return sb.ToString();
+        //}
 
-        public static string StringGenerator(int length, string characteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_-+=<>?")
+        public static string StringGenerator(int length = 15, string characteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_-+=<>?")
         {
             Random random = new Random();
             StringBuilder sb = new StringBuilder();
