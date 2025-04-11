@@ -1,6 +1,0 @@
-services:
-  usermicroservice:
-    image: ${DOCKER_REGISTRY-}usermicroservice
-    build:
-      context: .
-      dockerfile: UserMicroservice/Dockerfile

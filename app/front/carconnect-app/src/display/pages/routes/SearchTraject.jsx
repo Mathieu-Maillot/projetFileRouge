@@ -7,6 +7,7 @@ import data from '../../../temp/data.json';
 import { getFormattedDate, getFormattedTime } from '../../components/utils/DataHelpers';
 import FormSearch from '../../components/utils/FormSearch';
 import { useAuthStore } from '../../../cfg/store/AuthStore';
+import TrajectManagement from '../../../data/auth/TrajectManagement';
 
 const SearchTraject = () => {
 	const navigate = useNavigate();
@@ -16,6 +17,7 @@ const SearchTraject = () => {
 	const [searchResults, setSearchResults] = useState([]);
 	const [searchPerformed, setSearchPerformed] = useState(false);
 	const [searchDebug, setSearchDebug] = useState({});
+	const {handleSearch} = TrajectManagement();
 	const [selectedDate, setSelectedDate] = useState('');
 	const dataUser = useAuthStore(state => state.dataUser);
 	useEffect(() => {
@@ -217,6 +219,7 @@ const SearchTraject = () => {
 					</div>
 				)}
 			</div>
+			<button onClick={() => handleSearch()}>Click</button>
 		</section>
 	);
 };

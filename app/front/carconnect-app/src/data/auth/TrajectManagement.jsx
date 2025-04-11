@@ -1,10 +1,23 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import useAuthStore from '../../cfg/store/AuthStore'
+import axios from 'axios';
 
 const TrajectManagement = () => {
     const navigate = useNavigate();
     const { user, isAuthenticated, setData, errorPop, successPop } = useAuthStore();
+
+	const handleSearch = async (formData) => {
+
+		try{
+			const res = axios.get("https://localhost:7228/api/User")
+			const data = await res;
+			console.log("Data fetched:", data);
+		}
+		catch (err){
+			console.log(err)
+		}
+	}
 
     const handlePublishTraject = async (data) => {
         if (!isAuthenticated) {
@@ -130,7 +143,8 @@ const TrajectManagement = () => {
 
     return {
         handlePublishTraject,
-        handleDeleteTraject
+        handleDeleteTraject,
+		handleSearch
     }
 }
 

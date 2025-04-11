@@ -177,7 +177,7 @@ namespace CarConnectAPI.Controllers
         //Review part
         //-----------
 
-        [HttpPost("{userId}/Vehicule/")]
+        [HttpPost("{userId}/Review/")]
         [ActionName(nameof(UpdateUser))]
         public async Task<IActionResult> CreateReviewByUserId(string userId, [FromBody] Review newReview)
         {
