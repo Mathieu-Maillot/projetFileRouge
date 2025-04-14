@@ -11,12 +11,16 @@
       "RelativeMoniker": "D:0:0:{636A0BA5-E92B-44B6-8B56-3BC5BF68A5BC}|CarConnectAPI\\CarConnectAPI.csproj|solutionrelative:carconnectapi\\dtos\\ridedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{636A0BA5-E92B-44B6-8B56-3BC5BF68A5BC}|CarConnectAPI\\CarConnectAPI.csproj|c:\\users\\administrateur\\desktop\\_dev\\projetfilerouge\\app\\back\\carconnect-api\\carconnectapisolution\\carconnectapi\\models\\ride.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{636A0BA5-E92B-44B6-8B56-3BC5BF68A5BC}|CarConnectAPI\\CarConnectAPI.csproj|solutionrelative:carconnectapi\\models\\ride.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{636A0BA5-E92B-44B6-8B56-3BC5BF68A5BC}|CarConnectAPI\\CarConnectAPI.csproj|c:\\users\\administrateur\\desktop\\_dev\\projetfilerouge\\app\\back\\carconnect-api\\carconnectapisolution\\carconnectapi\\dtos\\reviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{636A0BA5-E92B-44B6-8B56-3BC5BF68A5BC}|CarConnectAPI\\CarConnectAPI.csproj|solutionrelative:carconnectapi\\dtos\\reviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{636A0BA5-E92B-44B6-8B56-3BC5BF68A5BC}|CarConnectAPI\\CarConnectAPI.csproj|c:\\users\\administrateur\\desktop\\_dev\\projetfilerouge\\app\\back\\carconnect-api\\carconnectapisolution\\carconnectapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{636A0BA5-E92B-44B6-8B56-3BC5BF68A5BC}|CarConnectAPI\\CarConnectAPI.csproj|solutionrelative:carconnectapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{636A0BA5-E92B-44B6-8B56-3BC5BF68A5BC}|CarConnectAPI\\CarConnectAPI.csproj|c:\\users\\administrateur\\desktop\\_dev\\projetfilerouge\\app\\back\\carconnect-api\\carconnectapisolution\\carconnectapi\\models\\ride.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{636A0BA5-E92B-44B6-8B56-3BC5BF68A5BC}|CarConnectAPI\\CarConnectAPI.csproj|solutionrelative:carconnectapi\\models\\ride.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{636A0BA5-E92B-44B6-8B56-3BC5BF68A5BC}|CarConnectAPI\\CarConnectAPI.csproj|c:\\users\\administrateur\\desktop\\_dev\\projetfilerouge\\app\\back\\carconnect-api\\carconnectapisolution\\carconnectapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -46,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -63,6 +67,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "ReviewDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Administrateur\\Desktop\\_dev\\projetFileRouge\\app\\back\\carconnect-api\\CarConnectAPISolution\\CarConnectAPI\\DTOs\\ReviewDTO.cs",
+              "RelativeDocumentMoniker": "CarConnectAPI\\DTOs\\ReviewDTO.cs",
+              "ToolTip": "C:\\Users\\Administrateur\\Desktop\\_dev\\projetFileRouge\\app\\back\\carconnect-api\\CarConnectAPISolution\\CarConnectAPI\\DTOs\\ReviewDTO.cs",
+              "RelativeToolTip": "CarConnectAPI\\DTOs\\ReviewDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T13:27:12.708Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Ride.cs",
               "DocumentMoniker": "C:\\Users\\Administrateur\\Desktop\\_dev\\projetFileRouge\\app\\back\\carconnect-api\\CarConnectAPISolution\\CarConnectAPI\\Models\\Ride.cs",
               "RelativeDocumentMoniker": "CarConnectAPI\\Models\\Ride.cs",
@@ -81,7 +98,7 @@
               "RelativeDocumentMoniker": "CarConnectAPI\\DTOs\\RideDTO.cs",
               "ToolTip": "C:\\Users\\Administrateur\\Desktop\\_dev\\projetFileRouge\\app\\back\\carconnect-api\\CarConnectAPISolution\\CarConnectAPI\\DTOs\\RideDTO.cs",
               "RelativeToolTip": "CarConnectAPI\\DTOs\\RideDTO.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAwB8AAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB8AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-14T13:17:01.514Z",
               "EditorCaption": ""
@@ -94,14 +111,14 @@
               "RelativeDocumentMoniker": "CarConnectAPI\\Controllers\\RideController.cs",
               "ToolTip": "C:\\Users\\Administrateur\\Desktop\\_dev\\projetFileRouge\\app\\back\\carconnect-api\\CarConnectAPISolution\\CarConnectAPI\\Controllers\\RideController.cs",
               "RelativeToolTip": "CarConnectAPI\\Controllers\\RideController.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAuwCQAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAxwEAAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-14T13:10:58.722Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Encryptor.cs",
               "DocumentMoniker": "C:\\Users\\Administrateur\\Desktop\\_dev\\projetFileRouge\\app\\back\\carconnect-api\\CarConnectAPISolution\\CarConnectAPI\\Helpers\\Encryptor.cs",
               "RelativeDocumentMoniker": "CarConnectAPI\\Helpers\\Encryptor.cs",
@@ -114,7 +131,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "ConstantValues.cs",
               "DocumentMoniker": "C:\\Users\\Administrateur\\Desktop\\_dev\\projetFileRouge\\app\\back\\carconnect-api\\CarConnectAPISolution\\CarConnectAPI\\Helpers\\ConstantValues.cs",
               "RelativeDocumentMoniker": "CarConnectAPI\\Helpers\\ConstantValues.cs",
@@ -127,7 +144,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "AppSettings.cs",
               "DocumentMoniker": "C:\\Users\\Administrateur\\Desktop\\_dev\\projetFileRouge\\app\\back\\carconnect-api\\CarConnectAPISolution\\CarConnectAPI\\Helpers\\AppSettings.cs",
               "RelativeDocumentMoniker": "CarConnectAPI\\Helpers\\AppSettings.cs",
@@ -140,7 +157,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Administrateur\\Desktop\\_dev\\projetFileRouge\\app\\back\\carconnect-api\\CarConnectAPISolution\\CarConnectAPI\\appsettings.json",
               "RelativeDocumentMoniker": "CarConnectAPI\\appsettings.json",
@@ -153,7 +170,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Administrateur\\Desktop\\_dev\\projetFileRouge\\app\\back\\carconnect-api\\CarConnectAPISolution\\CarConnectAPI\\Program.cs",
               "RelativeDocumentMoniker": "CarConnectAPI\\Program.cs",

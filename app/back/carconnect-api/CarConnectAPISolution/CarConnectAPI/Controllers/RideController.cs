@@ -62,6 +62,7 @@ namespace CarConnectAPI.Controllers
                 NoSmoking = ride.NoSmoking,
                 PetsAllowed = ride.PetsAllowed,
                 Passengers = ride.Passengers,
+                DriverId = ride.DriverId,
             };
 
             return Ok(rideDTO);
