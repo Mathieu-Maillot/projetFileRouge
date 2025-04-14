@@ -25,7 +25,7 @@ export const calculateAge = (birthdate) => {
 export const findRidesWhereUserIsDriver = (user, data) => {
 	if (!user || !data?.rides) return [];
 
-	return data.rides.filter(ride => ride.driverId?.$oid === user._id?.$oid);
+	return data.rides.filter(ride => ride.driverId === user.id);
 };
 
 export const getAverageRating = (reviews) => {
@@ -36,10 +36,10 @@ export const getAverageRating = (reviews) => {
 export const linkBookingsForUser = (user, data) => {
 	if (!user || !data?.bookings) return [];
 	return data.bookings
-		.filter(b => b.userId?.$oid === user._id?.$oid)
+		.filter(b => b.userId === user.id)
 		.map(booking => {
-			const ride = data.rides?.find(r => r._id?.$oid === booking.rideId?.$oid);
-			const driver = data.users?.find(u => u._id?.$oid === ride?.driverId?.$oid);
+			const ride = data.rides?.find(r => r.id === booking.rideId);
+			const driver = data.users?.find(u => u.id === ride?.driverId);
 			return { booking, ride, driver, passenger: user };
 		});
 };
@@ -47,9 +47,9 @@ export const linkPassengersForRide = (ride, data) => {
 	if (!ride || !data?.bookings) return [];
 
 	return data.bookings
-		.filter(booking => booking.rideId?.$oid === ride._id?.$oid)
+		.filter(booking => booking.rideId === ride.id)
 		.map(booking => {
-			const passenger = data.users?.find(u => u._id?.$oid === booking.userId?.$oid);
+			const passenger = data.users?.find(u => u.id === booking.userId);
 			return { booking, passenger };
 		});
 };

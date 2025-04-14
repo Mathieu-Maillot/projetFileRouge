@@ -10,20 +10,19 @@ const Messages = ({ user, data }) => {
 	useEffect(() => {
 		if (user && data?.messages) {
 			const userMessages = data.messages.filter(msg =>
-				msg.senderId.$oid === user._id.$oid ||
-				msg.receiverId.$oid === user._id.$oid
+				msg.senderId === user.id ||
+				msg.receiverId === user.id
 			)
 			setMessages(userMessages)
 
 			const conversationsMap = new Map()
 
 			userMessages.forEach(msg => {
-				const otherUserId = msg.senderId.$oid === user._id.$oid ?
-					msg.receiverId.$oid :
-					msg.senderId.$oid
+				const otherUserId = msg.senderId === user.id ?
+					msg.receiverId : msg.senderId
 
 				if (!conversationsMap.has(otherUserId)) {
-					const otherUser = data.users.find(u => u._id.$oid === otherUserId)
+					const otherUser = data.users.find(u => u.id === otherUserId)
 					conversationsMap.set(otherUserId, {
 						otherUserId,
 						otherUser,
@@ -125,7 +124,7 @@ const Messages = ({ user, data }) => {
 							{selectedConversation.messages
 								.sort((a, b) => new Date(a.sentAt.$date) - new Date(b.sentAt.$date))
 								.map((msg, idx) => (
-									<div key={idx} className={`message ${msg.senderId.$oid === user._id.$oid ? 'sent' : 'received'}`}>
+									<div key={idx} className={`message ${msg.senderId === user.id ? 'sent' : 'received'}`}>
 										<div className="message-content"><p>{msg.content}</p></div>
 										<div className="message-time">{getFormattedDate(msg.sentAt.$date)}</div>
 									</div>

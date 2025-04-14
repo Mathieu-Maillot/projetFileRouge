@@ -60,7 +60,7 @@ const AuthManagement = () => {
 		}
 
 		const newUser = {
-			_id: { "$oid": `new-user-${Date.now()}` },
+			id: crypto.randomUUID(),
 			firstName: formData.username || '',
 			lastName: '',
 			email: formData.email,
@@ -83,10 +83,8 @@ const AuthManagement = () => {
 		if (formData.isDriver) {
 			navigate('/auth/driver', { state: { user: newUser } });
 		} else {
-			// Generate a fake token
 			const fakeToken = btoa(`${newUser.email}:${Date.now()}`);
 
-			// Update stores
 			setUser(newUser);
 			setAuthenticated(true);
 			login(newUser, fakeToken);

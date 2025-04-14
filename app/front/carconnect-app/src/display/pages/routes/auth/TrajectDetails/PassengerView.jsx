@@ -8,10 +8,10 @@ import RenderDriver from './RenderDriver';
 
 const PassengerView = ({ data, user, ride }) => {
 	const userBookingForRide = data?.bookings?.find(
-		booking => booking.rideId?.$oid === ride?._id?.$oid && booking.userId?.$oid === user?._id?.$oid
+		booking => booking.rideId === ride?.id && booking.userId === user?.id
 	);
 	
-	const driver = data?.users?.find(u => u._id?.$oid === ride?.driverId?.$oid);
+	const driver = data?.users?.find(u => u.id === ride?.driverId);
 	const isLogged = useAuthStore(state => state.isAuthenticated);
 
 	const checkIsAuthentificated = () => {

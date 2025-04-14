@@ -7,7 +7,7 @@ import { getFormattedDate } from './../../components/utils/DataHelpers';
 const ProfileDetails = () => {
 	const { id } = useParams();
 	const navigate = useNavigate();
-	const user = data?.users?.find(user => user._id?.$oid === id);
+	const user = data?.users?.find(user => user.id === id);
 	const getUserRating = getAverageRating(user?.reviews)
 	const findBookingForUser = linkBookingsForUser(user, data);
 	const userDrivingRides = findRidesWhereUserIsDriver(user, data);
@@ -18,7 +18,7 @@ const ProfileDetails = () => {
 			<>
 				<div className="flex column gap2">
 					{findBookingForUser.map((booking, idx) => (
-						<div key={idx} className="element_box cursor_pointer" onClick={() => navigate(`/rides/${booking?.ride?._id?.$oid}`)}>
+						<div key={idx} className="element_box cursor_pointer" onClick={() => navigate(`/rides/${booking?.ride?.id}`)}>
 							<div className="element_between w_100">
 								<p>Réservation : {booking?.ride?.departureLocation} - {booking?.ride?.arrivalLocation}</p>
 								<p className='text_link text_color_blue'>Regarder ce trajet</p>
@@ -38,7 +38,7 @@ const ProfileDetails = () => {
 				<div className="flex column gap2">
 					{userDrivingRides.length > 0 ? (
 						userDrivingRides.map((ride, idx) => (
-							<div key={idx} className="element_box cursor_pointer" onClick={() => navigate(`/rides/${ride?._id?.$oid}`)}>
+							<div key={idx} className="element_box cursor_pointer" onClick={() => navigate(`/rides/${ride?.id}`)}>
 								<div className="element_between w_100">
 									<p>Trajet : {ride?.departureLocation} - {ride?.arrivalLocation}</p>
 									<p className='text_link text_color_blue'>Regarder ce trajet</p>

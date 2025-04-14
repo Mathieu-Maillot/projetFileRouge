@@ -11,7 +11,7 @@ const Rides = ({ user, data }) => {
 		setSearchTerm(e.target.value)
 	}
 
-	const userRides = data?.rides?.filter(ride => ride.driverId?.$oid === user?._id?.$oid) || []
+	const userRides = data?.rides?.filter(ride => ride.driverId === user?.id) || []
 
 	const filteredRides = userRides.filter(ride => {
 		const searchLower = searchTerm.toLowerCase()
@@ -45,13 +45,13 @@ const Rides = ({ user, data }) => {
 					{filteredRides.length > 0 ? (
 						filteredRides.map((ride, index) => {
 							const passengers = getPassengersForRide(ride)
-							const isExpanded = expandedRide === ride._id?.$oid
+							const isExpanded = expandedRide === ride.id
 
 							return (
 								<div className="element_box" key={index}>
 									<div
 										className="wrapper_ride flex column gap05 pointer"
-										onClick={() => toggleRideDetails(ride._id?.$oid)}
+										onClick={() => toggleRideDetails(ride.id)}
 									>
 										<div className="flex gap1">
 											<p>
@@ -89,7 +89,7 @@ const Rides = ({ user, data }) => {
 											) : (
 												<p className="no-passengers">Aucun passager n'a encore réservé ce trajet</p>
 											)}
-											<p className='text_link text_color_blue cursor_pointer' onClick={() => navigate(`/rides/${ride._id?.$oid}`)}>Administrer le trajet</p>
+											<p className='text_link text_color_blue cursor_pointer' onClick={() => navigate(`/rides/${ride.id}`)}>Administrer le trajet</p>
 
 										</div>
 									)}

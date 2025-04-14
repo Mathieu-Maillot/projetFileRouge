@@ -5,7 +5,7 @@ export const useStore = create(
   persist(
     (set) => ({
       user: {
-        _id: { "$oid": "" },
+        id : "",
         firstName: "",
         lastName: "",
         email: "",
@@ -41,7 +41,7 @@ export const useStore = create(
       logout: () => {
         set({
           user: {
-            _id: { "$oid": "" },
+			id : "",
             firstName: "",
             lastName: "",
             email: "",
@@ -70,7 +70,7 @@ export const useStore = create(
       
       resetUser: () => set({
         user: {
-          _id: { "$oid": "" },
+			id : "",
           firstName: "",
           lastName: "",
           email: "",

@@ -8,7 +8,14 @@ const Input = ({ type, initialValue, name, defValue, placeholder }) => {
 
 	const isPassword = type === 'password';
 	const inputType = isPassword && showPassword ? 'text' : type;
-
+	const getCurrentDateTime = () => {
+		const now = new Date();
+		return now.toISOString().slice(0, 16);
+	};
+	const getCurrentDate = () => {
+		const now = new Date();
+		return now.toISOString().slice(0, 10);
+	};
 	const handleChange = (e) => {
 		setValue(e.target.value);
 	};

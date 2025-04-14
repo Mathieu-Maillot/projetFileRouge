@@ -13,7 +13,7 @@ const DriverView = ({ ride, data }) => {
 
 			<div className="element_between w_100">
 				<h3 className='bold'>Administrer le trajet</h3>
-				<p className='text_link text_color_blue' onClick={() => handleDeleteTraject(ride?._id?.$oid)}>Annuler le trajet</p>
+				<p className='text_link text_color_blue' onClick={() => handleDeleteTraject(ride?.id)}>Annuler le trajet</p>
 			</div>
 			<div className="element">
 				<h4>Détails</h4>
@@ -26,7 +26,7 @@ const DriverView = ({ ride, data }) => {
 									<p>{passengers.length} / {ride.availableSeats} passagers</p>
 									<p>Status: <span className={`status_${p.booking?.status}`}>{p.booking?.status}</span></p>
 									<p>Réservé le: {getFormattedDate(p.booking?.createdAt?.$date)}</p>
-									<Button variant='close' onClick={() => deletePassengerFromRide(ride._id.$oid, p.passenger?._id?.$oid)}
+									<Button variant='close' onClick={() => deletePassengerFromRide(ride.id, p.passenger?.id)}
 									>Supprimer le passager</Button>
 								</div>
 							</li>

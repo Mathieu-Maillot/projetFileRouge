@@ -56,7 +56,7 @@ const Bookings = ({ user, data }) => {
                                         <p>{booking?.ride?.price} € - <span className={`status_${booking?.booking?.status}`}>{booking?.booking?.status}</span></p>
                                     </div>
                                 </li>
-								<p className='text_link text_color_blue' onClick={() => navigate(`/rides/${booking?.ride?._id?.$oid}`)}>Regarder le trajet</p>
+								<p className='text_link text_color_blue' onClick={() => navigate(`/rides/${booking?.ride?.id}`)}>Regarder le trajet</p>
 
                             </ul>
                         ))

@@ -1,9 +1,9 @@
 import React from 'react'
-import { calculateAge, linkBookingsForUser } from '../../components/utils/DataHelpers';
+import { calculateAge, getFormattedDate, linkBookingsForUser } from '../../components/utils/DataHelpers';
 import { getAverageRating } from '../../components/utils/DataHelpers';
 import { getFormattedBirthDate } from './../../components/utils/DataHelpers';
 const DisplayProfile = ({ user, data }) => {
-	const findRides = data?.rides?.filter(ride => ride.driverId.$oid === user?._id.$oid);
+	const findRides = data?.rides?.filter(ride => ride.driverId === user?.id);
 	const findBookings = linkBookingsForUser(user, data);
 	const averageRating = getAverageRating(user?.reviews);
 	return (
@@ -20,7 +20,7 @@ const DisplayProfile = ({ user, data }) => {
 									<p>{user?.lastName}</p>
 								</div>
 								<div className="element">
-									<p className='text_color02'>Compte crée le {user?.createdAt.$date}</p>
+									<p className='text_color02'>Compte crée le {getFormattedDate(user?.createdAt.$date)}</p>
 								</div>
 							</div>
 							<div className="element">

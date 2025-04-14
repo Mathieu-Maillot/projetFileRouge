@@ -19,7 +19,6 @@ const Profile = () => {
 	const pathBookings = location.pathname === '/account/bookings';
 	const pathMessages = location.pathname === '/account/messages';
 	const { user } = useStore();
-
 	const reviews = user?.reviews;
 	return (
 		<>

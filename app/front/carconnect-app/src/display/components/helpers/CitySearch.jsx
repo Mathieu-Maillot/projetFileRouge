@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import axios from "axios";
 
-const CitySearch = ({ onSelectCity, placeholder = "Rechercher une ville..." }) => {
+const CitySearch = ({ onSelectCity, placeholder = "Rechercher une ville...", inputName }) => {
     const [query, setQuery] = useState("");
     const [cities, setCities] = useState([]);
     const [loading, setLoading] = useState(false);
@@ -84,17 +84,23 @@ const CitySearch = ({ onSelectCity, placeholder = "Rechercher une ville..." }) =
         }
     };
 
+    const inputId = inputName || `city-search-${Math.random().toString(36).substring(2, 11)}`;
+
     return (
         <div className="city_search_container">
             <input
                 ref={inputRef}
                 type="text"
+                id={inputId}
                 value={query}
                 onChange={handleInputChange}
                 onFocus={handleInputFocus}
                 placeholder={placeholder}
                 className="input_default"
+                name={inputName}
             />
+            <label htmlFor={inputId} className="label_default label_focused"></label>
+            
             {loading && <p className="city_search_loading">Chargement...</p>}
             {!loading && cities.length > 0 && isDropdownOpen && (
                 <ul ref={dropdownRef} className="city_search_list">	
@@ -112,7 +118,6 @@ const CitySearch = ({ onSelectCity, placeholder = "Rechercher une ville..." }) =
                     ))}
                 </ul>
             )}
-			<label htmlFor=""></label>
         </div>
     );
 };

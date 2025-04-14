@@ -22,7 +22,7 @@ const UserCard = ({ user }) => {
 	}
 	return (
 		<>
-			<div className="wrapper_driver" onClick={() => navigate(`/user/profile/${user._id.$oid}`)}>
+			<div className="wrapper_driver" onClick={() => navigate(`/user/profile/${user.id}`)}>
 				<div className="flex gap2 a_center">
 					<div className="element_between w_100">
 						<div className="flex gap05">

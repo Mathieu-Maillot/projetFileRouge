@@ -8,7 +8,7 @@ const Nav = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
     const { user } = useStore();
-    const isAuthenticated = user && user._id && user._id.$oid;
+    const isAuthenticated = user && user.id;
 
     const navLinks = [
         { name: 'Rechercher', path: '/routes/search', icon: 'search' },
