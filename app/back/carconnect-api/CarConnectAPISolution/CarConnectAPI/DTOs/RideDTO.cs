@@ -11,6 +11,7 @@ public class RideDTO
     public DateTime ArrivalTime { get; set; }
     public int AvailableSeats { get; set; }
     public decimal Price { get; set; }
+    public string DriverId { get; set; }
     public string? Description { get; set; }
     public bool NoSmoking { get; set; }
     public bool PetsAllowed { get; set; }
@@ -28,6 +29,7 @@ public class RideDTO
             NoSmoking = ride.NoSmoking,
             PetsAllowed = ride.PetsAllowed,
             Passengers = ride.Passengers,
+            DriverId = ride.DriverId,
         };
     }
 }

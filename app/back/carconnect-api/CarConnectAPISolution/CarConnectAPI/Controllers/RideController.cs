@@ -33,7 +33,8 @@ namespace CarConnectAPI.Controllers
                 Price = ride.Price,
                 Description = ride.Description,
                 NoSmoking = ride.NoSmoking,
-                PetsAllowed = ride.PetsAllowed
+                PetsAllowed = ride.PetsAllowed,
+                DriverId= ride.DriverId,
             });
 
             return Ok(rideDTOs);
