@@ -14,20 +14,23 @@ const DetailsTraject = () => {
 	const [driver, setDriver] = useState(null);
 	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState(null);
-
+	console.log(id)
 	useEffect(() => {
 		const fetchRide = async () => {
 			try {
 				const response = await axios.get(`https://localhost:7228/api/Ride/${id}`);
 				setRide(response.data);
 				console.log(response.data);
+				console.log(Ride)
 				if (response.data.driverId) {
+					
 					const driverResponse = await axios.get(`https://localhost:7228/api/User/${response.data.driverId}`);
 					setDriver(driverResponse.data);
 					console.log(driverResponse.data)
 				}
 			} catch (err) {
 				setError("Erreur lors du chargement du trajet");
+				console.error(err)
 			} finally {
 				setLoading(false);
 			}
