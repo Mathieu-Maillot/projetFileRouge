@@ -26,7 +26,7 @@ namespace UserMicroService.DTOs.Users
         [Required(ErrorMessage = "The gender is required.")]
         [StringLength(1, ErrorMessage = "The gender must be {1} characters.")]
         [RegularExpression("^[FMO]$", ErrorMessage = "The gender must be 'F', 'M' or 'O'.")]
-        public char? Gender { get; set; } = ConstantValues.GenreOther;
+        public string? Gender { get; set; } = ConstantValues.GenreOther;
 
         [Required(ErrorMessage = "The birthdate is required.")]
         [Range(typeof(DateOnly), "1911-01-01", "9999-12-31", ErrorMessage = "The birthday must be after 1910.")]

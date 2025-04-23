@@ -5,45 +5,22 @@ using CarConnectAPI.Services.Interfaces;
 using CarConnectAPI.Services;
 using MongoDB.Bson;
 using CarConnectAPI.Repositories;
+using CarConnectAPI.Helpers;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.InjectDepencies();
+
+var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 builder.Services.AddCors(options =>
 {
-    options.AddDefaultPolicy(policy =>
-    {
-        policy.WithOrigins("http://localhost:5173") 
-              .AllowAnyHeader()
-              .AllowAnyMethod();
-    });
+    options.AddPolicy(name: MyAllowSpecificOrigins,
+                      policy =>
+                      {
+                          policy.WithOrigins("http://localhost:5173");
+                      });
 });
-
-
-
-builder.Services.AddScoped<MongoDbContext>();
-// Add  Services and Repositories to the container
-builder.Services.AddScoped<IUserRepository<User, string>, UserRepository>();
-builder.Services.AddScoped<IUserService<User, string>, UserService>();
-
-builder.Services.AddScoped<IReviewRepository<Review, string>, ReviewRepository>();
-builder.Services.AddScoped<IReviewService<Review, string>, ReviewService>();
-
-builder.Services.AddScoped<IVehicleRepository<Vehicle, string>, VehicleRepository>();
-builder.Services.AddScoped<IVehicleService<Vehicle, string>, VehicleService>();
-
-builder.Services.AddScoped<IMessageRepository<Message, string>, MessageRepository>();
-builder.Services.AddScoped<IMessageService<Message, string>, MessageService>();
-
-builder.Services.AddScoped<IBookingService<Booking, string>, BookingService>();
-builder.Services.AddScoped<IBookingRepository<Booking, string>, BookingRepository>();
-
-builder.Services.AddScoped<IRideRepository<Ride, string>, RideRepository>();
-builder.Services.AddScoped<IRideService<Ride, string>, RideService>();
 
 
 
@@ -58,9 +35,11 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
+
 app.UseAuthorization();
 
-app.MapControllers();
-app.UseCors();
 
-app.Run();
+app.MapControllers();
+
+await app.RunAsync();

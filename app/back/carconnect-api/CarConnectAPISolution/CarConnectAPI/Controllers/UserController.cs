@@ -1,4 +1,5 @@
 ﻿using System.Net;
+using System.Reflection.Metadata;
 using CarConnectAPI.DTOs;
 using CarConnectAPI.Helpers;
 using CarConnectAPI.Models;
@@ -47,45 +48,57 @@ namespace CarConnectAPI.Controllers
 
         //Post: api/user
         [HttpPost]
-        public async Task<IActionResult> CreateUser(User user)
+        public async Task<IActionResult> CreateUser([FromBody] UserDTO userdto)
         {
-            if (user.Id is null)
-                user.Id = RandomStringGenerator.StringGenerator();
-            if (user.Role is null)
-                user.Role = ConstantValues.RoleUser;
-            if (user.Gender is null)
-                user.Gender = ConstantValues.GenreOther;
-            user.CreatedAt = DateTime.UtcNow;
-            user.UpdateAt = DateTime.UtcNow;
-            user.Vehicles = [];
-            user.Reviews = [];
+            if (userdto == null || string.IsNullOrWhiteSpace(userdto.Firstname) || string.IsNullOrWhiteSpace(userdto.Lastname))
+                return BadRequest();
+            var user = new User
+            {
+                Id = RandomStringGenerator.StringGenerator(),
+                Role = userdto.Role ?? ConstantValues.RoleUser,
+                Gender = userdto.Gender ?? ConstantValues.GenreOther,
+                Firstname = userdto.Firstname,
+                Lastname = userdto.Lastname,
+                Email = userdto.Email,
+                Password = userdto.Password,
+                Birthdate = userdto.Birthdate,
+                Address = userdto.Address,
+                CreatedAt = DateTime.UtcNow,
+                UpdateAt = DateTime.UtcNow,
+                Vehicles = [],
+                Reviews = []
+            };
             await _userService.CreateUserAsync(user);
-            return CreatedAtAction(nameof(GetUser), new { id = user.Id }, user);
+            var userDtoResponse = UserDTO.FromEntity(user);
+            return CreatedAtAction(nameof(GetUser), new { id = user.Id }, userDtoResponse);
         }
 
         //Put: api/user/{id}
         [HttpPut("{userid}")]
-        public async Task<IActionResult> UpdateUser(string userid, User user)
+        public async Task<IActionResult> UpdateUser(string userId, [FromBody] UserDTO userDto)
         {
-            var updatedUser = await _userService.GetUserByIdAsync(userid);
-            if (updatedUser == null) return NotFound();
-            updatedUser.Firstname = user.Firstname;
-            updatedUser.Lastname = user.Lastname;
-            updatedUser.Email = user.Email;
-            updatedUser.Password = user.Password;
-            updatedUser.Address = user.Address;
-            updatedUser.Birthdate = user.Birthdate;
-            updatedUser.Age = user.Age;
-            updatedUser.Gender = user.Gender;
-            updatedUser.CreatedAt = user.CreatedAt;
-            updatedUser.UpdateAt = DateTime.UtcNow;
-            updatedUser.Role = user.Role;
-            updatedUser.Vehicles = user.Vehicles;
-            updatedUser.Reviews = user.Reviews;
+            var existingUser = await _userService.GetUserByIdAsync(userId);
+            
+            if (existingUser == null) 
+                return NotFound($"User with Id : {userId} not found");
 
-            var success = await _userService.UpdateUserAsync(updatedUser);
+            if (!string.IsNullOrWhiteSpace(userDto.Firstname)) existingUser.Firstname = userDto.Firstname;
+            if (!string.IsNullOrWhiteSpace(userDto.Lastname)) existingUser.Lastname = userDto.Lastname;
+            if (!string.IsNullOrWhiteSpace(userDto.Email)) existingUser.Email = userDto.Email;
+            if (!string.IsNullOrWhiteSpace(userDto.Address)) existingUser.Address = userDto.Address;
+            if (userDto.Birthdate != DateOnly.MinValue)
+            {
+                existingUser.Birthdate = userDto.Birthdate;
+                existingUser.Age = AgeCalculator.AgeCalculatorUser(userDto.Birthdate);
+            }
+            if (!string.IsNullOrEmpty(userDto.Gender)) existingUser.Gender = userDto.Gender;
+            existingUser.UpdateAt = DateTime.UtcNow;
+
+            var success = await _userService.UpdateUserAsync(existingUser);
             if (success is null) return StatusCode(500, "A problem occurred while updating the user.");
-            return NoContent();
+
+            var UpdateDto = UserDTO.FromEntity(existingUser);
+            return Ok(UpdateDto);
         }
 
         //Delete: api/user/{id}
