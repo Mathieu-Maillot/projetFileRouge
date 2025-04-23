@@ -45,12 +45,10 @@ const SearchTraject = () => {
         setIsLoading(true);
         setError(null);
         try {
-            // Tentative de récupération depuis l'API
             try {
                 const response = await axios.get("https://localhost:7228/api/Ride", {
                     timeout: 5000,
                     validateStatus: false,
-                    // Désactiver la vérification SSL pour le développement
                     httpsAgent: {
                         rejectUnauthorized: false
                     }
@@ -67,7 +65,6 @@ const SearchTraject = () => {
             } catch (apiError) {
                 console.error("API fetch error:", apiError);
                 
-                // Fallback sur les données locales
                 console.log("Falling back to local storage");
                 const storage = localStorage.getItem('app-storage');
                 if (storage) {
@@ -90,7 +87,6 @@ const SearchTraject = () => {
         }
     };
 
-    // Pour rafraîchir manuellement les trajets
     const refreshRides = () => {
         fetchRides();
     };
@@ -99,13 +95,10 @@ const SearchTraject = () => {
         if (!dateString) return null;
 
         try {
-            // Gère plusieurs formats de date possibles
             let date;
             if (typeof dateString === 'object' && dateString.$date) {
-                // Format {$date: "2023-04-15T10:30:00Z"}
                 date = new Date(dateString.$date);
             } else {
-                // String format direct
                 date = new Date(dateString);
             }
             
@@ -114,7 +107,6 @@ const SearchTraject = () => {
                 return null;
             }
             
-            // Retourne YYYY-MM-DD
             return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
         } catch (error) {
             console.error("Error normalizing date:", error);
@@ -165,7 +157,6 @@ const SearchTraject = () => {
 
         if (searchDate) {
             filteredRides = filteredRides.filter(ride => {
-                // Gère les deux formats de date possibles
                 const depTime = ride.departureTime?.$date || ride.departureTime;
                 if (!depTime) return false;
                 

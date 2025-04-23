@@ -15,11 +15,20 @@ builder.InjectDepencies();
 var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 builder.Services.AddCors(options =>
 {
+<<<<<<< HEAD
     options.AddPolicy(name: MyAllowSpecificOrigins,
                       policy =>
                       {
                           policy.WithOrigins("http://localhost:5173");
                       });
+=======
+    options.AddDefaultPolicy(policy =>
+    {
+        policy.WithOrigins("http://localhost:5173", "https://localhost:5173")
+                      .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+>>>>>>> ba2146de386ace55f7737dd6d99eef80f3a4aded
 });
 
 
