@@ -7,9 +7,9 @@
         public const string RoleDriver = "Driver";
 
         //Genre values
-        public const char GenreMale = 'M';
-        public const char GenreFemale = 'F';
-        public const char GenreOther = 'O';
+        public const string GenreMale = "M";
+        public const string GenreFemale = "F";
+        public const string GenreOther = "O";
 
         //Booking values
         public const string BookingConfirmed = "Confirmed";

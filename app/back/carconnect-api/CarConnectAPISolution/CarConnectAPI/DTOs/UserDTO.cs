@@ -10,13 +10,14 @@ namespace CarConnectAPI.DTOs
         public string? Lastname { get; set; }
         public string Fullname => $"{Firstname} {Lastname}";
         public string? Email { get; set; }
-        public char? Gender { get; set; }
+        public string? Gender { get; set; }
         [JsonIgnore]
         public string? Role { get; set; }
         [JsonIgnore]
         public string? Password { get; set; }
         public int Age { get; set; }
         public string? Address { get; set; }
+        public string? PhoneNumber { get; set; }
         public DateOnly Birthdate { get; set; }
         public DateTime? UpdateAt { get; set; }
         public List<Vehicle> Vehicles { get; set; } = [];

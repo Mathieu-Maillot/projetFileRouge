@@ -91,7 +91,7 @@ namespace CarConnectAPI.Controllers
                 existingUser.Birthdate = userDto.Birthdate;
                 existingUser.Age = AgeCalculator.AgeCalculatorUser(userDto.Birthdate);
             }
-            if (userDto.Gender.HasValue) existingUser.Gender = userDto.Gender;
+            if (!string.IsNullOrEmpty(userDto.Gender)) existingUser.Gender = userDto.Gender;
             existingUser.UpdateAt = DateTime.UtcNow;
 
             var success = await _userService.UpdateUserAsync(existingUser);

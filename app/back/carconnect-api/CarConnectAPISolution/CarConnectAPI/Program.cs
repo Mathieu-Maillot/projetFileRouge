@@ -7,7 +7,6 @@ using MongoDB.Bson;
 using CarConnectAPI.Repositories;
 using CarConnectAPI.Helpers;
 using System.Text;
-using CarConnectAPI.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -36,9 +35,10 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
+
 app.UseAuthorization();
 
-app.UseMiddleware<GlobalExcetionMiddleware>();
 
 app.MapControllers();
 app.UseCors(MyAllowSpecificOrigins);

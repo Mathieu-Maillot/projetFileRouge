@@ -20,10 +20,12 @@ namespace CarConnectAPI.Helpers
             builder.Services.AddControllers()
                             .AddJsonOptions(options =>
                                 options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
-            
+
             builder.AddSwagger();
 
+            builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddScoped<MongoDbContext>();
+            builder.Services.AddHostedService<FirstRunService>();
 
             builder.AddRepositories();
 

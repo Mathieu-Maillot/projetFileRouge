@@ -19,6 +19,8 @@ namespace CarConnectAPI.Data
             _database = client.GetDatabase(database);
         }
 
+        public IMongoDatabase Database { get { return _database; } }
+
         public IMongoCollection<T> GetCollection<T>(string collectionName) => _database.GetCollection<T>(collectionName);
     }
 }
